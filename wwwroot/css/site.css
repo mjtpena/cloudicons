@@ -181,3 +181,11 @@ input[type="checkbox"] {
 .search-container {
     align-items: center;
 }  
+
+.svg-item img {
+    cursor: context-menu;
+}
+
+.svg-item img:active {
+    outline: 2px solid #007bff;
+}
