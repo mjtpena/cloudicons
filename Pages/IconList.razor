@@ -20,17 +20,16 @@
             var safeId = GenerateSafeId(svg.Name);
             <div class="svg-item-wrapper">
                 <div class="svg-item">
+                    <img id="@safeId" src="@svg.Path" alt="@svg.Name" style="min-width:180px;" 
+                         @oncontextmenu="@(e => OnRightClick(e, safeId, svg.Name))"
+                         @oncontextmenu:preventDefault="true" />
                     @if (DownloadAsPng)
                     {
-                        <a @onclick="() => OnDownloadRequested(safeId, svg.Name)">
-                            <img id="@safeId" src="@svg.Path" alt="@svg.Name" style="min-width:180px;" />
-                        </a>
+                        <a @onclick="() => OnDownloadRequested(safeId, svg.Name)">Download PNG</a>
                     }
                     else
                     {
-                        <a href="@svg.Path" download="@svg.Name">
-                            <img src="@svg.Path" alt="@svg.Name" style="min-width:180px;" />
-                        </a>
+                        <a href="@svg.Path" download="@svg.Name">Download SVG</a>
                     }
                 </div>
                 <p>@(svg.Name.Length > 32 ? svg.Name.Substring(0, 32) + "..." : svg.Name)</p>
@@ -167,6 +166,11 @@
         {
             await JSRuntime.InvokeVoidAsync("downloadAsPng", safeId, fileName);
         }
+    }
+
+    private async Task OnRightClick(MouseEventArgs e, string safeId, string fileName)
+    {
+        await JSRuntime.InvokeVoidAsync("copyImageToClipboard", safeId, fileName);
     }
 
     private class SvgFile
