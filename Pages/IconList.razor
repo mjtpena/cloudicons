@@ -55,6 +55,8 @@ else
     <button @onclick="LoadMore" style="display: @(hasMoreToLoad ? "block" : "none")">Load More</button>
 }
 
+@implements IDisposable
+
 @code {
     [Parameter] public string Tab { get; set; } = string.Empty;
 
