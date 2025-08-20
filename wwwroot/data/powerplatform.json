@@ -1,0 +1,51 @@
+{
+  "category": "powerplatform",
+  "count": 9,
+  "icons": [
+    {
+      "path": "/icons/powerplatform/AIBuilder_scalable.svg",
+      "name": "Aibuilder Scalable",
+      "fileName": "AIBuilder_scalable"
+    },
+    {
+      "path": "/icons/powerplatform/Dataverse_scalable.svg",
+      "name": "Dataverse Scalable",
+      "fileName": "Dataverse_scalable"
+    },
+    {
+      "path": "/icons/powerplatform/PowerApps_scalable.svg",
+      "name": "Powerapps Scalable",
+      "fileName": "PowerApps_scalable"
+    },
+    {
+      "path": "/icons/powerplatform/PowerAutomate_scalable.svg",
+      "name": "Powerautomate Scalable",
+      "fileName": "PowerAutomate_scalable"
+    },
+    {
+      "path": "/icons/powerplatform/PowerBI_scalable.svg",
+      "name": "Powerbi Scalable",
+      "fileName": "PowerBI_scalable"
+    },
+    {
+      "path": "/icons/powerplatform/PowerFx_scalable.svg",
+      "name": "Powerfx Scalable",
+      "fileName": "PowerFx_scalable"
+    },
+    {
+      "path": "/icons/powerplatform/PowerPages_scalable.svg",
+      "name": "Powerpages Scalable",
+      "fileName": "PowerPages_scalable"
+    },
+    {
+      "path": "/icons/powerplatform/PowerPlatform_scalable.svg",
+      "name": "Powerplatform Scalable",
+      "fileName": "PowerPlatform_scalable"
+    },
+    {
+      "path": "/icons/powerplatform/PowerVirtualAgents_scalable.svg",
+      "name": "Powervirtualagents Scalable",
+      "fileName": "PowerVirtualAgents_scalable"
+    }
+  ]
+}
