@@ -60,6 +60,8 @@ else
 @code {
     [Parameter] public string Tab { get; set; } = string.Empty;
 
+    private string previousTab = string.Empty;
+
     private string searchTerm = string.Empty;
     private List<SvgFile> allSvgs = new List<SvgFile>();
     private List<SvgFile> filteredSvgs = new List<SvgFile>();
@@ -81,8 +83,10 @@ else
 
     protected override async Task OnParametersSetAsync()
     {
-        if (currentPage != 1 || !string.IsNullOrEmpty(searchTerm))
+        // Check if the Tab parameter has changed
+        if (Tab != previousTab)
         {
+            previousTab = Tab;
             currentPage = 1;
             searchTerm = string.Empty;
             await LoadIconsMetadata();
