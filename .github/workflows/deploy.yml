@@ -48,6 +48,17 @@ jobs:
     - name: Fix base href for GitHub Pages
       run: |
         sed -i 's|<base href="/" />|<base href="/cloudicons/" />|g' ./dist/wwwroot/index.html
+    
+    - name: Fix icon paths in JSON files for GitHub Pages
+      run: |
+        find ./dist/wwwroot/data -name "*.json" -exec sed -i 's|"/icons/|"icons/|g' {} \;
+      
+    - name: Add .nojekyll file
+      run: touch ./dist/wwwroot/.nojekyll
+      
+    - name: Add 404.html for client-side routing
+      run: |
+        cp ./dist/wwwroot/index.html ./dist/wwwroot/404.html
       
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v3
