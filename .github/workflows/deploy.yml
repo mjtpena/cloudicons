@@ -37,6 +37,11 @@ jobs:
     - name: Publish
       run: dotnet publish -c Release -o ./dist
       
+    - name: Copy content from subfolder to root
+      run: |
+        cp -r ./dist/wwwroot/cloudicons/* ./dist/wwwroot/
+        rm -rf ./dist/wwwroot/cloudicons
+      
     - name: Add .nojekyll file
       run: touch ./dist/wwwroot/.nojekyll
       

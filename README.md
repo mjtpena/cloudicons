@@ -57,13 +57,29 @@ dotnet run
 
 ## Building for Production
 
-To build the static files for deployment:
+### GitHub Pages Deployment
+
+This project is configured for automatic deployment to GitHub Pages. The deployment happens automatically when changes are pushed to the `main` branch via GitHub Actions.
+
+#### Manual Build for GitHub Pages
+
+To build the static files for GitHub Pages deployment manually:
 
 ```bash
 dotnet publish -c Release -o ./dist
 ```
 
-The output will be in `./dist/wwwroot/` and can be deployed to any static hosting service.
+The output will be in `./dist/wwwroot/cloudicons/` with the correct base path configured for GitHub Pages subpath deployment.
+
+#### Local Development
+
+For local development, use:
+
+```bash
+dotnet run
+```
+
+This will start the development server at `https://localhost:5001` (or similar).
 
 ## Usage
 
@@ -80,6 +96,38 @@ The output will be in `./dist/wwwroot/` and can be deployed to any static hostin
 - **Hosting**: GitHub Pages (Static)
 - **Icons**: 7,818 official cloud service icons
 - **Build**: GitHub Actions for CI/CD
+
+## Deployment
+
+### GitHub Pages Deployment
+
+The application is automatically deployed to GitHub Pages using GitHub Actions:
+
+1. **Automatic Deployment**: Every push to the `main` branch triggers the deployment workflow
+2. **Workflow**: The `.github/workflows/deploy.yml` workflow handles:
+   - Building the .NET 8 Blazor WebAssembly application
+   - Configuring the base path for GitHub Pages subpath (`/cloudicons/`)
+   - Adding the `.nojekyll` file for proper asset serving
+   - Deploying to GitHub Pages
+
+### Manual Deployment Steps
+
+If you need to deploy manually or troubleshoot:
+
+1. Ensure the repository has GitHub Pages enabled in Settings → Pages
+2. Set the source to "GitHub Actions"
+3. The workflow will automatically handle deployment on push to `main`
+
+### Local Testing of Production Build
+
+To test the production build locally:
+
+```bash
+dotnet publish -c Release -o ./dist
+# Serve the ./dist/wwwroot/cloudicons/ directory with a static file server
+```
+
+Note: The production build includes the `/cloudicons/` base path configuration for GitHub Pages.
 
 ## Contributing
 
