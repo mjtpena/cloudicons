@@ -82,5 +82,25 @@ else
     echo "Skipping Dynamics 365 icons update"
 fi
 
+# Microsoft Fabric Icons
+echo "Checking Microsoft Fabric icons..."
+FABRIC_URL="https://github.com/microsoft/fabric-samples/raw/main/docs-samples/Icons.zip"
+FABRIC_ZIP="$TEMP_DIR/fabric-icons.zip"
+curl -sL -o "$FABRIC_ZIP" "$FABRIC_URL" || echo "Failed to download Fabric icons"
+
+if [ -f "$FABRIC_ZIP" ]; then
+    echo "Downloaded Fabric icons, extracting..."
+    unzip -q "$FABRIC_ZIP" -d "$TEMP_DIR/fabric-temp/"
+    if [ -d "$TEMP_DIR/fabric-temp/icons/package/dist/svg" ]; then
+        rm -rf wwwroot/icons/fabric/svg/*
+        cp -r "$TEMP_DIR/fabric-temp/icons/package/dist/svg/"* wwwroot/icons/fabric/svg/
+        echo "Fabric icons updated"
+    else
+        echo "Could not find Fabric SVG icons in downloaded package"
+    fi
+else
+    echo "Skipping Fabric icons update"
+fi
+
 echo "Icon update process completed!"
 echo "Please review the changes before committing."
