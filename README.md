@@ -17,13 +17,13 @@ CloudIcons is a Blazor WebAssembly application that lets you download official i
 
 The icons are sourced from official provider repositories:
 
-- [Azure Architecture Icons](https://learn.microsoft.com/en-us/azure/architecture/icons/)
-- [Fabric Icons](https://learn.microsoft.com/en-us/fabric/get-started/icons)
-- [Microsoft 365 Architecture Icons and Templates](https://learn.microsoft.com/en-us/microsoft-365/solutions/architecture-icons-templates?view=o365-worldwide)
-- [Dynamics 365 Icons](https://learn.microsoft.com/en-us/dynamics365/get-started/icons)
-- [Power Platform Icons](https://learn.microsoft.com/en-us/power-platform/guidance/icons)
-- [AWS Architecture Icons](https://aws.amazon.com/architecture/icons/)
-- [GCP Architecture Icons](https://cloud.google.com/icons)
+- [Azure Architecture Icons](https://learn.microsoft.com/en-us/azure/architecture/icons/) - **Last Updated: January 2025 (v18)**
+- [AWS Architecture Icons](https://aws.amazon.com/architecture/icons/) - **Last Updated: July 31, 2025**
+- [Microsoft Fabric Icons](https://learn.microsoft.com/en-us/fabric/get-started/icons) - **Last Updated: August 21, 2025**
+- [Microsoft 365 Architecture Icons and Templates](https://learn.microsoft.com/en-us/microsoft-365/solutions/architecture-icons-templates?view=o365-worldwide) - **Last Updated: January 9, 2024**
+- [Power Platform Icons](https://learn.microsoft.com/en-us/power-platform/guidance/icons) - **Last Updated: December 19, 2025**
+- [Dynamics 365 Icons](https://learn.microsoft.com/en-us/dynamics365/get-started/icons) - **Last Updated: December 19, 2025**
+- [GCP Architecture Icons](https://cloud.google.com/icons) - **Last Updated: Unknown**
 
 ## Getting Started
 
