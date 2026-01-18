@@ -39,9 +39,9 @@ fi
 
 # Microsoft 365 Icons
 echo "Checking Microsoft 365 icons..."
-M365_URL="https://download.microsoft.com/download/d/4/d/d4d6b4c5-f6e3-4d89-b796-e4f929c33ac3/Microsoft_365_architecture_icons.zip"
+M365_URL="https://download.microsoft.com/download/2/F/3/2F346655-1F7E-4F5E-BE78-82DA3D507F3A/2024-microsoft-365-content-icons.zip"
 M365_ZIP="$TEMP_DIR/m365-icons.zip"
-curl -L -o "$M365_ZIP" "$M365_URL" 2>/dev/null || echo "Failed to download M365 icons"
+curl -L -o "$M365_ZIP" "$M365_URL" || echo "Failed to download M365 icons"
 
 if [ -f "$M365_ZIP" ]; then
     echo "Downloaded M365 icons, extracting..."
@@ -54,9 +54,9 @@ fi
 
 # Power Platform Icons
 echo "Checking Power Platform icons..."
-PP_URL="https://download.microsoft.com/download/8/d/8/8d8b0958-6df6-4f64-b5e5-f4d6b0c3f3b4/PowerPlatformIcons.zip"
+PP_URL="https://download.microsoft.com/download/498606aa-6d27-4f13-aa5c-1401078c153b/Power-Platform-icons-scalable.zip"
 PP_ZIP="$TEMP_DIR/powerplatform-icons.zip"
-curl -L -o "$PP_ZIP" "$PP_URL" 2>/dev/null || echo "Failed to download Power Platform icons"
+curl -L -o "$PP_ZIP" "$PP_URL" || echo "Failed to download Power Platform icons"
 
 if [ -f "$PP_ZIP" ]; then
     echo "Downloaded Power Platform icons, extracting..."
@@ -69,9 +69,9 @@ fi
 
 # Dynamics 365 Icons
 echo "Checking Dynamics 365 icons..."
-D365_URL="https://download.microsoft.com/download/3/b/8/3b8b8b8e-8e8e-4e8e-8e8e-8e8e8e8e8e8e/Dynamics365Icons.zip"
+D365_URL="https://download.microsoft.com/download/498606aa-6d27-4f13-aa5c-1401078c153b/Dynamics-365-icons-scalable.zip"
 D365_ZIP="$TEMP_DIR/dynamics365-icons.zip"
-curl -L -o "$D365_ZIP" "$D365_URL" 2>/dev/null || echo "Failed to download Dynamics 365 icons"
+curl -L -o "$D365_ZIP" "$D365_URL" || echo "Failed to download Dynamics 365 icons"
 
 if [ -f "$D365_ZIP" ]; then
     echo "Downloaded Dynamics 365 icons, extracting..."
