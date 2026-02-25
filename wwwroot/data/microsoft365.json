@@ -3,6 +3,2331 @@
   "Count": 963,
   "Icons": [
     {
+      "name": "Apps List Detail",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Apps List Detail.svg",
+      "fileName": "Apps List Detail.svg"
+    },
+    {
+      "name": "Apps",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Apps.svg",
+      "fileName": "Apps.svg"
+    },
+    {
+      "name": "Arrow Circle Left",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Arrow Circle Left.svg",
+      "fileName": "Arrow Circle Left.svg"
+    },
+    {
+      "name": "Arrow Circle Right",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Arrow Circle Right.svg",
+      "fileName": "Arrow Circle Right.svg"
+    },
+    {
+      "name": "Arrow Clockwise",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Arrow Clockwise.svg",
+      "fileName": "Arrow Clockwise.svg"
+    },
+    {
+      "name": "Arrow Down",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Arrow Down.svg",
+      "fileName": "Arrow Down.svg"
+    },
+    {
+      "name": "Arrow Download",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Arrow Download.svg",
+      "fileName": "Arrow Download.svg"
+    },
+    {
+      "name": "Arrow Sync",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Arrow Sync.svg",
+      "fileName": "Arrow Sync.svg"
+    },
+    {
+      "name": "Arrow Upload",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Arrow Upload.svg",
+      "fileName": "Arrow Upload.svg"
+    },
+    {
+      "name": "Attach",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Attach.svg",
+      "fileName": "Attach.svg"
+    },
+    {
+      "name": "Book Contacts",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Book Contacts.svg",
+      "fileName": "Book Contacts.svg"
+    },
+    {
+      "name": "Bot",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Bot.svg",
+      "fileName": "Bot.svg"
+    },
+    {
+      "name": "Building Cloud",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Building Cloud.svg",
+      "fileName": "Building Cloud.svg"
+    },
+    {
+      "name": "Building Multiple",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Building Multiple.svg",
+      "fileName": "Building Multiple.svg"
+    },
+    {
+      "name": "Building People_Blue_Dark",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Building People_Blue_Dark.svg",
+      "fileName": "Building People_Blue_Dark.svg"
+    },
+    {
+      "name": "Building Retail",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Building Retail.svg",
+      "fileName": "Building Retail.svg"
+    },
+    {
+      "name": "Building",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Building.svg",
+      "fileName": "Building.svg"
+    },
+    {
+      "name": "Calculator",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Calculator.svg",
+      "fileName": "Calculator.svg"
+    },
+    {
+      "name": "Calendar Month",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Calendar Month.svg",
+      "fileName": "Calendar Month.svg"
+    },
+    {
+      "name": "Call",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Call.svg",
+      "fileName": "Call.svg"
+    },
+    {
+      "name": "Camera",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Camera.svg",
+      "fileName": "Camera.svg"
+    },
+    {
+      "name": "Cart",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Cart.svg",
+      "fileName": "Cart.svg"
+    },
+    {
+      "name": "Certificate",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Certificate.svg",
+      "fileName": "Certificate.svg"
+    },
+    {
+      "name": "Chart Multiple",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Chart Multiple.svg",
+      "fileName": "Chart Multiple.svg"
+    },
+    {
+      "name": "Chat Multiple",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Chat Multiple.svg",
+      "fileName": "Chat Multiple.svg"
+    },
+    {
+      "name": "Chat",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Chat.svg",
+      "fileName": "Chat.svg"
+    },
+    {
+      "name": "Check",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Check.svg",
+      "fileName": "Check.svg"
+    },
+    {
+      "name": "Checkmark Circle",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Checkmark Circle.svg",
+      "fileName": "Checkmark Circle.svg"
+    },
+    {
+      "name": "Chevron Circle",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Chevron Circle.svg",
+      "fileName": "Chevron Circle.svg"
+    },
+    {
+      "name": "Clipboard Task List",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Clipboard Task List.svg",
+      "fileName": "Clipboard Task List.svg"
+    },
+    {
+      "name": "Clock Alarm",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Clock Alarm.svg",
+      "fileName": "Clock Alarm.svg"
+    },
+    {
+      "name": "Clock",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Clock.svg",
+      "fileName": "Clock.svg"
+    },
+    {
+      "name": "Cloud Add",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Cloud Add.svg",
+      "fileName": "Cloud Add.svg"
+    },
+    {
+      "name": "Cloud Arrow Down",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Cloud Arrow Down.svg",
+      "fileName": "Cloud Arrow Down.svg"
+    },
+    {
+      "name": "Cloud Arrow Up",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Cloud Arrow Up.svg",
+      "fileName": "Cloud Arrow Up.svg"
+    },
+    {
+      "name": "Cloud Beaker",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Cloud Beaker.svg",
+      "fileName": "Cloud Beaker.svg"
+    },
+    {
+      "name": "Cloud Cube",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Cloud Cube.svg",
+      "fileName": "Cloud Cube.svg"
+    },
+    {
+      "name": "Cloud Database",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Cloud Database.svg",
+      "fileName": "Cloud Database.svg"
+    },
+    {
+      "name": "Cloud Desktop",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Cloud Desktop.svg",
+      "fileName": "Cloud Desktop.svg"
+    },
+    {
+      "name": "Cloud",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Cloud.svg",
+      "fileName": "Cloud.svg"
+    },
+    {
+      "name": "Code",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Code.svg",
+      "fileName": "Code.svg"
+    },
+    {
+      "name": "Column Arrow Right",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Column Arrow Right.svg",
+      "fileName": "Column Arrow Right.svg"
+    },
+    {
+      "name": "Comment Multiple",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Comment Multiple.svg",
+      "fileName": "Comment Multiple.svg"
+    },
+    {
+      "name": "Comment",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Comment.svg",
+      "fileName": "Comment.svg"
+    },
+    {
+      "name": "Data Area",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Data Area.svg",
+      "fileName": "Data Area.svg"
+    },
+    {
+      "name": "Data Bar Vertical",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Data Bar Vertical.svg",
+      "fileName": "Data Bar Vertical.svg"
+    },
+    {
+      "name": "Data Pie",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Data Pie.svg",
+      "fileName": "Data Pie.svg"
+    },
+    {
+      "name": "Data Trending (1)",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Data Trending (1).svg",
+      "fileName": "Data Trending (1).svg"
+    },
+    {
+      "name": "Data Trending",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Data Trending.svg",
+      "fileName": "Data Trending.svg"
+    },
+    {
+      "name": "Data Usage",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Data Usage.svg",
+      "fileName": "Data Usage.svg"
+    },
+    {
+      "name": "Database",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Database.svg",
+      "fileName": "Database.svg"
+    },
+    {
+      "name": "Deploy",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Deploy.svg",
+      "fileName": "Deploy.svg"
+    },
+    {
+      "name": "Desktop Arrow Down",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Desktop Arrow Down.svg",
+      "fileName": "Desktop Arrow Down.svg"
+    },
+    {
+      "name": "Desktop Tower",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Desktop Tower.svg",
+      "fileName": "Desktop Tower.svg"
+    },
+    {
+      "name": "Dismiss Circle",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Dismiss Circle.svg",
+      "fileName": "Dismiss Circle.svg"
+    },
+    {
+      "name": "Document Bullet List Multiple",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Document Bullet List Multiple.svg",
+      "fileName": "Document Bullet List Multiple.svg"
+    },
+    {
+      "name": "Document Bullet List",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Document Bullet List.svg",
+      "fileName": "Document Bullet List.svg"
+    },
+    {
+      "name": "Document Key",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Document Key.svg",
+      "fileName": "Document Key.svg"
+    },
+    {
+      "name": "Document Lock",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Document Lock.svg",
+      "fileName": "Document Lock.svg"
+    },
+    {
+      "name": "Document Multiple",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Document Multiple.svg",
+      "fileName": "Document Multiple.svg"
+    },
+    {
+      "name": "Document One Page",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Document One Page.svg",
+      "fileName": "Document One Page.svg"
+    },
+    {
+      "name": "Document Text",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Document Text.svg",
+      "fileName": "Document Text.svg"
+    },
+    {
+      "name": "Document",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Document.svg",
+      "fileName": "Document.svg"
+    },
+    {
+      "name": "Edit",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Edit.svg",
+      "fileName": "Edit.svg"
+    },
+    {
+      "name": "Filmstrip Play",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Filmstrip Play.svg",
+      "fileName": "Filmstrip Play.svg"
+    },
+    {
+      "name": "Fingerprint",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Fingerprint.svg",
+      "fileName": "Fingerprint.svg"
+    },
+    {
+      "name": "Flag",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Flag.svg",
+      "fileName": "Flag.svg"
+    },
+    {
+      "name": "Folder Multiple",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Folder Multiple.svg",
+      "fileName": "Folder Multiple.svg"
+    },
+    {
+      "name": "Folder Open Vertical",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Folder Open Vertical.svg",
+      "fileName": "Folder Open Vertical.svg"
+    },
+    {
+      "name": "Folder Open",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Folder Open.svg",
+      "fileName": "Folder Open.svg"
+    },
+    {
+      "name": "Folder People",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Folder People.svg",
+      "fileName": "Folder People.svg"
+    },
+    {
+      "name": "Globe",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Globe.svg",
+      "fileName": "Globe.svg"
+    },
+    {
+      "name": "Grid Circles",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Grid Circles.svg",
+      "fileName": "Grid Circles.svg"
+    },
+    {
+      "name": "Handshake",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Handshake.svg",
+      "fileName": "Handshake.svg"
+    },
+    {
+      "name": "Hat Graduation",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Hat Graduation.svg",
+      "fileName": "Hat Graduation.svg"
+    },
+    {
+      "name": "Headset",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Headset.svg",
+      "fileName": "Headset.svg"
+    },
+    {
+      "name": "Heart Pulse",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Heart Pulse.svg",
+      "fileName": "Heart Pulse.svg"
+    },
+    {
+      "name": "Heart",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Heart.svg",
+      "fileName": "Heart.svg"
+    },
+    {
+      "name": "Image",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Image.svg",
+      "fileName": "Image.svg"
+    },
+    {
+      "name": "Key",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Key.svg",
+      "fileName": "Key.svg"
+    },
+    {
+      "name": "Laptop",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Laptop.svg",
+      "fileName": "Laptop.svg"
+    },
+    {
+      "name": "Layer Diagonal",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Layer Diagonal.svg",
+      "fileName": "Layer Diagonal.svg"
+    },
+    {
+      "name": "Lightbulb Checkmark",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Lightbulb Checkmark.svg",
+      "fileName": "Lightbulb Checkmark.svg"
+    },
+    {
+      "name": "Lightbulb",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Lightbulb.svg",
+      "fileName": "Lightbulb.svg"
+    },
+    {
+      "name": "Lock Closed",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Lock Closed.svg",
+      "fileName": "Lock Closed.svg"
+    },
+    {
+      "name": "Lock Shield",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Lock Shield.svg",
+      "fileName": "Lock Shield.svg"
+    },
+    {
+      "name": "Mail Alert",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Mail Alert.svg",
+      "fileName": "Mail Alert.svg"
+    },
+    {
+      "name": "Mail Attach",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Mail Attach.svg",
+      "fileName": "Mail Attach.svg"
+    },
+    {
+      "name": "Mail Error",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Mail Error.svg",
+      "fileName": "Mail Error.svg"
+    },
+    {
+      "name": "Mail Read",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Mail Read.svg",
+      "fileName": "Mail Read.svg"
+    },
+    {
+      "name": "Mail",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Mail.svg",
+      "fileName": "Mail.svg"
+    },
+    {
+      "name": "Map",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Map.svg",
+      "fileName": "Map.svg"
+    },
+    {
+      "name": "Megaphone Loud",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Megaphone Loud.svg",
+      "fileName": "Megaphone Loud.svg"
+    },
+    {
+      "name": "Merge",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Merge.svg",
+      "fileName": "Merge.svg"
+    },
+    {
+      "name": "Notebook",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Notebook.svg",
+      "fileName": "Notebook.svg"
+    },
+    {
+      "name": "Number Circle 1",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Number Circle 1.svg",
+      "fileName": "Number Circle 1.svg"
+    },
+    {
+      "name": "Number Circle 2",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Number Circle 2.svg",
+      "fileName": "Number Circle 2.svg"
+    },
+    {
+      "name": "Number Circle 3",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Number Circle 3.svg",
+      "fileName": "Number Circle 3.svg"
+    },
+    {
+      "name": "Number Circle 4",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Number Circle 4.svg",
+      "fileName": "Number Circle 4.svg"
+    },
+    {
+      "name": "Organization Horizontal",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Organization Horizontal.svg",
+      "fileName": "Organization Horizontal.svg"
+    },
+    {
+      "name": "Organization",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Organization.svg",
+      "fileName": "Organization.svg"
+    },
+    {
+      "name": "Panel Left Header Key",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Panel Left Header Key.svg",
+      "fileName": "Panel Left Header Key.svg"
+    },
+    {
+      "name": "Panel Left Header",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Panel Left Header.svg",
+      "fileName": "Panel Left Header.svg"
+    },
+    {
+      "name": "Payment",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Payment.svg",
+      "fileName": "Payment.svg"
+    },
+    {
+      "name": "People Audience",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/People Audience.svg",
+      "fileName": "People Audience.svg"
+    },
+    {
+      "name": "People Community",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/People Community.svg",
+      "fileName": "People Community.svg"
+    },
+    {
+      "name": "People Settings",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/People Settings.svg",
+      "fileName": "People Settings.svg"
+    },
+    {
+      "name": "People Team",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/People Team.svg",
+      "fileName": "People Team.svg"
+    },
+    {
+      "name": "People",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/People.svg",
+      "fileName": "People.svg"
+    },
+    {
+      "name": "Person Accounts",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Person Accounts.svg",
+      "fileName": "Person Accounts.svg"
+    },
+    {
+      "name": "Person Desktop",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Person Desktop.svg",
+      "fileName": "Person Desktop.svg"
+    },
+    {
+      "name": "Person Settings",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Person Settings.svg",
+      "fileName": "Person Settings.svg"
+    },
+    {
+      "name": "Person Square",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Person Square.svg",
+      "fileName": "Person Square.svg"
+    },
+    {
+      "name": "Person Wrench",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Person Wrench.svg",
+      "fileName": "Person Wrench.svg"
+    },
+    {
+      "name": "Person",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Person.svg",
+      "fileName": "Person.svg"
+    },
+    {
+      "name": "Phone Desktop",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Phone Desktop.svg",
+      "fileName": "Phone Desktop.svg"
+    },
+    {
+      "name": "Phone Laptop",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Phone Laptop.svg",
+      "fileName": "Phone Laptop.svg"
+    },
+    {
+      "name": "Phone Tablet",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Phone Tablet.svg",
+      "fileName": "Phone Tablet.svg"
+    },
+    {
+      "name": "Phone Update",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Phone Update.svg",
+      "fileName": "Phone Update.svg"
+    },
+    {
+      "name": "Phone",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Phone.svg",
+      "fileName": "Phone.svg"
+    },
+    {
+      "name": "Presenter",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Presenter.svg",
+      "fileName": "Presenter.svg"
+    },
+    {
+      "name": "Question Circle",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Question Circle.svg",
+      "fileName": "Question Circle.svg"
+    },
+    {
+      "name": "Radar",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Radar.svg",
+      "fileName": "Radar.svg"
+    },
+    {
+      "name": "Receipt",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Receipt.svg",
+      "fileName": "Receipt.svg"
+    },
+    {
+      "name": "Ribbon Star",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Ribbon Star.svg",
+      "fileName": "Ribbon Star.svg"
+    },
+    {
+      "name": "Ribbon",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Ribbon.svg",
+      "fileName": "Ribbon.svg"
+    },
+    {
+      "name": "Road Cone",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Road Cone.svg",
+      "fileName": "Road Cone.svg"
+    },
+    {
+      "name": "Script",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Script.svg",
+      "fileName": "Script.svg"
+    },
+    {
+      "name": "Search",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Search.svg",
+      "fileName": "Search.svg"
+    },
+    {
+      "name": "Select All",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Select All.svg",
+      "fileName": "Select All.svg"
+    },
+    {
+      "name": "Settings Cog Multiple",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Settings Cog Multiple.svg",
+      "fileName": "Settings Cog Multiple.svg"
+    },
+    {
+      "name": "Settings",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Settings.svg",
+      "fileName": "Settings.svg"
+    },
+    {
+      "name": "Shapes Three",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Shapes Three.svg",
+      "fileName": "Shapes Three.svg"
+    },
+    {
+      "name": "Share Screen Person Overlay",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Share Screen Person Overlay.svg",
+      "fileName": "Share Screen Person Overlay.svg"
+    },
+    {
+      "name": "Share Screen Person",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Share Screen Person.svg",
+      "fileName": "Share Screen Person.svg"
+    },
+    {
+      "name": "Share",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Share.svg",
+      "fileName": "Share.svg"
+    },
+    {
+      "name": "Shield Error",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Shield Error.svg",
+      "fileName": "Shield Error.svg"
+    },
+    {
+      "name": "Shifts Activity",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Shifts Activity.svg",
+      "fileName": "Shifts Activity.svg"
+    },
+    {
+      "name": "Shopping Bag",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Shopping Bag.svg",
+      "fileName": "Shopping Bag.svg"
+    },
+    {
+      "name": "Signature",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Signature.svg",
+      "fileName": "Signature.svg"
+    },
+    {
+      "name": "Slide Layout",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Slide Layout.svg",
+      "fileName": "Slide Layout.svg"
+    },
+    {
+      "name": "Tablet Laptop",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Tablet Laptop.svg",
+      "fileName": "Tablet Laptop.svg"
+    },
+    {
+      "name": "Tablet",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Tablet.svg",
+      "fileName": "Tablet.svg"
+    },
+    {
+      "name": "Tap",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Tap.svg",
+      "fileName": "Tap.svg"
+    },
+    {
+      "name": "Task List Square",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Task List Square.svg",
+      "fileName": "Task List Square.svg"
+    },
+    {
+      "name": "Text First Line",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Text First Line.svg",
+      "fileName": "Text First Line.svg"
+    },
+    {
+      "name": "Text Number List",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Text Number List.svg",
+      "fileName": "Text Number List.svg"
+    },
+    {
+      "name": "Toolbox",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Toolbox.svg",
+      "fileName": "Toolbox.svg"
+    },
+    {
+      "name": "Top Speed",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Top Speed.svg",
+      "fileName": "Top Speed.svg"
+    },
+    {
+      "name": "Video",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Video.svg",
+      "fileName": "Video.svg"
+    },
+    {
+      "name": "Wallet Credit Card",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Wallet Credit Card.svg",
+      "fileName": "Wallet Credit Card.svg"
+    },
+    {
+      "name": "Window Dev Edit",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Window Dev Edit.svg",
+      "fileName": "Window Dev Edit.svg"
+    },
+    {
+      "name": "Window Edit",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Window Edit.svg",
+      "fileName": "Window Edit.svg"
+    },
+    {
+      "name": "Window",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Window.svg",
+      "fileName": "Window.svg"
+    },
+    {
+      "name": "Wrench",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Wrench.svg",
+      "fileName": "Wrench.svg"
+    },
+    {
+      "name": "Apps List Detail",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Apps List Detail.svg",
+      "fileName": "Apps List Detail.svg"
+    },
+    {
+      "name": "Apps",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Apps.svg",
+      "fileName": "Apps.svg"
+    },
+    {
+      "name": "Arrow Circle Left",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Arrow Circle Left.svg",
+      "fileName": "Arrow Circle Left.svg"
+    },
+    {
+      "name": "Arrow Circle Right",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Arrow Circle Right.svg",
+      "fileName": "Arrow Circle Right.svg"
+    },
+    {
+      "name": "Arrow Clockwise",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Arrow Clockwise.svg",
+      "fileName": "Arrow Clockwise.svg"
+    },
+    {
+      "name": "Arrow Down",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Arrow Down.svg",
+      "fileName": "Arrow Down.svg"
+    },
+    {
+      "name": "Arrow Download",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Arrow Download.svg",
+      "fileName": "Arrow Download.svg"
+    },
+    {
+      "name": "Arrow Sync",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Arrow Sync.svg",
+      "fileName": "Arrow Sync.svg"
+    },
+    {
+      "name": "Arrow Upload",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Arrow Upload.svg",
+      "fileName": "Arrow Upload.svg"
+    },
+    {
+      "name": "Attach",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Attach.svg",
+      "fileName": "Attach.svg"
+    },
+    {
+      "name": "Book Contacts",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Book Contacts.svg",
+      "fileName": "Book Contacts.svg"
+    },
+    {
+      "name": "Bot",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Bot.svg",
+      "fileName": "Bot.svg"
+    },
+    {
+      "name": "Building Cloud",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Building Cloud.svg",
+      "fileName": "Building Cloud.svg"
+    },
+    {
+      "name": "Building Multiple",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Building Multiple.svg",
+      "fileName": "Building Multiple.svg"
+    },
+    {
+      "name": "Building People_Blue_Gray",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Building People_Blue_Gray.svg",
+      "fileName": "Building People_Blue_Gray.svg"
+    },
+    {
+      "name": "Building Retail",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Building Retail.svg",
+      "fileName": "Building Retail.svg"
+    },
+    {
+      "name": "Building",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Building.svg",
+      "fileName": "Building.svg"
+    },
+    {
+      "name": "Calculator",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Calculator.svg",
+      "fileName": "Calculator.svg"
+    },
+    {
+      "name": "Calendar Month",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Calendar Month.svg",
+      "fileName": "Calendar Month.svg"
+    },
+    {
+      "name": "Call",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Call.svg",
+      "fileName": "Call.svg"
+    },
+    {
+      "name": "Camera",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Camera.svg",
+      "fileName": "Camera.svg"
+    },
+    {
+      "name": "Cart",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Cart.svg",
+      "fileName": "Cart.svg"
+    },
+    {
+      "name": "Certificate",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Certificate.svg",
+      "fileName": "Certificate.svg"
+    },
+    {
+      "name": "Chart Multiple",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Chart Multiple.svg",
+      "fileName": "Chart Multiple.svg"
+    },
+    {
+      "name": "Chat Multiple",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Chat Multiple.svg",
+      "fileName": "Chat Multiple.svg"
+    },
+    {
+      "name": "Chat",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Chat.svg",
+      "fileName": "Chat.svg"
+    },
+    {
+      "name": "Check",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Check.svg",
+      "fileName": "Check.svg"
+    },
+    {
+      "name": "Checkmark Circle",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Checkmark Circle.svg",
+      "fileName": "Checkmark Circle.svg"
+    },
+    {
+      "name": "Chevron Circle",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Chevron Circle.svg",
+      "fileName": "Chevron Circle.svg"
+    },
+    {
+      "name": "Clipboard Task List",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Clipboard Task List.svg",
+      "fileName": "Clipboard Task List.svg"
+    },
+    {
+      "name": "Clock Alarm",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Clock Alarm.svg",
+      "fileName": "Clock Alarm.svg"
+    },
+    {
+      "name": "Clock",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Clock.svg",
+      "fileName": "Clock.svg"
+    },
+    {
+      "name": "Cloud Add",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Cloud Add.svg",
+      "fileName": "Cloud Add.svg"
+    },
+    {
+      "name": "Cloud Arrow Down",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Cloud Arrow Down.svg",
+      "fileName": "Cloud Arrow Down.svg"
+    },
+    {
+      "name": "Cloud Arrow Up",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Cloud Arrow Up.svg",
+      "fileName": "Cloud Arrow Up.svg"
+    },
+    {
+      "name": "Cloud Beaker",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Cloud Beaker.svg",
+      "fileName": "Cloud Beaker.svg"
+    },
+    {
+      "name": "Cloud Cube",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Cloud Cube.svg",
+      "fileName": "Cloud Cube.svg"
+    },
+    {
+      "name": "Cloud Database",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Cloud Database.svg",
+      "fileName": "Cloud Database.svg"
+    },
+    {
+      "name": "Cloud Desktop",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Cloud Desktop.svg",
+      "fileName": "Cloud Desktop.svg"
+    },
+    {
+      "name": "Cloud",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Cloud.svg",
+      "fileName": "Cloud.svg"
+    },
+    {
+      "name": "Code",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Code.svg",
+      "fileName": "Code.svg"
+    },
+    {
+      "name": "Column Arrow Right",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Column Arrow Right.svg",
+      "fileName": "Column Arrow Right.svg"
+    },
+    {
+      "name": "Comment Multiple",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Comment Multiple.svg",
+      "fileName": "Comment Multiple.svg"
+    },
+    {
+      "name": "Comment",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Comment.svg",
+      "fileName": "Comment.svg"
+    },
+    {
+      "name": "Data Area",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Data Area.svg",
+      "fileName": "Data Area.svg"
+    },
+    {
+      "name": "Data Bar Vertical",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Data Bar Vertical.svg",
+      "fileName": "Data Bar Vertical.svg"
+    },
+    {
+      "name": "Data Pie",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Data Pie.svg",
+      "fileName": "Data Pie.svg"
+    },
+    {
+      "name": "Data Trending (1)",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Data Trending (1).svg",
+      "fileName": "Data Trending (1).svg"
+    },
+    {
+      "name": "Data Trending",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Data Trending.svg",
+      "fileName": "Data Trending.svg"
+    },
+    {
+      "name": "Data Usage",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Data Usage.svg",
+      "fileName": "Data Usage.svg"
+    },
+    {
+      "name": "Database",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Database.svg",
+      "fileName": "Database.svg"
+    },
+    {
+      "name": "Deploy",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Deploy.svg",
+      "fileName": "Deploy.svg"
+    },
+    {
+      "name": "Desktop Arrow Down",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Desktop Arrow Down.svg",
+      "fileName": "Desktop Arrow Down.svg"
+    },
+    {
+      "name": "Desktop Tower",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Desktop Tower.svg",
+      "fileName": "Desktop Tower.svg"
+    },
+    {
+      "name": "Dismiss Circle",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Dismiss Circle.svg",
+      "fileName": "Dismiss Circle.svg"
+    },
+    {
+      "name": "Document Bullet List Multiple",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Document Bullet List Multiple.svg",
+      "fileName": "Document Bullet List Multiple.svg"
+    },
+    {
+      "name": "Document Bullet List",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Document Bullet List.svg",
+      "fileName": "Document Bullet List.svg"
+    },
+    {
+      "name": "Document Key",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Document Key.svg",
+      "fileName": "Document Key.svg"
+    },
+    {
+      "name": "Document Lock",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Document Lock.svg",
+      "fileName": "Document Lock.svg"
+    },
+    {
+      "name": "Document Multiple",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Document Multiple.svg",
+      "fileName": "Document Multiple.svg"
+    },
+    {
+      "name": "Document One Page",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Document One Page.svg",
+      "fileName": "Document One Page.svg"
+    },
+    {
+      "name": "Document Text",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Document Text.svg",
+      "fileName": "Document Text.svg"
+    },
+    {
+      "name": "Document",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Document.svg",
+      "fileName": "Document.svg"
+    },
+    {
+      "name": "Edit",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Edit.svg",
+      "fileName": "Edit.svg"
+    },
+    {
+      "name": "Filmstrip Play",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Filmstrip Play.svg",
+      "fileName": "Filmstrip Play.svg"
+    },
+    {
+      "name": "Fingerprint",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Fingerprint.svg",
+      "fileName": "Fingerprint.svg"
+    },
+    {
+      "name": "Flag",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Flag.svg",
+      "fileName": "Flag.svg"
+    },
+    {
+      "name": "Folder Multiple",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Folder Multiple.svg",
+      "fileName": "Folder Multiple.svg"
+    },
+    {
+      "name": "Folder Open Vertical",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Folder Open Vertical.svg",
+      "fileName": "Folder Open Vertical.svg"
+    },
+    {
+      "name": "Folder Open",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Folder Open.svg",
+      "fileName": "Folder Open.svg"
+    },
+    {
+      "name": "Folder People",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Folder People.svg",
+      "fileName": "Folder People.svg"
+    },
+    {
+      "name": "Globe",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Globe.svg",
+      "fileName": "Globe.svg"
+    },
+    {
+      "name": "Grid Circles",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Grid Circles.svg",
+      "fileName": "Grid Circles.svg"
+    },
+    {
+      "name": "Handshake",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Handshake.svg",
+      "fileName": "Handshake.svg"
+    },
+    {
+      "name": "Hat Graduation",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Hat Graduation.svg",
+      "fileName": "Hat Graduation.svg"
+    },
+    {
+      "name": "Headset",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Headset.svg",
+      "fileName": "Headset.svg"
+    },
+    {
+      "name": "Heart Pulse",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Heart Pulse.svg",
+      "fileName": "Heart Pulse.svg"
+    },
+    {
+      "name": "Heart",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Heart.svg",
+      "fileName": "Heart.svg"
+    },
+    {
+      "name": "Image",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Image.svg",
+      "fileName": "Image.svg"
+    },
+    {
+      "name": "Key",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Key.svg",
+      "fileName": "Key.svg"
+    },
+    {
+      "name": "Laptop",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Laptop.svg",
+      "fileName": "Laptop.svg"
+    },
+    {
+      "name": "Layer Diagonal",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Layer Diagonal.svg",
+      "fileName": "Layer Diagonal.svg"
+    },
+    {
+      "name": "Lightbulb Checkmark",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Lightbulb Checkmark.svg",
+      "fileName": "Lightbulb Checkmark.svg"
+    },
+    {
+      "name": "Lightbulb",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Lightbulb.svg",
+      "fileName": "Lightbulb.svg"
+    },
+    {
+      "name": "Lock Closed",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Lock Closed.svg",
+      "fileName": "Lock Closed.svg"
+    },
+    {
+      "name": "Lock Shield",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Lock Shield.svg",
+      "fileName": "Lock Shield.svg"
+    },
+    {
+      "name": "Mail Alert",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Mail Alert.svg",
+      "fileName": "Mail Alert.svg"
+    },
+    {
+      "name": "Mail Attach",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Mail Attach.svg",
+      "fileName": "Mail Attach.svg"
+    },
+    {
+      "name": "Mail Error",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Mail Error.svg",
+      "fileName": "Mail Error.svg"
+    },
+    {
+      "name": "Mail Read",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Mail Read.svg",
+      "fileName": "Mail Read.svg"
+    },
+    {
+      "name": "Mail",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Mail.svg",
+      "fileName": "Mail.svg"
+    },
+    {
+      "name": "Map",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Map.svg",
+      "fileName": "Map.svg"
+    },
+    {
+      "name": "Megaphone Loud",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Megaphone Loud.svg",
+      "fileName": "Megaphone Loud.svg"
+    },
+    {
+      "name": "Merge",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Merge.svg",
+      "fileName": "Merge.svg"
+    },
+    {
+      "name": "Notebook",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Notebook.svg",
+      "fileName": "Notebook.svg"
+    },
+    {
+      "name": "Number Circle 1",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Number Circle 1.svg",
+      "fileName": "Number Circle 1.svg"
+    },
+    {
+      "name": "Number Circle 2",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Number Circle 2.svg",
+      "fileName": "Number Circle 2.svg"
+    },
+    {
+      "name": "Number Circle 3",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Number Circle 3.svg",
+      "fileName": "Number Circle 3.svg"
+    },
+    {
+      "name": "Number Circle 4",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Number Circle 4.svg",
+      "fileName": "Number Circle 4.svg"
+    },
+    {
+      "name": "Organization Horizontal",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Organization Horizontal.svg",
+      "fileName": "Organization Horizontal.svg"
+    },
+    {
+      "name": "Organization",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Organization.svg",
+      "fileName": "Organization.svg"
+    },
+    {
+      "name": "Panel Left Header Key",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Panel Left Header Key.svg",
+      "fileName": "Panel Left Header Key.svg"
+    },
+    {
+      "name": "Panel Left Header",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Panel Left Header.svg",
+      "fileName": "Panel Left Header.svg"
+    },
+    {
+      "name": "Payment",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Payment.svg",
+      "fileName": "Payment.svg"
+    },
+    {
+      "name": "People Audience",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/People Audience.svg",
+      "fileName": "People Audience.svg"
+    },
+    {
+      "name": "People Community",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/People Community.svg",
+      "fileName": "People Community.svg"
+    },
+    {
+      "name": "People Settings",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/People Settings.svg",
+      "fileName": "People Settings.svg"
+    },
+    {
+      "name": "People Team",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/People Team.svg",
+      "fileName": "People Team.svg"
+    },
+    {
+      "name": "People",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/People.svg",
+      "fileName": "People.svg"
+    },
+    {
+      "name": "Person Accounts",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Person Accounts.svg",
+      "fileName": "Person Accounts.svg"
+    },
+    {
+      "name": "Person Desktop",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Person Desktop.svg",
+      "fileName": "Person Desktop.svg"
+    },
+    {
+      "name": "Person Settings",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Person Settings.svg",
+      "fileName": "Person Settings.svg"
+    },
+    {
+      "name": "Person Square",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Person Square.svg",
+      "fileName": "Person Square.svg"
+    },
+    {
+      "name": "Person Wrench",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Person Wrench.svg",
+      "fileName": "Person Wrench.svg"
+    },
+    {
+      "name": "Person",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Person.svg",
+      "fileName": "Person.svg"
+    },
+    {
+      "name": "Phone Desktop",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Phone Desktop.svg",
+      "fileName": "Phone Desktop.svg"
+    },
+    {
+      "name": "Phone Laptop",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Phone Laptop.svg",
+      "fileName": "Phone Laptop.svg"
+    },
+    {
+      "name": "Phone Tablet",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Phone Tablet.svg",
+      "fileName": "Phone Tablet.svg"
+    },
+    {
+      "name": "Phone Update",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Phone Update.svg",
+      "fileName": "Phone Update.svg"
+    },
+    {
+      "name": "Phone",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Phone.svg",
+      "fileName": "Phone.svg"
+    },
+    {
+      "name": "Presenter",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Presenter.svg",
+      "fileName": "Presenter.svg"
+    },
+    {
+      "name": "Question Circle",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Question Circle.svg",
+      "fileName": "Question Circle.svg"
+    },
+    {
+      "name": "Radar",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Radar.svg",
+      "fileName": "Radar.svg"
+    },
+    {
+      "name": "Receipt",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Receipt.svg",
+      "fileName": "Receipt.svg"
+    },
+    {
+      "name": "Ribbon Star",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Ribbon Star.svg",
+      "fileName": "Ribbon Star.svg"
+    },
+    {
+      "name": "Ribbon",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Ribbon.svg",
+      "fileName": "Ribbon.svg"
+    },
+    {
+      "name": "Road Cone",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Road Cone.svg",
+      "fileName": "Road Cone.svg"
+    },
+    {
+      "name": "Script",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Script.svg",
+      "fileName": "Script.svg"
+    },
+    {
+      "name": "Search",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Search.svg",
+      "fileName": "Search.svg"
+    },
+    {
+      "name": "Select All",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Select All.svg",
+      "fileName": "Select All.svg"
+    },
+    {
+      "name": "Settings Cog Multiple",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Settings Cog Multiple.svg",
+      "fileName": "Settings Cog Multiple.svg"
+    },
+    {
+      "name": "Settings",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Settings.svg",
+      "fileName": "Settings.svg"
+    },
+    {
+      "name": "Shapes Three",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Shapes Three.svg",
+      "fileName": "Shapes Three.svg"
+    },
+    {
+      "name": "Share Screen Person Overlay",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Share Screen Person Overlay.svg",
+      "fileName": "Share Screen Person Overlay.svg"
+    },
+    {
+      "name": "Share Screen Person",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Share Screen Person.svg",
+      "fileName": "Share Screen Person.svg"
+    },
+    {
+      "name": "Share",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Share.svg",
+      "fileName": "Share.svg"
+    },
+    {
+      "name": "Shield Error",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Shield Error.svg",
+      "fileName": "Shield Error.svg"
+    },
+    {
+      "name": "Shifts Activity",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Shifts Activity.svg",
+      "fileName": "Shifts Activity.svg"
+    },
+    {
+      "name": "Shopping Bag",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Shopping Bag.svg",
+      "fileName": "Shopping Bag.svg"
+    },
+    {
+      "name": "Signature",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Signature.svg",
+      "fileName": "Signature.svg"
+    },
+    {
+      "name": "Slide Layout",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Slide Layout.svg",
+      "fileName": "Slide Layout.svg"
+    },
+    {
+      "name": "Tablet Laptop",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Tablet Laptop.svg",
+      "fileName": "Tablet Laptop.svg"
+    },
+    {
+      "name": "Tablet",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Tablet.svg",
+      "fileName": "Tablet.svg"
+    },
+    {
+      "name": "Tap",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Tap.svg",
+      "fileName": "Tap.svg"
+    },
+    {
+      "name": "Task List Square",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Task List Square.svg",
+      "fileName": "Task List Square.svg"
+    },
+    {
+      "name": "Text First Line",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Text First Line.svg",
+      "fileName": "Text First Line.svg"
+    },
+    {
+      "name": "Text Number List",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Text Number List.svg",
+      "fileName": "Text Number List.svg"
+    },
+    {
+      "name": "Toolbox",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Toolbox.svg",
+      "fileName": "Toolbox.svg"
+    },
+    {
+      "name": "Top Speed",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Top Speed.svg",
+      "fileName": "Top Speed.svg"
+    },
+    {
+      "name": "Video",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Video.svg",
+      "fileName": "Video.svg"
+    },
+    {
+      "name": "Wallet Credit Card",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Wallet Credit Card.svg",
+      "fileName": "Wallet Credit Card.svg"
+    },
+    {
+      "name": "Window Dev Edit",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Window Dev Edit.svg",
+      "fileName": "Window Dev Edit.svg"
+    },
+    {
+      "name": "Window Edit",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Window Edit.svg",
+      "fileName": "Window Edit.svg"
+    },
+    {
+      "name": "Window",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Window.svg",
+      "fileName": "Window.svg"
+    },
+    {
+      "name": "Wrench",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Wrench.svg",
+      "fileName": "Wrench.svg"
+    },
+    {
+      "name": "Apps List Detail",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Apps List Detail.svg",
+      "fileName": "Apps List Detail.svg"
+    },
+    {
+      "name": "Apps",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Apps.svg",
+      "fileName": "Apps.svg"
+    },
+    {
+      "name": "Arrow Circle Left",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Arrow Circle Left.svg",
+      "fileName": "Arrow Circle Left.svg"
+    },
+    {
+      "name": "Arrow Circle Right",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Arrow Circle Right.svg",
+      "fileName": "Arrow Circle Right.svg"
+    },
+    {
+      "name": "Arrow Clockwise",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Arrow Clockwise.svg",
+      "fileName": "Arrow Clockwise.svg"
+    },
+    {
+      "name": "Arrow Down",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Arrow Down.svg",
+      "fileName": "Arrow Down.svg"
+    },
+    {
+      "name": "Arrow Download",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Arrow Download.svg",
+      "fileName": "Arrow Download.svg"
+    },
+    {
+      "name": "Arrow Sync",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Arrow Sync.svg",
+      "fileName": "Arrow Sync.svg"
+    },
+    {
+      "name": "Arrow Upload",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Arrow Upload.svg",
+      "fileName": "Arrow Upload.svg"
+    },
+    {
+      "name": "Attach",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Attach.svg",
+      "fileName": "Attach.svg"
+    },
+    {
+      "name": "Book Contacts",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Book Contacts.svg",
+      "fileName": "Book Contacts.svg"
+    },
+    {
+      "name": "Bot",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Bot.svg",
+      "fileName": "Bot.svg"
+    },
+    {
+      "name": "Building Cloud",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Building Cloud.svg",
+      "fileName": "Building Cloud.svg"
+    },
+    {
+      "name": "Building Multiple",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Building Multiple.svg",
+      "fileName": "Building Multiple.svg"
+    },
+    {
+      "name": "Building People_Blue_Light",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Building People_Blue_Light.svg",
+      "fileName": "Building People_Blue_Light.svg"
+    },
+    {
+      "name": "Building Retail",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Building Retail.svg",
+      "fileName": "Building Retail.svg"
+    },
+    {
+      "name": "Building",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Building.svg",
+      "fileName": "Building.svg"
+    },
+    {
+      "name": "Calculator",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Calculator.svg",
+      "fileName": "Calculator.svg"
+    },
+    {
+      "name": "Calendar Month",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Calendar Month.svg",
+      "fileName": "Calendar Month.svg"
+    },
+    {
+      "name": "Call",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Call.svg",
+      "fileName": "Call.svg"
+    },
+    {
+      "name": "Camera",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Camera.svg",
+      "fileName": "Camera.svg"
+    },
+    {
+      "name": "Cart",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Cart.svg",
+      "fileName": "Cart.svg"
+    },
+    {
+      "name": "Certificate",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Certificate.svg",
+      "fileName": "Certificate.svg"
+    },
+    {
+      "name": "Chart Multiple",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Chart Multiple.svg",
+      "fileName": "Chart Multiple.svg"
+    },
+    {
+      "name": "Chat Multiple",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Chat Multiple.svg",
+      "fileName": "Chat Multiple.svg"
+    },
+    {
+      "name": "Chat",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Chat.svg",
+      "fileName": "Chat.svg"
+    },
+    {
+      "name": "Check",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Check.svg",
+      "fileName": "Check.svg"
+    },
+    {
+      "name": "Checkmark Circle",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Checkmark Circle.svg",
+      "fileName": "Checkmark Circle.svg"
+    },
+    {
+      "name": "Chevron Circle",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Chevron Circle.svg",
+      "fileName": "Chevron Circle.svg"
+    },
+    {
+      "name": "Clipboard Task List",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Clipboard Task List.svg",
+      "fileName": "Clipboard Task List.svg"
+    },
+    {
+      "name": "Clock Alarm",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Clock Alarm.svg",
+      "fileName": "Clock Alarm.svg"
+    },
+    {
+      "name": "Clock",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Clock.svg",
+      "fileName": "Clock.svg"
+    },
+    {
+      "name": "Cloud Add",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Cloud Add.svg",
+      "fileName": "Cloud Add.svg"
+    },
+    {
+      "name": "Cloud Arrow Down",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Cloud Arrow Down.svg",
+      "fileName": "Cloud Arrow Down.svg"
+    },
+    {
+      "name": "Cloud Arrow Up",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Cloud Arrow Up.svg",
+      "fileName": "Cloud Arrow Up.svg"
+    },
+    {
+      "name": "Cloud Beaker",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Cloud Beaker.svg",
+      "fileName": "Cloud Beaker.svg"
+    },
+    {
+      "name": "Cloud Cube",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Cloud Cube.svg",
+      "fileName": "Cloud Cube.svg"
+    },
+    {
+      "name": "Cloud Database",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Cloud Database.svg",
+      "fileName": "Cloud Database.svg"
+    },
+    {
+      "name": "Cloud Desktop",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Cloud Desktop.svg",
+      "fileName": "Cloud Desktop.svg"
+    },
+    {
+      "name": "Cloud",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Cloud.svg",
+      "fileName": "Cloud.svg"
+    },
+    {
+      "name": "Code",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Code.svg",
+      "fileName": "Code.svg"
+    },
+    {
+      "name": "Column Arrow Right",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Column Arrow Right.svg",
+      "fileName": "Column Arrow Right.svg"
+    },
+    {
+      "name": "Comment Multiple",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Comment Multiple.svg",
+      "fileName": "Comment Multiple.svg"
+    },
+    {
+      "name": "Comment",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Comment.svg",
+      "fileName": "Comment.svg"
+    },
+    {
+      "name": "Data Area",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Data Area.svg",
+      "fileName": "Data Area.svg"
+    },
+    {
+      "name": "Data Bar Vertical",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Data Bar Vertical.svg",
+      "fileName": "Data Bar Vertical.svg"
+    },
+    {
+      "name": "Data Pie",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Data Pie.svg",
+      "fileName": "Data Pie.svg"
+    },
+    {
+      "name": "Data Trending (1)",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Data Trending (1).svg",
+      "fileName": "Data Trending (1).svg"
+    },
+    {
+      "name": "Data Trending",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Data Trending.svg",
+      "fileName": "Data Trending.svg"
+    },
+    {
+      "name": "Data Usage",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Data Usage.svg",
+      "fileName": "Data Usage.svg"
+    },
+    {
+      "name": "Database",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Database.svg",
+      "fileName": "Database.svg"
+    },
+    {
+      "name": "Deploy",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Deploy.svg",
+      "fileName": "Deploy.svg"
+    },
+    {
+      "name": "Desktop Arrow Down",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Desktop Arrow Down.svg",
+      "fileName": "Desktop Arrow Down.svg"
+    },
+    {
+      "name": "Desktop Tower",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Desktop Tower.svg",
+      "fileName": "Desktop Tower.svg"
+    },
+    {
+      "name": "Dismiss Circle",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Dismiss Circle.svg",
+      "fileName": "Dismiss Circle.svg"
+    },
+    {
+      "name": "Document Bullet List Multiple",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Document Bullet List Multiple.svg",
+      "fileName": "Document Bullet List Multiple.svg"
+    },
+    {
+      "name": "Document Bullet List",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Document Bullet List.svg",
+      "fileName": "Document Bullet List.svg"
+    },
+    {
+      "name": "Document Key",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Document Key.svg",
+      "fileName": "Document Key.svg"
+    },
+    {
+      "name": "Document Lock",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Document Lock.svg",
+      "fileName": "Document Lock.svg"
+    },
+    {
+      "name": "Document Multiple",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Document Multiple.svg",
+      "fileName": "Document Multiple.svg"
+    },
+    {
+      "name": "Document One Page",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Document One Page.svg",
+      "fileName": "Document One Page.svg"
+    },
+    {
+      "name": "Document Text",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Document Text.svg",
+      "fileName": "Document Text.svg"
+    },
+    {
+      "name": "Document",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Document.svg",
+      "fileName": "Document.svg"
+    },
+    {
+      "name": "Edit",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Edit.svg",
+      "fileName": "Edit.svg"
+    },
+    {
+      "name": "Filmstrip Play",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Filmstrip Play.svg",
+      "fileName": "Filmstrip Play.svg"
+    },
+    {
+      "name": "Fingerprint",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Fingerprint.svg",
+      "fileName": "Fingerprint.svg"
+    },
+    {
+      "name": "Flag",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Flag.svg",
+      "fileName": "Flag.svg"
+    },
+    {
+      "name": "Folder Multiple",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Folder Multiple.svg",
+      "fileName": "Folder Multiple.svg"
+    },
+    {
+      "name": "Folder Open Vertical",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Folder Open Vertical.svg",
+      "fileName": "Folder Open Vertical.svg"
+    },
+    {
+      "name": "Folder Open",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Folder Open.svg",
+      "fileName": "Folder Open.svg"
+    },
+    {
+      "name": "Folder People",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Folder People.svg",
+      "fileName": "Folder People.svg"
+    },
+    {
+      "name": "Globe",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Globe.svg",
+      "fileName": "Globe.svg"
+    },
+    {
+      "name": "Grid Circles",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Grid Circles.svg",
+      "fileName": "Grid Circles.svg"
+    },
+    {
+      "name": "Handshake",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Handshake.svg",
+      "fileName": "Handshake.svg"
+    },
+    {
+      "name": "Hat Graduation",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Hat Graduation.svg",
+      "fileName": "Hat Graduation.svg"
+    },
+    {
+      "name": "Headset",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Headset.svg",
+      "fileName": "Headset.svg"
+    },
+    {
+      "name": "Heart Pulse",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Heart Pulse.svg",
+      "fileName": "Heart Pulse.svg"
+    },
+    {
+      "name": "Heart",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Heart.svg",
+      "fileName": "Heart.svg"
+    },
+    {
+      "name": "Image",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Image.svg",
+      "fileName": "Image.svg"
+    },
+    {
+      "name": "Key",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Key.svg",
+      "fileName": "Key.svg"
+    },
+    {
+      "name": "Laptop",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Laptop.svg",
+      "fileName": "Laptop.svg"
+    },
+    {
+      "name": "Layer Diagonal",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Layer Diagonal.svg",
+      "fileName": "Layer Diagonal.svg"
+    },
+    {
+      "name": "Lightbulb Checkmark",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Lightbulb Checkmark.svg",
+      "fileName": "Lightbulb Checkmark.svg"
+    },
+    {
+      "name": "Lightbulb",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Lightbulb.svg",
+      "fileName": "Lightbulb.svg"
+    },
+    {
+      "name": "Lock Closed",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Lock Closed.svg",
+      "fileName": "Lock Closed.svg"
+    },
+    {
+      "name": "Lock Shield",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Lock Shield.svg",
+      "fileName": "Lock Shield.svg"
+    },
+    {
+      "name": "Mail Alert",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Mail Alert.svg",
+      "fileName": "Mail Alert.svg"
+    },
+    {
+      "name": "Mail Attach",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Mail Attach.svg",
+      "fileName": "Mail Attach.svg"
+    },
+    {
+      "name": "Mail Error",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Mail Error.svg",
+      "fileName": "Mail Error.svg"
+    },
+    {
+      "name": "Mail Read",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Mail Read.svg",
+      "fileName": "Mail Read.svg"
+    },
+    {
+      "name": "Mail",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Mail.svg",
+      "fileName": "Mail.svg"
+    },
+    {
+      "name": "Map",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Map.svg",
+      "fileName": "Map.svg"
+    },
+    {
+      "name": "Megaphone Loud",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Megaphone Loud.svg",
+      "fileName": "Megaphone Loud.svg"
+    },
+    {
+      "name": "Merge",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Merge.svg",
+      "fileName": "Merge.svg"
+    },
+    {
+      "name": "Notebook",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Notebook.svg",
+      "fileName": "Notebook.svg"
+    },
+    {
+      "name": "Number Circle 1",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Number Circle 1.svg",
+      "fileName": "Number Circle 1.svg"
+    },
+    {
+      "name": "Number Circle 2",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Number Circle 2.svg",
+      "fileName": "Number Circle 2.svg"
+    },
+    {
+      "name": "Number Circle 3",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Number Circle 3.svg",
+      "fileName": "Number Circle 3.svg"
+    },
+    {
+      "name": "Number Circle 4",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Number Circle 4.svg",
+      "fileName": "Number Circle 4.svg"
+    },
+    {
+      "name": "Organization Horizontal",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Organization Horizontal.svg",
+      "fileName": "Organization Horizontal.svg"
+    },
+    {
+      "name": "Organization",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Organization.svg",
+      "fileName": "Organization.svg"
+    },
+    {
+      "name": "Panel Left Header Key",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Panel Left Header Key.svg",
+      "fileName": "Panel Left Header Key.svg"
+    },
+    {
+      "name": "Panel Left Header",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Panel Left Header.svg",
+      "fileName": "Panel Left Header.svg"
+    },
+    {
+      "name": "Payment",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Payment.svg",
+      "fileName": "Payment.svg"
+    },
+    {
+      "name": "People Audience",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/People Audience.svg",
+      "fileName": "People Audience.svg"
+    },
+    {
+      "name": "People Community",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/People Community.svg",
+      "fileName": "People Community.svg"
+    },
+    {
+      "name": "People Settings",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/People Settings.svg",
+      "fileName": "People Settings.svg"
+    },
+    {
+      "name": "People Team",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/People Team.svg",
+      "fileName": "People Team.svg"
+    },
+    {
+      "name": "People",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/People.svg",
+      "fileName": "People.svg"
+    },
+    {
+      "name": "Person Accounts",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Person Accounts.svg",
+      "fileName": "Person Accounts.svg"
+    },
+    {
+      "name": "Person Desktop",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Person Desktop.svg",
+      "fileName": "Person Desktop.svg"
+    },
+    {
+      "name": "Person Settings",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Person Settings.svg",
+      "fileName": "Person Settings.svg"
+    },
+    {
+      "name": "Person Square",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Person Square.svg",
+      "fileName": "Person Square.svg"
+    },
+    {
+      "name": "Person Wrench",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Person Wrench.svg",
+      "fileName": "Person Wrench.svg"
+    },
+    {
+      "name": "Person",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Person.svg",
+      "fileName": "Person.svg"
+    },
+    {
+      "name": "Phone Desktop",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Phone Desktop.svg",
+      "fileName": "Phone Desktop.svg"
+    },
+    {
+      "name": "Phone Laptop",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Phone Laptop.svg",
+      "fileName": "Phone Laptop.svg"
+    },
+    {
+      "name": "Phone Tablet",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Phone Tablet.svg",
+      "fileName": "Phone Tablet.svg"
+    },
+    {
+      "name": "Phone Update",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Phone Update.svg",
+      "fileName": "Phone Update.svg"
+    },
+    {
+      "name": "Phone",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Phone.svg",
+      "fileName": "Phone.svg"
+    },
+    {
+      "name": "Presenter",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Presenter.svg",
+      "fileName": "Presenter.svg"
+    },
+    {
+      "name": "Question Circle",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Question Circle.svg",
+      "fileName": "Question Circle.svg"
+    },
+    {
+      "name": "Radar",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Radar.svg",
+      "fileName": "Radar.svg"
+    },
+    {
+      "name": "Receipt",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Receipt.svg",
+      "fileName": "Receipt.svg"
+    },
+    {
+      "name": "Ribbon Star",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Ribbon Star.svg",
+      "fileName": "Ribbon Star.svg"
+    },
+    {
+      "name": "Ribbon",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Ribbon.svg",
+      "fileName": "Ribbon.svg"
+    },
+    {
+      "name": "Road Cone",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Road Cone.svg",
+      "fileName": "Road Cone.svg"
+    },
+    {
+      "name": "Script",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Script.svg",
+      "fileName": "Script.svg"
+    },
+    {
+      "name": "Search",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Search.svg",
+      "fileName": "Search.svg"
+    },
+    {
+      "name": "Select All",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Select All.svg",
+      "fileName": "Select All.svg"
+    },
+    {
+      "name": "Settings Cog Multiple",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Settings Cog Multiple.svg",
+      "fileName": "Settings Cog Multiple.svg"
+    },
+    {
+      "name": "Settings",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Settings.svg",
+      "fileName": "Settings.svg"
+    },
+    {
+      "name": "Shapes Three",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Shapes Three.svg",
+      "fileName": "Shapes Three.svg"
+    },
+    {
+      "name": "Share Screen Person Overlay",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Share Screen Person Overlay.svg",
+      "fileName": "Share Screen Person Overlay.svg"
+    },
+    {
+      "name": "Share Screen Person",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Share Screen Person.svg",
+      "fileName": "Share Screen Person.svg"
+    },
+    {
+      "name": "Share",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Share.svg",
+      "fileName": "Share.svg"
+    },
+    {
+      "name": "Shield Error",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Shield Error.svg",
+      "fileName": "Shield Error.svg"
+    },
+    {
+      "name": "Shifts Activity",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Shifts Activity.svg",
+      "fileName": "Shifts Activity.svg"
+    },
+    {
+      "name": "Shopping Bag",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Shopping Bag.svg",
+      "fileName": "Shopping Bag.svg"
+    },
+    {
+      "name": "Signature",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Signature.svg",
+      "fileName": "Signature.svg"
+    },
+    {
+      "name": "Slide Layout",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Slide Layout.svg",
+      "fileName": "Slide Layout.svg"
+    },
+    {
+      "name": "Tablet Laptop",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Tablet Laptop.svg",
+      "fileName": "Tablet Laptop.svg"
+    },
+    {
+      "name": "Tablet",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Tablet.svg",
+      "fileName": "Tablet.svg"
+    },
+    {
+      "name": "Tap",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Tap.svg",
+      "fileName": "Tap.svg"
+    },
+    {
+      "name": "Task List Square",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Task List Square.svg",
+      "fileName": "Task List Square.svg"
+    },
+    {
+      "name": "Text First Line",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Text First Line.svg",
+      "fileName": "Text First Line.svg"
+    },
+    {
+      "name": "Text Number List",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Text Number List.svg",
+      "fileName": "Text Number List.svg"
+    },
+    {
+      "name": "Toolbox",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Toolbox.svg",
+      "fileName": "Toolbox.svg"
+    },
+    {
+      "name": "Top Speed",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Top Speed.svg",
+      "fileName": "Top Speed.svg"
+    },
+    {
+      "name": "Video",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Video.svg",
+      "fileName": "Video.svg"
+    },
+    {
+      "name": "Wallet Credit Card",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Wallet Credit Card.svg",
+      "fileName": "Wallet Credit Card.svg"
+    },
+    {
+      "name": "Window Dev Edit",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Window Dev Edit.svg",
+      "fileName": "Window Dev Edit.svg"
+    },
+    {
+      "name": "Window Edit",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Window Edit.svg",
+      "fileName": "Window Edit.svg"
+    },
+    {
+      "name": "Window",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Window.svg",
+      "fileName": "Window.svg"
+    },
+    {
+      "name": "Wrench",
+      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Wrench.svg",
+      "fileName": "Wrench.svg"
+    },
+    {
       "name": "Organization_Dark",
       "path": "/icons/microsoft365/SharePoint Teal/48x48 SVG Icon/Organization_Dark.svg",
       "fileName": "Organization_Dark.svg"
@@ -2243,2391 +4568,6 @@
       "fileName": "Tap_Light.svg"
     },
     {
-      "name": "Apps List Detail",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Apps List Detail.svg",
-      "fileName": "Apps List Detail.svg"
-    },
-    {
-      "name": "Apps",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Apps.svg",
-      "fileName": "Apps.svg"
-    },
-    {
-      "name": "Arrow Circle Left",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Arrow Circle Left.svg",
-      "fileName": "Arrow Circle Left.svg"
-    },
-    {
-      "name": "Arrow Circle Right",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Arrow Circle Right.svg",
-      "fileName": "Arrow Circle Right.svg"
-    },
-    {
-      "name": "Arrow Clockwise",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Arrow Clockwise.svg",
-      "fileName": "Arrow Clockwise.svg"
-    },
-    {
-      "name": "Arrow Down",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Arrow Down.svg",
-      "fileName": "Arrow Down.svg"
-    },
-    {
-      "name": "Arrow Download",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Arrow Download.svg",
-      "fileName": "Arrow Download.svg"
-    },
-    {
-      "name": "Arrow Sync",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Arrow Sync.svg",
-      "fileName": "Arrow Sync.svg"
-    },
-    {
-      "name": "Arrow Upload",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Arrow Upload.svg",
-      "fileName": "Arrow Upload.svg"
-    },
-    {
-      "name": "Attach",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Attach.svg",
-      "fileName": "Attach.svg"
-    },
-    {
-      "name": "Book Contacts",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Book Contacts.svg",
-      "fileName": "Book Contacts.svg"
-    },
-    {
-      "name": "Bot",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Bot.svg",
-      "fileName": "Bot.svg"
-    },
-    {
-      "name": "Building Cloud",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Building Cloud.svg",
-      "fileName": "Building Cloud.svg"
-    },
-    {
-      "name": "Building Multiple",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Building Multiple.svg",
-      "fileName": "Building Multiple.svg"
-    },
-    {
-      "name": "Building People_Blue_Gray",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Building People_Blue_Gray.svg",
-      "fileName": "Building People_Blue_Gray.svg"
-    },
-    {
-      "name": "Building Retail",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Building Retail.svg",
-      "fileName": "Building Retail.svg"
-    },
-    {
-      "name": "Building",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Building.svg",
-      "fileName": "Building.svg"
-    },
-    {
-      "name": "Calculator",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Calculator.svg",
-      "fileName": "Calculator.svg"
-    },
-    {
-      "name": "Calendar Month",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Calendar Month.svg",
-      "fileName": "Calendar Month.svg"
-    },
-    {
-      "name": "Call",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Call.svg",
-      "fileName": "Call.svg"
-    },
-    {
-      "name": "Camera",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Camera.svg",
-      "fileName": "Camera.svg"
-    },
-    {
-      "name": "Cart",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Cart.svg",
-      "fileName": "Cart.svg"
-    },
-    {
-      "name": "Certificate",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Certificate.svg",
-      "fileName": "Certificate.svg"
-    },
-    {
-      "name": "Chart Multiple",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Chart Multiple.svg",
-      "fileName": "Chart Multiple.svg"
-    },
-    {
-      "name": "Chat Multiple",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Chat Multiple.svg",
-      "fileName": "Chat Multiple.svg"
-    },
-    {
-      "name": "Chat",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Chat.svg",
-      "fileName": "Chat.svg"
-    },
-    {
-      "name": "Check",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Check.svg",
-      "fileName": "Check.svg"
-    },
-    {
-      "name": "Checkmark Circle",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Checkmark Circle.svg",
-      "fileName": "Checkmark Circle.svg"
-    },
-    {
-      "name": "Chevron Circle",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Chevron Circle.svg",
-      "fileName": "Chevron Circle.svg"
-    },
-    {
-      "name": "Clipboard Task List",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Clipboard Task List.svg",
-      "fileName": "Clipboard Task List.svg"
-    },
-    {
-      "name": "Clock Alarm",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Clock Alarm.svg",
-      "fileName": "Clock Alarm.svg"
-    },
-    {
-      "name": "Clock",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Clock.svg",
-      "fileName": "Clock.svg"
-    },
-    {
-      "name": "Cloud Add",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Cloud Add.svg",
-      "fileName": "Cloud Add.svg"
-    },
-    {
-      "name": "Cloud Arrow Down",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Cloud Arrow Down.svg",
-      "fileName": "Cloud Arrow Down.svg"
-    },
-    {
-      "name": "Cloud Arrow Up",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Cloud Arrow Up.svg",
-      "fileName": "Cloud Arrow Up.svg"
-    },
-    {
-      "name": "Cloud Beaker",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Cloud Beaker.svg",
-      "fileName": "Cloud Beaker.svg"
-    },
-    {
-      "name": "Cloud Cube",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Cloud Cube.svg",
-      "fileName": "Cloud Cube.svg"
-    },
-    {
-      "name": "Cloud Database",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Cloud Database.svg",
-      "fileName": "Cloud Database.svg"
-    },
-    {
-      "name": "Cloud Desktop",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Cloud Desktop.svg",
-      "fileName": "Cloud Desktop.svg"
-    },
-    {
-      "name": "Cloud",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Cloud.svg",
-      "fileName": "Cloud.svg"
-    },
-    {
-      "name": "Code",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Code.svg",
-      "fileName": "Code.svg"
-    },
-    {
-      "name": "Column Arrow Right",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Column Arrow Right.svg",
-      "fileName": "Column Arrow Right.svg"
-    },
-    {
-      "name": "Comment Multiple",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Comment Multiple.svg",
-      "fileName": "Comment Multiple.svg"
-    },
-    {
-      "name": "Comment",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Comment.svg",
-      "fileName": "Comment.svg"
-    },
-    {
-      "name": "Data Area",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Data Area.svg",
-      "fileName": "Data Area.svg"
-    },
-    {
-      "name": "Data Bar Vertical",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Data Bar Vertical.svg",
-      "fileName": "Data Bar Vertical.svg"
-    },
-    {
-      "name": "Data Pie",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Data Pie.svg",
-      "fileName": "Data Pie.svg"
-    },
-    {
-      "name": "Data Trending (1)",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Data Trending (1).svg",
-      "fileName": "Data Trending (1).svg"
-    },
-    {
-      "name": "Data Trending",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Data Trending.svg",
-      "fileName": "Data Trending.svg"
-    },
-    {
-      "name": "Data Usage",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Data Usage.svg",
-      "fileName": "Data Usage.svg"
-    },
-    {
-      "name": "Database",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Database.svg",
-      "fileName": "Database.svg"
-    },
-    {
-      "name": "Deploy",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Deploy.svg",
-      "fileName": "Deploy.svg"
-    },
-    {
-      "name": "Desktop Arrow Down",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Desktop Arrow Down.svg",
-      "fileName": "Desktop Arrow Down.svg"
-    },
-    {
-      "name": "Desktop Tower",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Desktop Tower.svg",
-      "fileName": "Desktop Tower.svg"
-    },
-    {
-      "name": "Dismiss Circle",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Dismiss Circle.svg",
-      "fileName": "Dismiss Circle.svg"
-    },
-    {
-      "name": "Document Bullet List Multiple",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Document Bullet List Multiple.svg",
-      "fileName": "Document Bullet List Multiple.svg"
-    },
-    {
-      "name": "Document Bullet List",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Document Bullet List.svg",
-      "fileName": "Document Bullet List.svg"
-    },
-    {
-      "name": "Document Key",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Document Key.svg",
-      "fileName": "Document Key.svg"
-    },
-    {
-      "name": "Document Lock",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Document Lock.svg",
-      "fileName": "Document Lock.svg"
-    },
-    {
-      "name": "Document Multiple",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Document Multiple.svg",
-      "fileName": "Document Multiple.svg"
-    },
-    {
-      "name": "Document One Page",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Document One Page.svg",
-      "fileName": "Document One Page.svg"
-    },
-    {
-      "name": "Document Text",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Document Text.svg",
-      "fileName": "Document Text.svg"
-    },
-    {
-      "name": "Document",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Document.svg",
-      "fileName": "Document.svg"
-    },
-    {
-      "name": "Edit",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Edit.svg",
-      "fileName": "Edit.svg"
-    },
-    {
-      "name": "Filmstrip Play",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Filmstrip Play.svg",
-      "fileName": "Filmstrip Play.svg"
-    },
-    {
-      "name": "Fingerprint",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Fingerprint.svg",
-      "fileName": "Fingerprint.svg"
-    },
-    {
-      "name": "Flag",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Flag.svg",
-      "fileName": "Flag.svg"
-    },
-    {
-      "name": "Folder Multiple",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Folder Multiple.svg",
-      "fileName": "Folder Multiple.svg"
-    },
-    {
-      "name": "Folder Open Vertical",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Folder Open Vertical.svg",
-      "fileName": "Folder Open Vertical.svg"
-    },
-    {
-      "name": "Folder Open",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Folder Open.svg",
-      "fileName": "Folder Open.svg"
-    },
-    {
-      "name": "Folder People",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Folder People.svg",
-      "fileName": "Folder People.svg"
-    },
-    {
-      "name": "Globe",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Globe.svg",
-      "fileName": "Globe.svg"
-    },
-    {
-      "name": "Grid Circles",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Grid Circles.svg",
-      "fileName": "Grid Circles.svg"
-    },
-    {
-      "name": "Handshake",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Handshake.svg",
-      "fileName": "Handshake.svg"
-    },
-    {
-      "name": "Hat Graduation",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Hat Graduation.svg",
-      "fileName": "Hat Graduation.svg"
-    },
-    {
-      "name": "Headset",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Headset.svg",
-      "fileName": "Headset.svg"
-    },
-    {
-      "name": "Heart Pulse",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Heart Pulse.svg",
-      "fileName": "Heart Pulse.svg"
-    },
-    {
-      "name": "Heart",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Heart.svg",
-      "fileName": "Heart.svg"
-    },
-    {
-      "name": "Image",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Image.svg",
-      "fileName": "Image.svg"
-    },
-    {
-      "name": "Key",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Key.svg",
-      "fileName": "Key.svg"
-    },
-    {
-      "name": "Laptop",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Laptop.svg",
-      "fileName": "Laptop.svg"
-    },
-    {
-      "name": "Layer Diagonal",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Layer Diagonal.svg",
-      "fileName": "Layer Diagonal.svg"
-    },
-    {
-      "name": "Lightbulb Checkmark",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Lightbulb Checkmark.svg",
-      "fileName": "Lightbulb Checkmark.svg"
-    },
-    {
-      "name": "Lightbulb",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Lightbulb.svg",
-      "fileName": "Lightbulb.svg"
-    },
-    {
-      "name": "Lock Closed",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Lock Closed.svg",
-      "fileName": "Lock Closed.svg"
-    },
-    {
-      "name": "Lock Shield",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Lock Shield.svg",
-      "fileName": "Lock Shield.svg"
-    },
-    {
-      "name": "Mail Alert",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Mail Alert.svg",
-      "fileName": "Mail Alert.svg"
-    },
-    {
-      "name": "Mail Attach",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Mail Attach.svg",
-      "fileName": "Mail Attach.svg"
-    },
-    {
-      "name": "Mail Error",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Mail Error.svg",
-      "fileName": "Mail Error.svg"
-    },
-    {
-      "name": "Mail Read",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Mail Read.svg",
-      "fileName": "Mail Read.svg"
-    },
-    {
-      "name": "Mail",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Mail.svg",
-      "fileName": "Mail.svg"
-    },
-    {
-      "name": "Map",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Map.svg",
-      "fileName": "Map.svg"
-    },
-    {
-      "name": "Megaphone Loud",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Megaphone Loud.svg",
-      "fileName": "Megaphone Loud.svg"
-    },
-    {
-      "name": "Merge",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Merge.svg",
-      "fileName": "Merge.svg"
-    },
-    {
-      "name": "Notebook",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Notebook.svg",
-      "fileName": "Notebook.svg"
-    },
-    {
-      "name": "Number Circle 1",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Number Circle 1.svg",
-      "fileName": "Number Circle 1.svg"
-    },
-    {
-      "name": "Number Circle 2",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Number Circle 2.svg",
-      "fileName": "Number Circle 2.svg"
-    },
-    {
-      "name": "Number Circle 3",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Number Circle 3.svg",
-      "fileName": "Number Circle 3.svg"
-    },
-    {
-      "name": "Number Circle 4",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Number Circle 4.svg",
-      "fileName": "Number Circle 4.svg"
-    },
-    {
-      "name": "Organization Horizontal",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Organization Horizontal.svg",
-      "fileName": "Organization Horizontal.svg"
-    },
-    {
-      "name": "Organization",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Organization.svg",
-      "fileName": "Organization.svg"
-    },
-    {
-      "name": "Panel Left Header Key",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Panel Left Header Key.svg",
-      "fileName": "Panel Left Header Key.svg"
-    },
-    {
-      "name": "Panel Left Header",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Panel Left Header.svg",
-      "fileName": "Panel Left Header.svg"
-    },
-    {
-      "name": "Payment",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Payment.svg",
-      "fileName": "Payment.svg"
-    },
-    {
-      "name": "People Audience",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/People Audience.svg",
-      "fileName": "People Audience.svg"
-    },
-    {
-      "name": "People Community",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/People Community.svg",
-      "fileName": "People Community.svg"
-    },
-    {
-      "name": "People Settings",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/People Settings.svg",
-      "fileName": "People Settings.svg"
-    },
-    {
-      "name": "People Team",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/People Team.svg",
-      "fileName": "People Team.svg"
-    },
-    {
-      "name": "People",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/People.svg",
-      "fileName": "People.svg"
-    },
-    {
-      "name": "Person Accounts",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Person Accounts.svg",
-      "fileName": "Person Accounts.svg"
-    },
-    {
-      "name": "Person Desktop",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Person Desktop.svg",
-      "fileName": "Person Desktop.svg"
-    },
-    {
-      "name": "Person Settings",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Person Settings.svg",
-      "fileName": "Person Settings.svg"
-    },
-    {
-      "name": "Person Square",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Person Square.svg",
-      "fileName": "Person Square.svg"
-    },
-    {
-      "name": "Person Wrench",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Person Wrench.svg",
-      "fileName": "Person Wrench.svg"
-    },
-    {
-      "name": "Person",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Person.svg",
-      "fileName": "Person.svg"
-    },
-    {
-      "name": "Phone Desktop",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Phone Desktop.svg",
-      "fileName": "Phone Desktop.svg"
-    },
-    {
-      "name": "Phone Laptop",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Phone Laptop.svg",
-      "fileName": "Phone Laptop.svg"
-    },
-    {
-      "name": "Phone Tablet",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Phone Tablet.svg",
-      "fileName": "Phone Tablet.svg"
-    },
-    {
-      "name": "Phone Update",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Phone Update.svg",
-      "fileName": "Phone Update.svg"
-    },
-    {
-      "name": "Phone",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Phone.svg",
-      "fileName": "Phone.svg"
-    },
-    {
-      "name": "Presenter",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Presenter.svg",
-      "fileName": "Presenter.svg"
-    },
-    {
-      "name": "Question Circle",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Question Circle.svg",
-      "fileName": "Question Circle.svg"
-    },
-    {
-      "name": "Radar",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Radar.svg",
-      "fileName": "Radar.svg"
-    },
-    {
-      "name": "Receipt",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Receipt.svg",
-      "fileName": "Receipt.svg"
-    },
-    {
-      "name": "Ribbon Star",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Ribbon Star.svg",
-      "fileName": "Ribbon Star.svg"
-    },
-    {
-      "name": "Ribbon",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Ribbon.svg",
-      "fileName": "Ribbon.svg"
-    },
-    {
-      "name": "Road Cone",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Road Cone.svg",
-      "fileName": "Road Cone.svg"
-    },
-    {
-      "name": "Script",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Script.svg",
-      "fileName": "Script.svg"
-    },
-    {
-      "name": "Search",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Search.svg",
-      "fileName": "Search.svg"
-    },
-    {
-      "name": "Select All",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Select All.svg",
-      "fileName": "Select All.svg"
-    },
-    {
-      "name": "Settings Cog Multiple",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Settings Cog Multiple.svg",
-      "fileName": "Settings Cog Multiple.svg"
-    },
-    {
-      "name": "Settings",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Settings.svg",
-      "fileName": "Settings.svg"
-    },
-    {
-      "name": "Shapes Three",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Shapes Three.svg",
-      "fileName": "Shapes Three.svg"
-    },
-    {
-      "name": "Share Screen Person Overlay",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Share Screen Person Overlay.svg",
-      "fileName": "Share Screen Person Overlay.svg"
-    },
-    {
-      "name": "Share Screen Person",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Share Screen Person.svg",
-      "fileName": "Share Screen Person.svg"
-    },
-    {
-      "name": "Share",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Share.svg",
-      "fileName": "Share.svg"
-    },
-    {
-      "name": "Shield Error",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Shield Error.svg",
-      "fileName": "Shield Error.svg"
-    },
-    {
-      "name": "Shifts Activity",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Shifts Activity.svg",
-      "fileName": "Shifts Activity.svg"
-    },
-    {
-      "name": "Shopping Bag",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Shopping Bag.svg",
-      "fileName": "Shopping Bag.svg"
-    },
-    {
-      "name": "Signature",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Signature.svg",
-      "fileName": "Signature.svg"
-    },
-    {
-      "name": "Slide Layout",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Slide Layout.svg",
-      "fileName": "Slide Layout.svg"
-    },
-    {
-      "name": "Tablet Laptop",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Tablet Laptop.svg",
-      "fileName": "Tablet Laptop.svg"
-    },
-    {
-      "name": "Tablet",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Tablet.svg",
-      "fileName": "Tablet.svg"
-    },
-    {
-      "name": "Tap",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Tap.svg",
-      "fileName": "Tap.svg"
-    },
-    {
-      "name": "Task List Square",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Task List Square.svg",
-      "fileName": "Task List Square.svg"
-    },
-    {
-      "name": "Text First Line",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Text First Line.svg",
-      "fileName": "Text First Line.svg"
-    },
-    {
-      "name": "Text Number List",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Text Number List.svg",
-      "fileName": "Text Number List.svg"
-    },
-    {
-      "name": "Toolbox",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Toolbox.svg",
-      "fileName": "Toolbox.svg"
-    },
-    {
-      "name": "Top Speed",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Top Speed.svg",
-      "fileName": "Top Speed.svg"
-    },
-    {
-      "name": "Video",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Video.svg",
-      "fileName": "Video.svg"
-    },
-    {
-      "name": "Wallet Credit Card",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Wallet Credit Card.svg",
-      "fileName": "Wallet Credit Card.svg"
-    },
-    {
-      "name": "Window Dev Edit",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Window Dev Edit.svg",
-      "fileName": "Window Dev Edit.svg"
-    },
-    {
-      "name": "Window Edit",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Window Edit.svg",
-      "fileName": "Window Edit.svg"
-    },
-    {
-      "name": "Window",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Window.svg",
-      "fileName": "Window.svg"
-    },
-    {
-      "name": "Wrench",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Grey & Blue Icon/Wrench.svg",
-      "fileName": "Wrench.svg"
-    },
-    {
-      "name": "Apps List Detail",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Apps List Detail.svg",
-      "fileName": "Apps List Detail.svg"
-    },
-    {
-      "name": "Apps",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Apps.svg",
-      "fileName": "Apps.svg"
-    },
-    {
-      "name": "Arrow Circle Left",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Arrow Circle Left.svg",
-      "fileName": "Arrow Circle Left.svg"
-    },
-    {
-      "name": "Arrow Circle Right",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Arrow Circle Right.svg",
-      "fileName": "Arrow Circle Right.svg"
-    },
-    {
-      "name": "Arrow Clockwise",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Arrow Clockwise.svg",
-      "fileName": "Arrow Clockwise.svg"
-    },
-    {
-      "name": "Arrow Down",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Arrow Down.svg",
-      "fileName": "Arrow Down.svg"
-    },
-    {
-      "name": "Arrow Download",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Arrow Download.svg",
-      "fileName": "Arrow Download.svg"
-    },
-    {
-      "name": "Arrow Sync",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Arrow Sync.svg",
-      "fileName": "Arrow Sync.svg"
-    },
-    {
-      "name": "Arrow Upload",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Arrow Upload.svg",
-      "fileName": "Arrow Upload.svg"
-    },
-    {
-      "name": "Attach",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Attach.svg",
-      "fileName": "Attach.svg"
-    },
-    {
-      "name": "Book Contacts",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Book Contacts.svg",
-      "fileName": "Book Contacts.svg"
-    },
-    {
-      "name": "Bot",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Bot.svg",
-      "fileName": "Bot.svg"
-    },
-    {
-      "name": "Building Cloud",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Building Cloud.svg",
-      "fileName": "Building Cloud.svg"
-    },
-    {
-      "name": "Building Multiple",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Building Multiple.svg",
-      "fileName": "Building Multiple.svg"
-    },
-    {
-      "name": "Building People_Blue_Light",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Building People_Blue_Light.svg",
-      "fileName": "Building People_Blue_Light.svg"
-    },
-    {
-      "name": "Building Retail",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Building Retail.svg",
-      "fileName": "Building Retail.svg"
-    },
-    {
-      "name": "Building",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Building.svg",
-      "fileName": "Building.svg"
-    },
-    {
-      "name": "Calculator",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Calculator.svg",
-      "fileName": "Calculator.svg"
-    },
-    {
-      "name": "Calendar Month",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Calendar Month.svg",
-      "fileName": "Calendar Month.svg"
-    },
-    {
-      "name": "Call",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Call.svg",
-      "fileName": "Call.svg"
-    },
-    {
-      "name": "Camera",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Camera.svg",
-      "fileName": "Camera.svg"
-    },
-    {
-      "name": "Cart",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Cart.svg",
-      "fileName": "Cart.svg"
-    },
-    {
-      "name": "Certificate",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Certificate.svg",
-      "fileName": "Certificate.svg"
-    },
-    {
-      "name": "Chart Multiple",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Chart Multiple.svg",
-      "fileName": "Chart Multiple.svg"
-    },
-    {
-      "name": "Chat Multiple",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Chat Multiple.svg",
-      "fileName": "Chat Multiple.svg"
-    },
-    {
-      "name": "Chat",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Chat.svg",
-      "fileName": "Chat.svg"
-    },
-    {
-      "name": "Check",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Check.svg",
-      "fileName": "Check.svg"
-    },
-    {
-      "name": "Checkmark Circle",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Checkmark Circle.svg",
-      "fileName": "Checkmark Circle.svg"
-    },
-    {
-      "name": "Chevron Circle",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Chevron Circle.svg",
-      "fileName": "Chevron Circle.svg"
-    },
-    {
-      "name": "Clipboard Task List",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Clipboard Task List.svg",
-      "fileName": "Clipboard Task List.svg"
-    },
-    {
-      "name": "Clock Alarm",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Clock Alarm.svg",
-      "fileName": "Clock Alarm.svg"
-    },
-    {
-      "name": "Clock",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Clock.svg",
-      "fileName": "Clock.svg"
-    },
-    {
-      "name": "Cloud Add",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Cloud Add.svg",
-      "fileName": "Cloud Add.svg"
-    },
-    {
-      "name": "Cloud Arrow Down",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Cloud Arrow Down.svg",
-      "fileName": "Cloud Arrow Down.svg"
-    },
-    {
-      "name": "Cloud Arrow Up",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Cloud Arrow Up.svg",
-      "fileName": "Cloud Arrow Up.svg"
-    },
-    {
-      "name": "Cloud Beaker",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Cloud Beaker.svg",
-      "fileName": "Cloud Beaker.svg"
-    },
-    {
-      "name": "Cloud Cube",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Cloud Cube.svg",
-      "fileName": "Cloud Cube.svg"
-    },
-    {
-      "name": "Cloud Database",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Cloud Database.svg",
-      "fileName": "Cloud Database.svg"
-    },
-    {
-      "name": "Cloud Desktop",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Cloud Desktop.svg",
-      "fileName": "Cloud Desktop.svg"
-    },
-    {
-      "name": "Cloud",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Cloud.svg",
-      "fileName": "Cloud.svg"
-    },
-    {
-      "name": "Code",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Code.svg",
-      "fileName": "Code.svg"
-    },
-    {
-      "name": "Column Arrow Right",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Column Arrow Right.svg",
-      "fileName": "Column Arrow Right.svg"
-    },
-    {
-      "name": "Comment Multiple",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Comment Multiple.svg",
-      "fileName": "Comment Multiple.svg"
-    },
-    {
-      "name": "Comment",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Comment.svg",
-      "fileName": "Comment.svg"
-    },
-    {
-      "name": "Data Area",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Data Area.svg",
-      "fileName": "Data Area.svg"
-    },
-    {
-      "name": "Data Bar Vertical",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Data Bar Vertical.svg",
-      "fileName": "Data Bar Vertical.svg"
-    },
-    {
-      "name": "Data Pie",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Data Pie.svg",
-      "fileName": "Data Pie.svg"
-    },
-    {
-      "name": "Data Trending (1)",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Data Trending (1).svg",
-      "fileName": "Data Trending (1).svg"
-    },
-    {
-      "name": "Data Trending",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Data Trending.svg",
-      "fileName": "Data Trending.svg"
-    },
-    {
-      "name": "Data Usage",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Data Usage.svg",
-      "fileName": "Data Usage.svg"
-    },
-    {
-      "name": "Database",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Database.svg",
-      "fileName": "Database.svg"
-    },
-    {
-      "name": "Deploy",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Deploy.svg",
-      "fileName": "Deploy.svg"
-    },
-    {
-      "name": "Desktop Arrow Down",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Desktop Arrow Down.svg",
-      "fileName": "Desktop Arrow Down.svg"
-    },
-    {
-      "name": "Desktop Tower",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Desktop Tower.svg",
-      "fileName": "Desktop Tower.svg"
-    },
-    {
-      "name": "Dismiss Circle",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Dismiss Circle.svg",
-      "fileName": "Dismiss Circle.svg"
-    },
-    {
-      "name": "Document Bullet List Multiple",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Document Bullet List Multiple.svg",
-      "fileName": "Document Bullet List Multiple.svg"
-    },
-    {
-      "name": "Document Bullet List",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Document Bullet List.svg",
-      "fileName": "Document Bullet List.svg"
-    },
-    {
-      "name": "Document Key",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Document Key.svg",
-      "fileName": "Document Key.svg"
-    },
-    {
-      "name": "Document Lock",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Document Lock.svg",
-      "fileName": "Document Lock.svg"
-    },
-    {
-      "name": "Document Multiple",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Document Multiple.svg",
-      "fileName": "Document Multiple.svg"
-    },
-    {
-      "name": "Document One Page",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Document One Page.svg",
-      "fileName": "Document One Page.svg"
-    },
-    {
-      "name": "Document Text",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Document Text.svg",
-      "fileName": "Document Text.svg"
-    },
-    {
-      "name": "Document",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Document.svg",
-      "fileName": "Document.svg"
-    },
-    {
-      "name": "Edit",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Edit.svg",
-      "fileName": "Edit.svg"
-    },
-    {
-      "name": "Filmstrip Play",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Filmstrip Play.svg",
-      "fileName": "Filmstrip Play.svg"
-    },
-    {
-      "name": "Fingerprint",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Fingerprint.svg",
-      "fileName": "Fingerprint.svg"
-    },
-    {
-      "name": "Flag",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Flag.svg",
-      "fileName": "Flag.svg"
-    },
-    {
-      "name": "Folder Multiple",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Folder Multiple.svg",
-      "fileName": "Folder Multiple.svg"
-    },
-    {
-      "name": "Folder Open Vertical",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Folder Open Vertical.svg",
-      "fileName": "Folder Open Vertical.svg"
-    },
-    {
-      "name": "Folder Open",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Folder Open.svg",
-      "fileName": "Folder Open.svg"
-    },
-    {
-      "name": "Folder People",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Folder People.svg",
-      "fileName": "Folder People.svg"
-    },
-    {
-      "name": "Globe",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Globe.svg",
-      "fileName": "Globe.svg"
-    },
-    {
-      "name": "Grid Circles",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Grid Circles.svg",
-      "fileName": "Grid Circles.svg"
-    },
-    {
-      "name": "Handshake",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Handshake.svg",
-      "fileName": "Handshake.svg"
-    },
-    {
-      "name": "Hat Graduation",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Hat Graduation.svg",
-      "fileName": "Hat Graduation.svg"
-    },
-    {
-      "name": "Headset",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Headset.svg",
-      "fileName": "Headset.svg"
-    },
-    {
-      "name": "Heart Pulse",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Heart Pulse.svg",
-      "fileName": "Heart Pulse.svg"
-    },
-    {
-      "name": "Heart",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Heart.svg",
-      "fileName": "Heart.svg"
-    },
-    {
-      "name": "Image",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Image.svg",
-      "fileName": "Image.svg"
-    },
-    {
-      "name": "Key",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Key.svg",
-      "fileName": "Key.svg"
-    },
-    {
-      "name": "Laptop",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Laptop.svg",
-      "fileName": "Laptop.svg"
-    },
-    {
-      "name": "Layer Diagonal",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Layer Diagonal.svg",
-      "fileName": "Layer Diagonal.svg"
-    },
-    {
-      "name": "Lightbulb Checkmark",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Lightbulb Checkmark.svg",
-      "fileName": "Lightbulb Checkmark.svg"
-    },
-    {
-      "name": "Lightbulb",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Lightbulb.svg",
-      "fileName": "Lightbulb.svg"
-    },
-    {
-      "name": "Lock Closed",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Lock Closed.svg",
-      "fileName": "Lock Closed.svg"
-    },
-    {
-      "name": "Lock Shield",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Lock Shield.svg",
-      "fileName": "Lock Shield.svg"
-    },
-    {
-      "name": "Mail Alert",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Mail Alert.svg",
-      "fileName": "Mail Alert.svg"
-    },
-    {
-      "name": "Mail Attach",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Mail Attach.svg",
-      "fileName": "Mail Attach.svg"
-    },
-    {
-      "name": "Mail Error",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Mail Error.svg",
-      "fileName": "Mail Error.svg"
-    },
-    {
-      "name": "Mail Read",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Mail Read.svg",
-      "fileName": "Mail Read.svg"
-    },
-    {
-      "name": "Mail",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Mail.svg",
-      "fileName": "Mail.svg"
-    },
-    {
-      "name": "Map",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Map.svg",
-      "fileName": "Map.svg"
-    },
-    {
-      "name": "Megaphone Loud",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Megaphone Loud.svg",
-      "fileName": "Megaphone Loud.svg"
-    },
-    {
-      "name": "Merge",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Merge.svg",
-      "fileName": "Merge.svg"
-    },
-    {
-      "name": "Notebook",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Notebook.svg",
-      "fileName": "Notebook.svg"
-    },
-    {
-      "name": "Number Circle 1",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Number Circle 1.svg",
-      "fileName": "Number Circle 1.svg"
-    },
-    {
-      "name": "Number Circle 2",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Number Circle 2.svg",
-      "fileName": "Number Circle 2.svg"
-    },
-    {
-      "name": "Number Circle 3",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Number Circle 3.svg",
-      "fileName": "Number Circle 3.svg"
-    },
-    {
-      "name": "Number Circle 4",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Number Circle 4.svg",
-      "fileName": "Number Circle 4.svg"
-    },
-    {
-      "name": "Organization Horizontal",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Organization Horizontal.svg",
-      "fileName": "Organization Horizontal.svg"
-    },
-    {
-      "name": "Organization",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Organization.svg",
-      "fileName": "Organization.svg"
-    },
-    {
-      "name": "Panel Left Header Key",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Panel Left Header Key.svg",
-      "fileName": "Panel Left Header Key.svg"
-    },
-    {
-      "name": "Panel Left Header",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Panel Left Header.svg",
-      "fileName": "Panel Left Header.svg"
-    },
-    {
-      "name": "Payment",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Payment.svg",
-      "fileName": "Payment.svg"
-    },
-    {
-      "name": "People Audience",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/People Audience.svg",
-      "fileName": "People Audience.svg"
-    },
-    {
-      "name": "People Community",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/People Community.svg",
-      "fileName": "People Community.svg"
-    },
-    {
-      "name": "People Settings",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/People Settings.svg",
-      "fileName": "People Settings.svg"
-    },
-    {
-      "name": "People Team",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/People Team.svg",
-      "fileName": "People Team.svg"
-    },
-    {
-      "name": "People",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/People.svg",
-      "fileName": "People.svg"
-    },
-    {
-      "name": "Person Accounts",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Person Accounts.svg",
-      "fileName": "Person Accounts.svg"
-    },
-    {
-      "name": "Person Desktop",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Person Desktop.svg",
-      "fileName": "Person Desktop.svg"
-    },
-    {
-      "name": "Person Settings",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Person Settings.svg",
-      "fileName": "Person Settings.svg"
-    },
-    {
-      "name": "Person Square",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Person Square.svg",
-      "fileName": "Person Square.svg"
-    },
-    {
-      "name": "Person Wrench",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Person Wrench.svg",
-      "fileName": "Person Wrench.svg"
-    },
-    {
-      "name": "Person",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Person.svg",
-      "fileName": "Person.svg"
-    },
-    {
-      "name": "Phone Desktop",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Phone Desktop.svg",
-      "fileName": "Phone Desktop.svg"
-    },
-    {
-      "name": "Phone Laptop",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Phone Laptop.svg",
-      "fileName": "Phone Laptop.svg"
-    },
-    {
-      "name": "Phone Tablet",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Phone Tablet.svg",
-      "fileName": "Phone Tablet.svg"
-    },
-    {
-      "name": "Phone Update",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Phone Update.svg",
-      "fileName": "Phone Update.svg"
-    },
-    {
-      "name": "Phone",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Phone.svg",
-      "fileName": "Phone.svg"
-    },
-    {
-      "name": "Presenter",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Presenter.svg",
-      "fileName": "Presenter.svg"
-    },
-    {
-      "name": "Question Circle",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Question Circle.svg",
-      "fileName": "Question Circle.svg"
-    },
-    {
-      "name": "Radar",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Radar.svg",
-      "fileName": "Radar.svg"
-    },
-    {
-      "name": "Receipt",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Receipt.svg",
-      "fileName": "Receipt.svg"
-    },
-    {
-      "name": "Ribbon Star",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Ribbon Star.svg",
-      "fileName": "Ribbon Star.svg"
-    },
-    {
-      "name": "Ribbon",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Ribbon.svg",
-      "fileName": "Ribbon.svg"
-    },
-    {
-      "name": "Road Cone",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Road Cone.svg",
-      "fileName": "Road Cone.svg"
-    },
-    {
-      "name": "Script",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Script.svg",
-      "fileName": "Script.svg"
-    },
-    {
-      "name": "Search",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Search.svg",
-      "fileName": "Search.svg"
-    },
-    {
-      "name": "Select All",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Select All.svg",
-      "fileName": "Select All.svg"
-    },
-    {
-      "name": "Settings Cog Multiple",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Settings Cog Multiple.svg",
-      "fileName": "Settings Cog Multiple.svg"
-    },
-    {
-      "name": "Settings",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Settings.svg",
-      "fileName": "Settings.svg"
-    },
-    {
-      "name": "Shapes Three",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Shapes Three.svg",
-      "fileName": "Shapes Three.svg"
-    },
-    {
-      "name": "Share Screen Person Overlay",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Share Screen Person Overlay.svg",
-      "fileName": "Share Screen Person Overlay.svg"
-    },
-    {
-      "name": "Share Screen Person",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Share Screen Person.svg",
-      "fileName": "Share Screen Person.svg"
-    },
-    {
-      "name": "Share",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Share.svg",
-      "fileName": "Share.svg"
-    },
-    {
-      "name": "Shield Error",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Shield Error.svg",
-      "fileName": "Shield Error.svg"
-    },
-    {
-      "name": "Shifts Activity",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Shifts Activity.svg",
-      "fileName": "Shifts Activity.svg"
-    },
-    {
-      "name": "Shopping Bag",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Shopping Bag.svg",
-      "fileName": "Shopping Bag.svg"
-    },
-    {
-      "name": "Signature",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Signature.svg",
-      "fileName": "Signature.svg"
-    },
-    {
-      "name": "Slide Layout",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Slide Layout.svg",
-      "fileName": "Slide Layout.svg"
-    },
-    {
-      "name": "Tablet Laptop",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Tablet Laptop.svg",
-      "fileName": "Tablet Laptop.svg"
-    },
-    {
-      "name": "Tablet",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Tablet.svg",
-      "fileName": "Tablet.svg"
-    },
-    {
-      "name": "Tap",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Tap.svg",
-      "fileName": "Tap.svg"
-    },
-    {
-      "name": "Task List Square",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Task List Square.svg",
-      "fileName": "Task List Square.svg"
-    },
-    {
-      "name": "Text First Line",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Text First Line.svg",
-      "fileName": "Text First Line.svg"
-    },
-    {
-      "name": "Text Number List",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Text Number List.svg",
-      "fileName": "Text Number List.svg"
-    },
-    {
-      "name": "Toolbox",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Toolbox.svg",
-      "fileName": "Toolbox.svg"
-    },
-    {
-      "name": "Top Speed",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Top Speed.svg",
-      "fileName": "Top Speed.svg"
-    },
-    {
-      "name": "Video",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Video.svg",
-      "fileName": "Video.svg"
-    },
-    {
-      "name": "Wallet Credit Card",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Wallet Credit Card.svg",
-      "fileName": "Wallet Credit Card.svg"
-    },
-    {
-      "name": "Window Dev Edit",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Window Dev Edit.svg",
-      "fileName": "Window Dev Edit.svg"
-    },
-    {
-      "name": "Window Edit",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Window Edit.svg",
-      "fileName": "Window Edit.svg"
-    },
-    {
-      "name": "Window",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Window.svg",
-      "fileName": "Window.svg"
-    },
-    {
-      "name": "Wrench",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Light Blue Icon/Wrench.svg",
-      "fileName": "Wrench.svg"
-    },
-    {
-      "name": "Apps List Detail",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Apps List Detail.svg",
-      "fileName": "Apps List Detail.svg"
-    },
-    {
-      "name": "Apps",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Apps.svg",
-      "fileName": "Apps.svg"
-    },
-    {
-      "name": "Arrow Circle Left",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Arrow Circle Left.svg",
-      "fileName": "Arrow Circle Left.svg"
-    },
-    {
-      "name": "Arrow Circle Right",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Arrow Circle Right.svg",
-      "fileName": "Arrow Circle Right.svg"
-    },
-    {
-      "name": "Arrow Clockwise",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Arrow Clockwise.svg",
-      "fileName": "Arrow Clockwise.svg"
-    },
-    {
-      "name": "Arrow Down",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Arrow Down.svg",
-      "fileName": "Arrow Down.svg"
-    },
-    {
-      "name": "Arrow Download",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Arrow Download.svg",
-      "fileName": "Arrow Download.svg"
-    },
-    {
-      "name": "Arrow Sync",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Arrow Sync.svg",
-      "fileName": "Arrow Sync.svg"
-    },
-    {
-      "name": "Arrow Upload",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Arrow Upload.svg",
-      "fileName": "Arrow Upload.svg"
-    },
-    {
-      "name": "Attach",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Attach.svg",
-      "fileName": "Attach.svg"
-    },
-    {
-      "name": "Book Contacts",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Book Contacts.svg",
-      "fileName": "Book Contacts.svg"
-    },
-    {
-      "name": "Bot",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Bot.svg",
-      "fileName": "Bot.svg"
-    },
-    {
-      "name": "Building Cloud",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Building Cloud.svg",
-      "fileName": "Building Cloud.svg"
-    },
-    {
-      "name": "Building Multiple",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Building Multiple.svg",
-      "fileName": "Building Multiple.svg"
-    },
-    {
-      "name": "Building People_Blue_Dark",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Building People_Blue_Dark.svg",
-      "fileName": "Building People_Blue_Dark.svg"
-    },
-    {
-      "name": "Building Retail",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Building Retail.svg",
-      "fileName": "Building Retail.svg"
-    },
-    {
-      "name": "Building",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Building.svg",
-      "fileName": "Building.svg"
-    },
-    {
-      "name": "Calculator",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Calculator.svg",
-      "fileName": "Calculator.svg"
-    },
-    {
-      "name": "Calendar Month",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Calendar Month.svg",
-      "fileName": "Calendar Month.svg"
-    },
-    {
-      "name": "Call",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Call.svg",
-      "fileName": "Call.svg"
-    },
-    {
-      "name": "Camera",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Camera.svg",
-      "fileName": "Camera.svg"
-    },
-    {
-      "name": "Cart",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Cart.svg",
-      "fileName": "Cart.svg"
-    },
-    {
-      "name": "Certificate",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Certificate.svg",
-      "fileName": "Certificate.svg"
-    },
-    {
-      "name": "Chart Multiple",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Chart Multiple.svg",
-      "fileName": "Chart Multiple.svg"
-    },
-    {
-      "name": "Chat Multiple",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Chat Multiple.svg",
-      "fileName": "Chat Multiple.svg"
-    },
-    {
-      "name": "Chat",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Chat.svg",
-      "fileName": "Chat.svg"
-    },
-    {
-      "name": "Check",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Check.svg",
-      "fileName": "Check.svg"
-    },
-    {
-      "name": "Checkmark Circle",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Checkmark Circle.svg",
-      "fileName": "Checkmark Circle.svg"
-    },
-    {
-      "name": "Chevron Circle",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Chevron Circle.svg",
-      "fileName": "Chevron Circle.svg"
-    },
-    {
-      "name": "Clipboard Task List",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Clipboard Task List.svg",
-      "fileName": "Clipboard Task List.svg"
-    },
-    {
-      "name": "Clock Alarm",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Clock Alarm.svg",
-      "fileName": "Clock Alarm.svg"
-    },
-    {
-      "name": "Clock",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Clock.svg",
-      "fileName": "Clock.svg"
-    },
-    {
-      "name": "Cloud Add",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Cloud Add.svg",
-      "fileName": "Cloud Add.svg"
-    },
-    {
-      "name": "Cloud Arrow Down",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Cloud Arrow Down.svg",
-      "fileName": "Cloud Arrow Down.svg"
-    },
-    {
-      "name": "Cloud Arrow Up",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Cloud Arrow Up.svg",
-      "fileName": "Cloud Arrow Up.svg"
-    },
-    {
-      "name": "Cloud Beaker",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Cloud Beaker.svg",
-      "fileName": "Cloud Beaker.svg"
-    },
-    {
-      "name": "Cloud Cube",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Cloud Cube.svg",
-      "fileName": "Cloud Cube.svg"
-    },
-    {
-      "name": "Cloud Database",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Cloud Database.svg",
-      "fileName": "Cloud Database.svg"
-    },
-    {
-      "name": "Cloud Desktop",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Cloud Desktop.svg",
-      "fileName": "Cloud Desktop.svg"
-    },
-    {
-      "name": "Cloud",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Cloud.svg",
-      "fileName": "Cloud.svg"
-    },
-    {
-      "name": "Code",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Code.svg",
-      "fileName": "Code.svg"
-    },
-    {
-      "name": "Column Arrow Right",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Column Arrow Right.svg",
-      "fileName": "Column Arrow Right.svg"
-    },
-    {
-      "name": "Comment Multiple",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Comment Multiple.svg",
-      "fileName": "Comment Multiple.svg"
-    },
-    {
-      "name": "Comment",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Comment.svg",
-      "fileName": "Comment.svg"
-    },
-    {
-      "name": "Data Area",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Data Area.svg",
-      "fileName": "Data Area.svg"
-    },
-    {
-      "name": "Data Bar Vertical",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Data Bar Vertical.svg",
-      "fileName": "Data Bar Vertical.svg"
-    },
-    {
-      "name": "Data Pie",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Data Pie.svg",
-      "fileName": "Data Pie.svg"
-    },
-    {
-      "name": "Data Trending (1)",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Data Trending (1).svg",
-      "fileName": "Data Trending (1).svg"
-    },
-    {
-      "name": "Data Trending",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Data Trending.svg",
-      "fileName": "Data Trending.svg"
-    },
-    {
-      "name": "Data Usage",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Data Usage.svg",
-      "fileName": "Data Usage.svg"
-    },
-    {
-      "name": "Database",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Database.svg",
-      "fileName": "Database.svg"
-    },
-    {
-      "name": "Deploy",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Deploy.svg",
-      "fileName": "Deploy.svg"
-    },
-    {
-      "name": "Desktop Arrow Down",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Desktop Arrow Down.svg",
-      "fileName": "Desktop Arrow Down.svg"
-    },
-    {
-      "name": "Desktop Tower",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Desktop Tower.svg",
-      "fileName": "Desktop Tower.svg"
-    },
-    {
-      "name": "Dismiss Circle",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Dismiss Circle.svg",
-      "fileName": "Dismiss Circle.svg"
-    },
-    {
-      "name": "Document Bullet List Multiple",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Document Bullet List Multiple.svg",
-      "fileName": "Document Bullet List Multiple.svg"
-    },
-    {
-      "name": "Document Bullet List",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Document Bullet List.svg",
-      "fileName": "Document Bullet List.svg"
-    },
-    {
-      "name": "Document Key",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Document Key.svg",
-      "fileName": "Document Key.svg"
-    },
-    {
-      "name": "Document Lock",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Document Lock.svg",
-      "fileName": "Document Lock.svg"
-    },
-    {
-      "name": "Document Multiple",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Document Multiple.svg",
-      "fileName": "Document Multiple.svg"
-    },
-    {
-      "name": "Document One Page",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Document One Page.svg",
-      "fileName": "Document One Page.svg"
-    },
-    {
-      "name": "Document Text",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Document Text.svg",
-      "fileName": "Document Text.svg"
-    },
-    {
-      "name": "Document",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Document.svg",
-      "fileName": "Document.svg"
-    },
-    {
-      "name": "Edit",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Edit.svg",
-      "fileName": "Edit.svg"
-    },
-    {
-      "name": "Filmstrip Play",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Filmstrip Play.svg",
-      "fileName": "Filmstrip Play.svg"
-    },
-    {
-      "name": "Fingerprint",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Fingerprint.svg",
-      "fileName": "Fingerprint.svg"
-    },
-    {
-      "name": "Flag",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Flag.svg",
-      "fileName": "Flag.svg"
-    },
-    {
-      "name": "Folder Multiple",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Folder Multiple.svg",
-      "fileName": "Folder Multiple.svg"
-    },
-    {
-      "name": "Folder Open Vertical",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Folder Open Vertical.svg",
-      "fileName": "Folder Open Vertical.svg"
-    },
-    {
-      "name": "Folder Open",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Folder Open.svg",
-      "fileName": "Folder Open.svg"
-    },
-    {
-      "name": "Folder People",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Folder People.svg",
-      "fileName": "Folder People.svg"
-    },
-    {
-      "name": "Globe",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Globe.svg",
-      "fileName": "Globe.svg"
-    },
-    {
-      "name": "Grid Circles",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Grid Circles.svg",
-      "fileName": "Grid Circles.svg"
-    },
-    {
-      "name": "Handshake",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Handshake.svg",
-      "fileName": "Handshake.svg"
-    },
-    {
-      "name": "Hat Graduation",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Hat Graduation.svg",
-      "fileName": "Hat Graduation.svg"
-    },
-    {
-      "name": "Headset",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Headset.svg",
-      "fileName": "Headset.svg"
-    },
-    {
-      "name": "Heart Pulse",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Heart Pulse.svg",
-      "fileName": "Heart Pulse.svg"
-    },
-    {
-      "name": "Heart",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Heart.svg",
-      "fileName": "Heart.svg"
-    },
-    {
-      "name": "Image",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Image.svg",
-      "fileName": "Image.svg"
-    },
-    {
-      "name": "Key",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Key.svg",
-      "fileName": "Key.svg"
-    },
-    {
-      "name": "Laptop",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Laptop.svg",
-      "fileName": "Laptop.svg"
-    },
-    {
-      "name": "Layer Diagonal",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Layer Diagonal.svg",
-      "fileName": "Layer Diagonal.svg"
-    },
-    {
-      "name": "Lightbulb Checkmark",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Lightbulb Checkmark.svg",
-      "fileName": "Lightbulb Checkmark.svg"
-    },
-    {
-      "name": "Lightbulb",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Lightbulb.svg",
-      "fileName": "Lightbulb.svg"
-    },
-    {
-      "name": "Lock Closed",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Lock Closed.svg",
-      "fileName": "Lock Closed.svg"
-    },
-    {
-      "name": "Lock Shield",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Lock Shield.svg",
-      "fileName": "Lock Shield.svg"
-    },
-    {
-      "name": "Mail Alert",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Mail Alert.svg",
-      "fileName": "Mail Alert.svg"
-    },
-    {
-      "name": "Mail Attach",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Mail Attach.svg",
-      "fileName": "Mail Attach.svg"
-    },
-    {
-      "name": "Mail Error",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Mail Error.svg",
-      "fileName": "Mail Error.svg"
-    },
-    {
-      "name": "Mail Read",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Mail Read.svg",
-      "fileName": "Mail Read.svg"
-    },
-    {
-      "name": "Mail",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Mail.svg",
-      "fileName": "Mail.svg"
-    },
-    {
-      "name": "Map",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Map.svg",
-      "fileName": "Map.svg"
-    },
-    {
-      "name": "Megaphone Loud",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Megaphone Loud.svg",
-      "fileName": "Megaphone Loud.svg"
-    },
-    {
-      "name": "Merge",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Merge.svg",
-      "fileName": "Merge.svg"
-    },
-    {
-      "name": "Notebook",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Notebook.svg",
-      "fileName": "Notebook.svg"
-    },
-    {
-      "name": "Number Circle 1",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Number Circle 1.svg",
-      "fileName": "Number Circle 1.svg"
-    },
-    {
-      "name": "Number Circle 2",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Number Circle 2.svg",
-      "fileName": "Number Circle 2.svg"
-    },
-    {
-      "name": "Number Circle 3",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Number Circle 3.svg",
-      "fileName": "Number Circle 3.svg"
-    },
-    {
-      "name": "Number Circle 4",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Number Circle 4.svg",
-      "fileName": "Number Circle 4.svg"
-    },
-    {
-      "name": "Organization Horizontal",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Organization Horizontal.svg",
-      "fileName": "Organization Horizontal.svg"
-    },
-    {
-      "name": "Organization",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Organization.svg",
-      "fileName": "Organization.svg"
-    },
-    {
-      "name": "Panel Left Header Key",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Panel Left Header Key.svg",
-      "fileName": "Panel Left Header Key.svg"
-    },
-    {
-      "name": "Panel Left Header",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Panel Left Header.svg",
-      "fileName": "Panel Left Header.svg"
-    },
-    {
-      "name": "Payment",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Payment.svg",
-      "fileName": "Payment.svg"
-    },
-    {
-      "name": "People Audience",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/People Audience.svg",
-      "fileName": "People Audience.svg"
-    },
-    {
-      "name": "People Community",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/People Community.svg",
-      "fileName": "People Community.svg"
-    },
-    {
-      "name": "People Settings",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/People Settings.svg",
-      "fileName": "People Settings.svg"
-    },
-    {
-      "name": "People Team",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/People Team.svg",
-      "fileName": "People Team.svg"
-    },
-    {
-      "name": "People",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/People.svg",
-      "fileName": "People.svg"
-    },
-    {
-      "name": "Person Accounts",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Person Accounts.svg",
-      "fileName": "Person Accounts.svg"
-    },
-    {
-      "name": "Person Desktop",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Person Desktop.svg",
-      "fileName": "Person Desktop.svg"
-    },
-    {
-      "name": "Person Settings",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Person Settings.svg",
-      "fileName": "Person Settings.svg"
-    },
-    {
-      "name": "Person Square",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Person Square.svg",
-      "fileName": "Person Square.svg"
-    },
-    {
-      "name": "Person Wrench",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Person Wrench.svg",
-      "fileName": "Person Wrench.svg"
-    },
-    {
-      "name": "Person",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Person.svg",
-      "fileName": "Person.svg"
-    },
-    {
-      "name": "Phone Desktop",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Phone Desktop.svg",
-      "fileName": "Phone Desktop.svg"
-    },
-    {
-      "name": "Phone Laptop",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Phone Laptop.svg",
-      "fileName": "Phone Laptop.svg"
-    },
-    {
-      "name": "Phone Tablet",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Phone Tablet.svg",
-      "fileName": "Phone Tablet.svg"
-    },
-    {
-      "name": "Phone Update",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Phone Update.svg",
-      "fileName": "Phone Update.svg"
-    },
-    {
-      "name": "Phone",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Phone.svg",
-      "fileName": "Phone.svg"
-    },
-    {
-      "name": "Presenter",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Presenter.svg",
-      "fileName": "Presenter.svg"
-    },
-    {
-      "name": "Question Circle",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Question Circle.svg",
-      "fileName": "Question Circle.svg"
-    },
-    {
-      "name": "Radar",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Radar.svg",
-      "fileName": "Radar.svg"
-    },
-    {
-      "name": "Receipt",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Receipt.svg",
-      "fileName": "Receipt.svg"
-    },
-    {
-      "name": "Ribbon Star",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Ribbon Star.svg",
-      "fileName": "Ribbon Star.svg"
-    },
-    {
-      "name": "Ribbon",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Ribbon.svg",
-      "fileName": "Ribbon.svg"
-    },
-    {
-      "name": "Road Cone",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Road Cone.svg",
-      "fileName": "Road Cone.svg"
-    },
-    {
-      "name": "Script",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Script.svg",
-      "fileName": "Script.svg"
-    },
-    {
-      "name": "Search",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Search.svg",
-      "fileName": "Search.svg"
-    },
-    {
-      "name": "Select All",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Select All.svg",
-      "fileName": "Select All.svg"
-    },
-    {
-      "name": "Settings Cog Multiple",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Settings Cog Multiple.svg",
-      "fileName": "Settings Cog Multiple.svg"
-    },
-    {
-      "name": "Settings",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Settings.svg",
-      "fileName": "Settings.svg"
-    },
-    {
-      "name": "Shapes Three",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Shapes Three.svg",
-      "fileName": "Shapes Three.svg"
-    },
-    {
-      "name": "Share Screen Person Overlay",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Share Screen Person Overlay.svg",
-      "fileName": "Share Screen Person Overlay.svg"
-    },
-    {
-      "name": "Share Screen Person",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Share Screen Person.svg",
-      "fileName": "Share Screen Person.svg"
-    },
-    {
-      "name": "Share",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Share.svg",
-      "fileName": "Share.svg"
-    },
-    {
-      "name": "Shield Error",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Shield Error.svg",
-      "fileName": "Shield Error.svg"
-    },
-    {
-      "name": "Shifts Activity",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Shifts Activity.svg",
-      "fileName": "Shifts Activity.svg"
-    },
-    {
-      "name": "Shopping Bag",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Shopping Bag.svg",
-      "fileName": "Shopping Bag.svg"
-    },
-    {
-      "name": "Signature",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Signature.svg",
-      "fileName": "Signature.svg"
-    },
-    {
-      "name": "Slide Layout",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Slide Layout.svg",
-      "fileName": "Slide Layout.svg"
-    },
-    {
-      "name": "Tablet Laptop",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Tablet Laptop.svg",
-      "fileName": "Tablet Laptop.svg"
-    },
-    {
-      "name": "Tablet",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Tablet.svg",
-      "fileName": "Tablet.svg"
-    },
-    {
-      "name": "Tap",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Tap.svg",
-      "fileName": "Tap.svg"
-    },
-    {
-      "name": "Task List Square",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Task List Square.svg",
-      "fileName": "Task List Square.svg"
-    },
-    {
-      "name": "Text First Line",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Text First Line.svg",
-      "fileName": "Text First Line.svg"
-    },
-    {
-      "name": "Text Number List",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Text Number List.svg",
-      "fileName": "Text Number List.svg"
-    },
-    {
-      "name": "Toolbox",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Toolbox.svg",
-      "fileName": "Toolbox.svg"
-    },
-    {
-      "name": "Top Speed",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Top Speed.svg",
-      "fileName": "Top Speed.svg"
-    },
-    {
-      "name": "Video",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Video.svg",
-      "fileName": "Video.svg"
-    },
-    {
-      "name": "Wallet Credit Card",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Wallet Credit Card.svg",
-      "fileName": "Wallet Credit Card.svg"
-    },
-    {
-      "name": "Window Dev Edit",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Window Dev Edit.svg",
-      "fileName": "Window Dev Edit.svg"
-    },
-    {
-      "name": "Window Edit",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Window Edit.svg",
-      "fileName": "Window Edit.svg"
-    },
-    {
-      "name": "Window",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Window.svg",
-      "fileName": "Window.svg"
-    },
-    {
-      "name": "Wrench",
-      "path": "/icons/microsoft365/Microsoft Blue/48x48 Dark Blue Icon/Wrench.svg",
-      "fileName": "Wrench.svg"
-    },
-    {
-      "name": "Document_Dark",
-      "path": "/icons/microsoft365/Project Green/48x48 SVG Icons/Document_Dark.svg",
-      "fileName": "Document_Dark.svg"
-    },
-    {
-      "name": "Document_Gray",
-      "path": "/icons/microsoft365/Project Green/48x48 SVG Icons/Document_Gray.svg",
-      "fileName": "Document_Gray.svg"
-    },
-    {
-      "name": "Document_Light",
-      "path": "/icons/microsoft365/Project Green/48x48 SVG Icons/Document_Light.svg",
-      "fileName": "Document_Light.svg"
-    },
-    {
-      "name": "Megaphone_Loud_Dark",
-      "path": "/icons/microsoft365/Project Green/48x48 SVG Icons/Megaphone_Loud_Dark.svg",
-      "fileName": "Megaphone_Loud_Dark.svg"
-    },
-    {
-      "name": "Megaphone_Loud_Gray",
-      "path": "/icons/microsoft365/Project Green/48x48 SVG Icons/Megaphone_Loud_Gray.svg",
-      "fileName": "Megaphone_Loud_Gray.svg"
-    },
-    {
-      "name": "Megaphone_Loud_Light",
-      "path": "/icons/microsoft365/Project Green/48x48 SVG Icons/Megaphone_Loud_Light.svg",
-      "fileName": "Megaphone_Loud_Light.svg"
-    },
-    {
-      "name": "Text_Bullet_List_Dark",
-      "path": "/icons/microsoft365/Project Green/48x48 SVG Icons/Text_Bullet_List_Dark.svg",
-      "fileName": "Text_Bullet_List_Dark.svg"
-    },
-    {
-      "name": "Text_Bullet_List_Gray",
-      "path": "/icons/microsoft365/Project Green/48x48 SVG Icons/Text_Bullet_List_Gray.svg",
-      "fileName": "Text_Bullet_List_Gray.svg"
-    },
-    {
-      "name": "Text_Bullet_List_Light",
-      "path": "/icons/microsoft365/Project Green/48x48 SVG Icons/Text_Bullet_List_Light.svg",
-      "fileName": "Text_Bullet_List_Light.svg"
-    },
-    {
-      "name": "Text_Bullet_List_Square_Dark",
-      "path": "/icons/microsoft365/Project Green/48x48 SVG Icons/Text_Bullet_List_Square_Dark.svg",
-      "fileName": "Text_Bullet_List_Square_Dark.svg"
-    },
-    {
-      "name": "Text_Bullet_List_Square_Gray",
-      "path": "/icons/microsoft365/Project Green/48x48 SVG Icons/Text_Bullet_List_Square_Gray.svg",
-      "fileName": "Text_Bullet_List_Square_Gray.svg"
-    },
-    {
-      "name": "Text_Bullet_List_Square_Light",
-      "path": "/icons/microsoft365/Project Green/48x48 SVG Icons/Text_Bullet_List_Square_Light.svg",
-      "fileName": "Text_Bullet_List_Square_Light.svg"
-    },
-    {
       "name": "Calendar_Month_Dark",
       "path": "/icons/microsoft365/Planner Green/48x48 SVG Icons/Calendar_Month_Dark.svg",
       "fileName": "Calendar_Month_Dark.svg"
@@ -4816,6 +4756,66 @@
       "name": "Window Edit",
       "path": "/icons/microsoft365/Planner Green/48x48 SVG Icons/Window Edit.svg",
       "fileName": "Window Edit.svg"
+    },
+    {
+      "name": "Document_Dark",
+      "path": "/icons/microsoft365/Project Green/48x48 SVG Icons/Document_Dark.svg",
+      "fileName": "Document_Dark.svg"
+    },
+    {
+      "name": "Document_Gray",
+      "path": "/icons/microsoft365/Project Green/48x48 SVG Icons/Document_Gray.svg",
+      "fileName": "Document_Gray.svg"
+    },
+    {
+      "name": "Document_Light",
+      "path": "/icons/microsoft365/Project Green/48x48 SVG Icons/Document_Light.svg",
+      "fileName": "Document_Light.svg"
+    },
+    {
+      "name": "Megaphone_Loud_Dark",
+      "path": "/icons/microsoft365/Project Green/48x48 SVG Icons/Megaphone_Loud_Dark.svg",
+      "fileName": "Megaphone_Loud_Dark.svg"
+    },
+    {
+      "name": "Megaphone_Loud_Gray",
+      "path": "/icons/microsoft365/Project Green/48x48 SVG Icons/Megaphone_Loud_Gray.svg",
+      "fileName": "Megaphone_Loud_Gray.svg"
+    },
+    {
+      "name": "Megaphone_Loud_Light",
+      "path": "/icons/microsoft365/Project Green/48x48 SVG Icons/Megaphone_Loud_Light.svg",
+      "fileName": "Megaphone_Loud_Light.svg"
+    },
+    {
+      "name": "Text_Bullet_List_Dark",
+      "path": "/icons/microsoft365/Project Green/48x48 SVG Icons/Text_Bullet_List_Dark.svg",
+      "fileName": "Text_Bullet_List_Dark.svg"
+    },
+    {
+      "name": "Text_Bullet_List_Gray",
+      "path": "/icons/microsoft365/Project Green/48x48 SVG Icons/Text_Bullet_List_Gray.svg",
+      "fileName": "Text_Bullet_List_Gray.svg"
+    },
+    {
+      "name": "Text_Bullet_List_Light",
+      "path": "/icons/microsoft365/Project Green/48x48 SVG Icons/Text_Bullet_List_Light.svg",
+      "fileName": "Text_Bullet_List_Light.svg"
+    },
+    {
+      "name": "Text_Bullet_List_Square_Dark",
+      "path": "/icons/microsoft365/Project Green/48x48 SVG Icons/Text_Bullet_List_Square_Dark.svg",
+      "fileName": "Text_Bullet_List_Square_Dark.svg"
+    },
+    {
+      "name": "Text_Bullet_List_Square_Gray",
+      "path": "/icons/microsoft365/Project Green/48x48 SVG Icons/Text_Bullet_List_Square_Gray.svg",
+      "fileName": "Text_Bullet_List_Square_Gray.svg"
+    },
+    {
+      "name": "Text_Bullet_List_Square_Light",
+      "path": "/icons/microsoft365/Project Green/48x48 SVG Icons/Text_Bullet_List_Square_Light.svg",
+      "fileName": "Text_Bullet_List_Square_Light.svg"
     }
   ]
 }

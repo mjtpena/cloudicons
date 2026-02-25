@@ -1,151 +1,86 @@
 {
   "Category": "Dynamics365",
-  "Count": 29,
+  "Count": 16,
   "Icons": [
     {
       "name": "Dynamics365_scalable",
-      "path": "/icons/dynamics365/Dynamics 365/Dynamics 365 Product Family Icons/Dynamics365_scalable.svg",
+      "path": "/icons/dynamics365/Dynamics 365 Product Family Icons/Dynamics365_scalable.svg",
       "fileName": "Dynamics365_scalable.svg"
     },
     {
       "name": "BusinessCentral_scalable",
-      "path": "/icons/dynamics365/Dynamics 365/Dynamics 365 App Icons/BusinessCentral_scalable.svg",
+      "path": "/icons/dynamics365/Dynamics 365 App Icons/BusinessCentral_scalable.svg",
       "fileName": "BusinessCentral_scalable.svg"
     },
     {
-      "name": "CloudforSustainability_scalable",
-      "path": "/icons/dynamics365/Dynamics 365/Dynamics 365 App Icons/CloudforSustainability_scalable.svg",
-      "fileName": "CloudforSustainability_scalable.svg"
-    },
-    {
       "name": "Commerce_scalable",
-      "path": "/icons/dynamics365/Dynamics 365/Dynamics 365 App Icons/Commerce_scalable.svg",
+      "path": "/icons/dynamics365/Dynamics 365 App Icons/Commerce_scalable.svg",
       "fileName": "Commerce_scalable.svg"
     },
     {
+      "name": "ContactCenter_scalable",
+      "path": "/icons/dynamics365/Dynamics 365 App Icons/ContactCenter_scalable.svg",
+      "fileName": "ContactCenter_scalable.svg"
+    },
+    {
       "name": "CustomerInsights_scalable",
-      "path": "/icons/dynamics365/Dynamics 365/Dynamics 365 App Icons/CustomerInsights_scalable.svg",
+      "path": "/icons/dynamics365/Dynamics 365 App Icons/CustomerInsights_scalable.svg",
       "fileName": "CustomerInsights_scalable.svg"
     },
     {
-      "name": "CustomerServiceInsights_scalable",
-      "path": "/icons/dynamics365/Dynamics 365/Dynamics 365 App Icons/CustomerServiceInsights_scalable.svg",
-      "fileName": "CustomerServiceInsights_scalable.svg"
-    },
-    {
       "name": "CustomerServices_scalable",
-      "path": "/icons/dynamics365/Dynamics 365/Dynamics 365 App Icons/CustomerServices_scalable.svg",
+      "path": "/icons/dynamics365/Dynamics 365 App Icons/CustomerServices_scalable.svg",
       "fileName": "CustomerServices_scalable.svg"
     },
     {
       "name": "CustomerVoice_scalable",
-      "path": "/icons/dynamics365/Dynamics 365/Dynamics 365 App Icons/CustomerVoice_scalable.svg",
+      "path": "/icons/dynamics365/Dynamics 365 App Icons/CustomerVoice_scalable.svg",
       "fileName": "CustomerVoice_scalable.svg"
     },
     {
       "name": "FieldService_scalable",
-      "path": "/icons/dynamics365/Dynamics 365/Dynamics 365 App Icons/FieldService_scalable.svg",
+      "path": "/icons/dynamics365/Dynamics 365 App Icons/FieldService_scalable.svg",
       "fileName": "FieldService_scalable.svg"
     },
     {
       "name": "FinanceOperations_scalable",
-      "path": "/icons/dynamics365/Dynamics 365/Dynamics 365 App Icons/FinanceOperations_scalable.svg",
+      "path": "/icons/dynamics365/Dynamics 365 App Icons/FinanceOperations_scalable.svg",
       "fileName": "FinanceOperations_scalable.svg"
     },
     {
       "name": "Finance_scalable",
-      "path": "/icons/dynamics365/Dynamics 365/Dynamics 365 App Icons/Finance_scalable.svg",
+      "path": "/icons/dynamics365/Dynamics 365 App Icons/Finance_scalable.svg",
       "fileName": "Finance_scalable.svg"
     },
     {
-      "name": "FraudProtection_scalable",
-      "path": "/icons/dynamics365/Dynamics 365/Dynamics 365 App Icons/FraudProtection_scalable.svg",
-      "fileName": "FraudProtection_scalable.svg"
-    },
-    {
       "name": "HumanResources_scalable",
-      "path": "/icons/dynamics365/Dynamics 365/Dynamics 365 App Icons/HumanResources_scalable.svg",
+      "path": "/icons/dynamics365/Dynamics 365 App Icons/HumanResources_scalable.svg",
       "fileName": "HumanResources_scalable.svg"
     },
     {
       "name": "IntelligentOrderManagement_scalable",
-      "path": "/icons/dynamics365/Dynamics 365/Dynamics 365 App Icons/IntelligentOrderManagement_scalable.svg",
+      "path": "/icons/dynamics365/Dynamics 365 App Icons/IntelligentOrderManagement_scalable.svg",
       "fileName": "IntelligentOrderManagement_scalable.svg"
     },
     {
-      "name": "Marketing_scalable",
-      "path": "/icons/dynamics365/Dynamics 365/Dynamics 365 App Icons/Marketing_scalable.svg",
-      "fileName": "Marketing_scalable.svg"
-    },
-    {
-      "name": "ProductInsights_scalable",
-      "path": "/icons/dynamics365/Dynamics 365/Dynamics 365 App Icons/ProductInsights_scalable.svg",
-      "fileName": "ProductInsights_scalable.svg"
-    },
-    {
       "name": "ProjectOperations_scalable",
-      "path": "/icons/dynamics365/Dynamics 365/Dynamics 365 App Icons/ProjectOperations_scalable.svg",
+      "path": "/icons/dynamics365/Dynamics 365 App Icons/ProjectOperations_scalable.svg",
       "fileName": "ProjectOperations_scalable.svg"
     },
     {
-      "name": "ProjectServiceAutomation_scalable",
-      "path": "/icons/dynamics365/Dynamics 365/Dynamics 365 App Icons/ProjectServiceAutomation_scalable.svg",
-      "fileName": "ProjectServiceAutomation_scalable.svg"
-    },
-    {
       "name": "SalesInsights_scalable",
-      "path": "/icons/dynamics365/Dynamics 365/Dynamics 365 App Icons/SalesInsights_scalable.svg",
+      "path": "/icons/dynamics365/Dynamics 365 App Icons/SalesInsights_scalable.svg",
       "fileName": "SalesInsights_scalable.svg"
     },
     {
       "name": "Sales_scalable",
-      "path": "/icons/dynamics365/Dynamics 365/Dynamics 365 App Icons/Sales_scalable.svg",
+      "path": "/icons/dynamics365/Dynamics 365 App Icons/Sales_scalable.svg",
       "fileName": "Sales_scalable.svg"
     },
     {
-      "name": "SupplierEngagement_scalable",
-      "path": "/icons/dynamics365/Dynamics 365/Dynamics 365 App Icons/SupplierEngagement_scalable.svg",
-      "fileName": "SupplierEngagement_scalable.svg"
-    },
-    {
       "name": "SupplyChainManagement_scalable",
-      "path": "/icons/dynamics365/Dynamics 365/Dynamics 365 App Icons/SupplyChainManagement_scalable.svg",
+      "path": "/icons/dynamics365/Dynamics 365 App Icons/SupplyChainManagement_scalable.svg",
       "fileName": "SupplyChainManagement_scalable.svg"
-    },
-    {
-      "name": "Guides_scalable",
-      "path": "/icons/dynamics365/Dynamics 365/Dynamics 365 Mixed Reality Icons/Guides_scalable.svg",
-      "fileName": "Guides_scalable.svg"
-    },
-    {
-      "name": "ImportTool_scalable",
-      "path": "/icons/dynamics365/Dynamics 365/Dynamics 365 Mixed Reality Icons/ImportTool_scalable.svg",
-      "fileName": "ImportTool_scalable.svg"
-    },
-    {
-      "name": "Layout_scalable",
-      "path": "/icons/dynamics365/Dynamics 365/Dynamics 365 Mixed Reality Icons/Layout_scalable.svg",
-      "fileName": "Layout_scalable.svg"
-    },
-    {
-      "name": "MRPortal_scalable",
-      "path": "/icons/dynamics365/Dynamics 365/Dynamics 365 Mixed Reality Icons/MRPortal_scalable.svg",
-      "fileName": "MRPortal_scalable.svg"
-    },
-    {
-      "name": "ProductVisualize_scalable",
-      "path": "/icons/dynamics365/Dynamics 365/Dynamics 365 Mixed Reality Icons/ProductVisualize_scalable.svg",
-      "fileName": "ProductVisualize_scalable.svg"
-    },
-    {
-      "name": "RemoteAssist_scalable",
-      "path": "/icons/dynamics365/Dynamics 365/Dynamics 365 Mixed Reality Icons/RemoteAssist_scalable.svg",
-      "fileName": "RemoteAssist_scalable.svg"
-    },
-    {
-      "name": "VoiceAssistant_scalable",
-      "path": "/icons/dynamics365/Dynamics 365/Dynamics 365 Mixed Reality Icons/VoiceAssistant_scalable.svg",
-      "fileName": "VoiceAssistant_scalable.svg"
     }
   ]
 }
