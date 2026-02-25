@@ -89,7 +89,9 @@ window.xyzicon.searchEngine = {
       ranked.push({ icon, score });
     }
 
-    ranked.sort((a, b) => b.score - a.score || a.icon.name.localeCompare(b.icon.name));
+    ranked.sort(
+      (a, b) => b.score - a.score || a.icon.name.localeCompare(b.icon.name),
+    );
     const results = ranked.map((r) => r.icon);
 
     // Cache result (LRU)
