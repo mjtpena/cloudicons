@@ -2,9 +2,9 @@ name: Build and Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -19,51 +19,47 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    
+
     steps:
-    - uses: actions/checkout@v4
-    
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v4
-      with:
-        dotnet-version: 8.x
-    
-    - name: Restore dependencies
-      run: dotnet restore
-      
-    - name: Build
-      run: dotnet build --no-restore
-      
-    - name: Publish
-      run: dotnet publish -c Release -o ./dist
-      
-    - name: Copy content from subfolder to root
-      run: |
-        cp -r ./dist/wwwroot/cloudicons/* ./dist/wwwroot/
-        rm -rf ./dist/wwwroot/cloudicons
-      
-    - name: Add .nojekyll file
-      run: touch ./dist/wwwroot/.nojekyll
-      
-    - name: Fix base href for GitHub Pages
-      run: |
-        sed -i 's|<base href="/" />|<base href="/cloudicons/" />|g' ./dist/wwwroot/index.html
-    
-    - name: Fix icon paths in JSON files for GitHub Pages
-      run: |
-        find ./dist/wwwroot/data -name "*.json" -exec sed -i 's|"/icons/|"icons/|g' {} \;
-      
-    - name: Add .nojekyll file
-      run: touch ./dist/wwwroot/.nojekyll
-      
-    - name: Add 404.html for client-side routing
-      run: |
-        cp ./dist/wwwroot/index.html ./dist/wwwroot/404.html
-      
-    - name: Upload artifact
-      uses: actions/upload-pages-artifact@v3
-      with:
-        path: ./dist/wwwroot
+      - uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.x
+
+      - name: Restore dependencies
+        run: dotnet restore
+
+      - name: Build
+        run: dotnet build --no-restore
+
+      - name: Publish
+        run: dotnet publish -c Release -o ./dist
+
+      - name: Copy content from subfolder to root
+        run: |
+          cp -r ./dist/wwwroot/cloudicons/* ./dist/wwwroot/
+          rm -rf ./dist/wwwroot/cloudicons
+
+      - name: Add .nojekyll file
+        run: touch ./dist/wwwroot/.nojekyll
+
+      - name: Fix icon paths in JSON files
+        run: |
+          find ./dist/wwwroot/data -name "*.json" -exec sed -i 's|"/icons/|"icons/|g' {} \;
+
+      - name: Add .nojekyll file
+        run: touch ./dist/wwwroot/.nojekyll
+
+      - name: Add 404.html for client-side routing
+        run: |
+          cp ./dist/wwwroot/index.html ./dist/wwwroot/404.html
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist/wwwroot
 
   deploy:
     if: github.ref == 'refs/heads/main'
@@ -73,6 +69,6 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-    - name: Deploy to GitHub Pages
-      id: deployment
-      uses: actions/deploy-pages@v4
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

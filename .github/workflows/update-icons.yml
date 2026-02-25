@@ -39,5 +39,5 @@ jobs:
         body: 'Automated nightly update of cloud service icons from official sources.'
         branch: update-icons-${{ github.run_number }}
         delete-branch: true
-        author: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
-        committer: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
+        committer: GitHub <noreply@github.com>
+        author: mjtpena <mjtpena@users.noreply.github.com>
