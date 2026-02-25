@@ -303,24 +303,46 @@
 
     private static string CleanIconName(string name)
     {
+        if (string.IsNullOrWhiteSpace(name)) return "";
+
+        var cleaned = name;
+
+        // Strip leading dots and special chars
+        cleaned = Regex.Replace(cleaned, @"^[.\-_]+", "");
+
         // Strip numeric prefixes like "00698-icon-service-"
-        var cleaned = Regex.Replace(name, @"^\d+-icon-service-", "", RegexOptions.IgnoreCase);
+        cleaned = Regex.Replace(cleaned, @"^\d+-icon-service-", "", RegexOptions.IgnoreCase);
+
         // Also handle patterns like "12345-icon-" without "service"
         cleaned = Regex.Replace(cleaned, @"^\d+-icon-", "", RegexOptions.IgnoreCase);
+
         // Strip remaining leading digits + dash
         cleaned = Regex.Replace(cleaned, @"^\d+-", "");
+
+        // Strip any leading dots/dashes/underscores again (after other stripping)
+        cleaned = Regex.Replace(cleaned, @"^[.\-_]+", "");
+
         // Replace dashes/underscores with spaces
         cleaned = cleaned.Replace("-", " ").Replace("_", " ");
+
         // Remove file extensions
         cleaned = Regex.Replace(cleaned, @"\.(svg|png)$", "", RegexOptions.IgnoreCase);
-        // Collapse whitespace
+
+        // Strip leading/trailing whitespace and dots
+        cleaned = cleaned.Trim();
+        cleaned = cleaned.Trim('.', '-', '_', ' ');
+
+        // Collapse multiple whitespace
         cleaned = Regex.Replace(cleaned, @"\s+", " ").Trim();
+
         // Title-case each word
         if (!string.IsNullOrEmpty(cleaned))
         {
             cleaned = string.Join(" ", cleaned.Split(' ')
-                .Select(w => w.Length > 0 ? char.ToUpper(w[0]) + w.Substring(1) : w));
+                .Where(w => !string.IsNullOrWhiteSpace(w))
+                .Select(w => w.Length > 0 ? char.ToUpper(w[0]) + (w.Length > 1 ? w.Substring(1).ToLowerInvariant() : "") : ""));
         }
+
         return cleaned;
     }
 

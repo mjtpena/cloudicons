@@ -361,8 +361,8 @@ img {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.25rem;
 }
 
 /* --- Card --- */
@@ -394,13 +394,14 @@ img {
   align-items: center;
   justify-content: center;
   background: var(--bg-secondary);
-  padding: 1.25rem;
+  padding: 1rem;
 }
 
 .icon-img {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  max-width: 100%;
 }
 
 .card-body {
@@ -653,8 +654,8 @@ img {
   }
 
   .grid {
-    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
-    gap: 0.75rem;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 1rem;
   }
 
   .card-actions {
@@ -677,8 +678,8 @@ img {
   }
 
   .grid {
-    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
-    gap: 0.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 0.75rem;
   }
 
   .card-img {

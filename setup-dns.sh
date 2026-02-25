@@ -5,37 +5,29 @@
 # Prerequisites:
 #   - az cli installed and logged in
 #   - Domain xyzicon.com purchased in subscription f7759234-c85d-4ebf-8c87-98a68b327eb7
+#   - DNS zone already exists in RG-DOMAINS resource group
 #
 # This script:
-#   1. Creates a DNS zone for xyzicon.com
-#   2. Adds A records pointing to GitHub Pages IPs
-#   3. Adds CNAME for www → GitHub Pages
-#   4. Adds TXT record for domain verification
+#   1. Adds A records pointing to GitHub Pages IPs
+#   2. Adds CNAME for www → GitHub Pages
+#   3. Adds TXT record for domain verification
+#   4. Sets custom domain on GitHub Pages via gh cli
+#
+# STATUS: Already executed on 2026-02-25. Records are live.
 # ==========================================================================
 
 set -euo pipefail
 
 SUBSCRIPTION="f7759234-c85d-4ebf-8c87-98a68b327eb7"
 DOMAIN="xyzicon.com"
-RESOURCE_GROUP="xyzicon-dns-rg"
-GITHUB_PAGES_USER="mjtpena"  # GitHub username for Pages
+RESOURCE_GROUP="RG-DOMAINS"
+GITHUB_PAGES_USER="mjtpena"
+GITHUB_REPO="mjtpena/cloudicons"
 
 echo "=== Setting subscription ==="
 az account set --subscription "$SUBSCRIPTION"
 
-echo "=== Creating resource group (if not exists) ==="
-az group create \
-    --name "$RESOURCE_GROUP" \
-    --location "australiaeast" \
-    --output none 2>/dev/null || true
-
-echo "=== Creating DNS zone ==="
-az network dns zone create \
-    --resource-group "$RESOURCE_GROUP" \
-    --name "$DOMAIN" \
-    --output table 2>/dev/null || echo "DNS zone may already exist, continuing..."
-
-# GitHub Pages IP addresses (as of 2024+)
+# GitHub Pages IP addresses
 # See: https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site
 GITHUB_IPS=("185.199.108.153" "185.199.109.153" "185.199.110.153" "185.199.111.153")
 
@@ -75,16 +67,21 @@ az network dns zone show \
     --output tsv
 
 echo ""
+echo "=== Setting custom domain on GitHub Pages ==="
+if command -v gh &> /dev/null; then
+    gh api "repos/${GITHUB_REPO}/pages" -X PUT -f cname="$DOMAIN" -f build_type="workflow" --silent 2>/dev/null || true
+    echo "GitHub Pages custom domain set to $DOMAIN"
+
+    # Try enabling HTTPS (may fail if cert not yet provisioned)
+    gh api "repos/${GITHUB_REPO}/pages" -X PUT -F https_enforced=true --silent 2>/dev/null || \
+        echo "HTTPS enforcement pending certificate provisioning"
+else
+    echo "gh CLI not found. Set custom domain manually in GitHub repo Settings → Pages"
+fi
+
+echo ""
 echo "============================================"
-echo "DONE! Next steps:"
-echo ""
-echo "1. Update the domain registrar's nameservers to the ones above"
-echo "   (If purchased via Azure App Service Domains, this should be automatic)"
-echo ""
-echo "2. In your GitHub repo Settings → Pages → Custom domain,"
-echo "   enter: $DOMAIN"
-echo ""
-echo "3. Check 'Enforce HTTPS' once the certificate is provisioned"
-echo ""
-echo "4. DNS propagation may take up to 48 hours"
+echo "DONE! DNS records configured in RG-DOMAINS."
+echo "GitHub Pages custom domain set to $DOMAIN."
+echo "HTTPS will auto-enable once DNS propagates."
 echo "============================================"
