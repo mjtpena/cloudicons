@@ -1,51 +1,46 @@
 {
-  "category": "powerplatform",
-  "count": 9,
-  "icons": [
+  "Category": "Powerplatform",
+  "Count": 8,
+  "Icons": [
     {
-      "path": "/icons/powerplatform/AIBuilder_scalable.svg",
-      "name": "Aibuilder Scalable",
-      "fileName": "AIBuilder_scalable"
+      "name": "Agent365_scalable",
+      "path": "/icons/powerplatform/Agent365_scalable.svg",
+      "fileName": "Agent365_scalable.svg"
     },
     {
-      "path": "/icons/powerplatform/Dataverse_scalable.svg",
-      "name": "Dataverse Scalable",
-      "fileName": "Dataverse_scalable"
+      "name": "CopilotStudio_scalable",
+      "path": "/icons/powerplatform/CopilotStudio_scalable.svg",
+      "fileName": "CopilotStudio_scalable.svg"
     },
     {
-      "path": "/icons/powerplatform/PowerApps_scalable.svg",
-      "name": "Powerapps Scalable",
-      "fileName": "PowerApps_scalable"
+      "name": "AIBuilder_scalable",
+      "path": "/icons/powerplatform/Power Platform/AIBuilder_scalable.svg",
+      "fileName": "AIBuilder_scalable.svg"
     },
     {
-      "path": "/icons/powerplatform/PowerAutomate_scalable.svg",
-      "name": "Powerautomate Scalable",
-      "fileName": "PowerAutomate_scalable"
+      "name": "Dataverse_scalable",
+      "path": "/icons/powerplatform/Power Platform/Dataverse_scalable.svg",
+      "fileName": "Dataverse_scalable.svg"
     },
     {
-      "path": "/icons/powerplatform/PowerBI_scalable.svg",
-      "name": "Powerbi Scalable",
-      "fileName": "PowerBI_scalable"
+      "name": "PowerApps_scalable",
+      "path": "/icons/powerplatform/Power Platform/PowerApps_scalable.svg",
+      "fileName": "PowerApps_scalable.svg"
     },
     {
-      "path": "/icons/powerplatform/PowerFx_scalable.svg",
-      "name": "Powerfx Scalable",
-      "fileName": "PowerFx_scalable"
+      "name": "PowerAutomate_scalable",
+      "path": "/icons/powerplatform/Power Platform/PowerAutomate_scalable.svg",
+      "fileName": "PowerAutomate_scalable.svg"
     },
     {
-      "path": "/icons/powerplatform/PowerPages_scalable.svg",
-      "name": "Powerpages Scalable",
-      "fileName": "PowerPages_scalable"
+      "name": "PowerPages_scalable",
+      "path": "/icons/powerplatform/Power Platform/PowerPages_scalable.svg",
+      "fileName": "PowerPages_scalable.svg"
     },
     {
-      "path": "/icons/powerplatform/PowerPlatform_scalable.svg",
-      "name": "Powerplatform Scalable",
-      "fileName": "PowerPlatform_scalable"
-    },
-    {
-      "path": "/icons/powerplatform/PowerVirtualAgents_scalable.svg",
-      "name": "Powervirtualagents Scalable",
-      "fileName": "PowerVirtualAgents_scalable"
+      "name": "PowerPlatform_scalable",
+      "path": "/icons/powerplatform/Power Platform/PowerPlatform_scalable.svg",
+      "fileName": "PowerPlatform_scalable.svg"
     }
   ]
 }

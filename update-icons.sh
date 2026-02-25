@@ -103,4 +103,10 @@ else
 fi
 
 echo "Icon update process completed!"
+
+# Generate metadata files
+echo "Generating icon metadata..."
+python3 generate-metadata.py
+
+echo "Icon update and metadata generation completed!"
 echo "Please review the changes before committing."

@@ -1,76 +1,76 @@
 {
-  "category": "entra",
-  "count": 14,
-  "icons": [
+  "Category": "Entra",
+  "Count": 14,
+  "Icons": [
     {
+      "name": "Microsoft Entra BW icon (product family)",
       "path": "/icons/entra/Microsoft Entra BW icons SVG/Microsoft Entra BW icon (product family).svg",
-      "name": "Microsoft Entra Bw Icon (product Family)",
-      "fileName": "Microsoft Entra BW icon (product family)"
+      "fileName": "Microsoft Entra BW icon (product family).svg"
     },
     {
+      "name": "Microsoft Entra ID BW icon",
       "path": "/icons/entra/Microsoft Entra BW icons SVG/Microsoft Entra ID BW icon.svg",
-      "name": "Microsoft Entra Id Bw Icon",
-      "fileName": "Microsoft Entra ID BW icon"
+      "fileName": "Microsoft Entra ID BW icon.svg"
     },
     {
-      "path": "/icons/entra/Microsoft Entra color icons SVG/Microsoft Entra ID color icon.svg",
-      "name": "Microsoft Entra Id Color Icon",
-      "fileName": "Microsoft Entra ID color icon"
-    },
-    {
-      "path": "/icons/entra/Microsoft Entra BW icons SVG/Microsoft Entra ID filled BW icon.svg",
-      "name": "Microsoft Entra Id Filled Bw Icon",
-      "fileName": "Microsoft Entra ID filled BW icon"
-    },
-    {
+      "name": "Microsoft Entra ID Governance BW icon",
       "path": "/icons/entra/Microsoft Entra BW icons SVG/Microsoft Entra ID Governance BW icon.svg",
-      "name": "Microsoft Entra Id Governance Bw Icon",
-      "fileName": "Microsoft Entra ID Governance BW icon"
+      "fileName": "Microsoft Entra ID Governance BW icon.svg"
     },
     {
-      "path": "/icons/entra/Microsoft Entra color icons SVG/Microsoft Entra ID Governance color icon.svg",
-      "name": "Microsoft Entra Id Governance Color Icon",
-      "fileName": "Microsoft Entra ID Governance color icon"
+      "name": "Microsoft Entra ID filled BW icon",
+      "path": "/icons/entra/Microsoft Entra BW icons SVG/Microsoft Entra ID filled BW icon.svg",
+      "fileName": "Microsoft Entra ID filled BW icon.svg"
     },
     {
+      "name": "Microsoft Entra Internet Access BW icon",
       "path": "/icons/entra/Microsoft Entra BW icons SVG/Microsoft Entra Internet Access BW icon.svg",
-      "name": "Microsoft Entra Internet Access Bw Icon",
-      "fileName": "Microsoft Entra Internet Access BW icon"
+      "fileName": "Microsoft Entra Internet Access BW icon.svg"
     },
     {
-      "path": "/icons/entra/Microsoft Entra color icons SVG/Microsoft Entra Internet Access color icon.svg",
-      "name": "Microsoft Entra Internet Access Color Icon",
-      "fileName": "Microsoft Entra Internet Access color icon"
-    },
-    {
+      "name": "Microsoft Entra Private Access BW icon",
       "path": "/icons/entra/Microsoft Entra BW icons SVG/Microsoft Entra Private Access BW icon.svg",
-      "name": "Microsoft Entra Private Access Bw Icon",
-      "fileName": "Microsoft Entra Private Access BW icon"
+      "fileName": "Microsoft Entra Private Access BW icon.svg"
     },
     {
-      "path": "/icons/entra/Microsoft Entra color icons SVG/Microsoft Entra Private Access color icon.svg",
-      "name": "Microsoft Entra Private Access Color Icon",
-      "fileName": "Microsoft Entra Private Access color icon"
-    },
-    {
-      "path": "/icons/entra/Microsoft Entra color icons SVG/Microsoft Entra Product Family.svg",
-      "name": "Microsoft Entra Product Family",
-      "fileName": "Microsoft Entra Product Family"
-    },
-    {
+      "name": "Microsoft Entra Verified ID BW icon",
       "path": "/icons/entra/Microsoft Entra BW icons SVG/Microsoft Entra Verified ID BW icon.svg",
-      "name": "Microsoft Entra Verified Id Bw Icon",
-      "fileName": "Microsoft Entra Verified ID BW icon"
+      "fileName": "Microsoft Entra Verified ID BW icon.svg"
     },
     {
+      "name": "Microsoft Entra ID Governance color icon",
+      "path": "/icons/entra/Microsoft Entra color icons SVG/Microsoft Entra ID Governance color icon.svg",
+      "fileName": "Microsoft Entra ID Governance color icon.svg"
+    },
+    {
+      "name": "Microsoft Entra ID color icon",
+      "path": "/icons/entra/Microsoft Entra color icons SVG/Microsoft Entra ID color icon.svg",
+      "fileName": "Microsoft Entra ID color icon.svg"
+    },
+    {
+      "name": "Microsoft Entra Internet Access color icon",
+      "path": "/icons/entra/Microsoft Entra color icons SVG/Microsoft Entra Internet Access color icon.svg",
+      "fileName": "Microsoft Entra Internet Access color icon.svg"
+    },
+    {
+      "name": "Microsoft Entra Private Access color icon",
+      "path": "/icons/entra/Microsoft Entra color icons SVG/Microsoft Entra Private Access color icon.svg",
+      "fileName": "Microsoft Entra Private Access color icon.svg"
+    },
+    {
+      "name": "Microsoft Entra Product Family",
+      "path": "/icons/entra/Microsoft Entra color icons SVG/Microsoft Entra Product Family.svg",
+      "fileName": "Microsoft Entra Product Family.svg"
+    },
+    {
+      "name": "Microsoft Entra Verified ID color icon",
       "path": "/icons/entra/Microsoft Entra color icons SVG/Microsoft Entra Verified ID color icon.svg",
-      "name": "Microsoft Entra Verified Id Color Icon",
-      "fileName": "Microsoft Entra Verified ID color icon"
+      "fileName": "Microsoft Entra Verified ID color icon.svg"
     },
     {
+      "name": "Microsoft Entra Workload ID color icon",
       "path": "/icons/entra/Microsoft Entra color icons SVG/Microsoft Entra Workload ID color icon.svg",
-      "name": "Microsoft Entra Workload Id Color Icon",
-      "fileName": "Microsoft Entra Workload ID color icon"
+      "fileName": "Microsoft Entra Workload ID color icon.svg"
     }
   ]
 }
