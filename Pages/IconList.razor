@@ -7,53 +7,77 @@
 @inject HttpClient HttpClient
 
 <div class="search-container">
-    <input type="text" @bind="searchTerm" @bind:event="oninput" @onkeyup="SearchDebounced" placeholder="Search icons..." />
-</div>
-
-<div>
-    <input type="checkbox" id="downloadAsPng" @bind="DownloadAsPng" />
-    <label for="downloadAsPng">Download as PNG</label>
+    <div class="search-input-group">
+        <input type="text" @bind="searchTerm" @bind:event="oninput" @onkeyup="SearchDebounced" placeholder="🔍 Search icons by name (e.g., 'database', 'storage')..." />
+    </div>
+    
+    <div class="search-filters">
+        <input type="checkbox" id="downloadAsPng" @bind="DownloadAsPng" />
+        <label for="downloadAsPng">📥 Download as PNG</label>
+        
+        @if (totalIcons > 0)
+        {
+            <span class="filter-badge">
+                📊 Found @filteredSvgs.Count / @totalIcons icons
+            </span>
+        }
+    </div>
 </div>
 
 @if (isLoading)
 {
     <div class="text-center mt-4">
-        <p>Loading icons...</p>
+        <div class="loading-spinner">
+            <p>Loading icons...</p>
+        </div>
+    </div>
+}
+else if (allSvgs.Count == 0)
+{
+    <div class="no-results">
+        <div class="no-results-icon">📭</div>
+        <div class="no-results-text">No icons available for this category</div>
+    </div>
+}
+else if (filteredSvgs.Count == 0)
+{
+    <div class="no-results">
+        <div class="no-results-icon">🔍</div>
+        <div class="no-results-text">No icons found matching "<strong>@searchTerm</strong>"</div>
     </div>
 }
 else
 {
     <div class="svg-grid">
-        @if (filteredSvgs.Count > 0)
+        @foreach (var svg in filteredSvgs)
         {
-            @foreach (var svg in filteredSvgs)
-            {
-                var safeId = GenerateSafeId(svg.Name);
-                <div class="svg-item-wrapper">
-                    <div class="svg-item">
-                        <img id="@safeId" src="@svg.Path" alt="@svg.Name" style="min-width:180px;" 
-                             @oncontextmenu="@(e => OnRightClick(e, safeId, svg.Name))"
-                             @oncontextmenu:preventDefault="true" />
-                        @if (DownloadAsPng)
-                        {
-                            <a @onclick="() => OnDownloadRequested(safeId, svg.Name)">Download PNG</a>
-                        }
-                        else
-                        {
-                            <a href="@svg.Path" download="@svg.Name">Download SVG</a>
-                        }
-                    </div>
-                    <p>@(svg.Name.Length > 32 ? svg.Name.Substring(0, 32) + "..." : svg.Name)</p>
+            var safeId = GenerateSafeId(svg.Name);
+            <div class="svg-item-wrapper">
+                <div class="svg-item">
+                    <img id="@safeId" src="@svg.Path" alt="@svg.Name" 
+                         @oncontextmenu="@(e => OnRightClick(e, safeId, svg.Name))"
+                         @oncontextmenu:preventDefault="true"
+                         title="Right-click to copy • @svg.Name" />
+                    @if (DownloadAsPng)
+                    {
+                        <a @onclick="() => OnDownloadRequested(safeId, svg.Name)">📥 PNG</a>
+                    }
+                    else
+                    {
+                        <a href="@svg.Path" download="@svg.Name">📄 SVG</a>
+                    }
                 </div>
-            }
-        }
-        else if (!isLoading)
-        {
-            <p>No results found</p>
+                <p title="@svg.Name">@(svg.Name.Length > 32 ? svg.Name.Substring(0, 32) + "..." : svg.Name)</p>
+            </div>
         }
     </div>
 
-    <button @onclick="LoadMore" style="display: @(hasMoreToLoad ? "block" : "none")">Load More</button>
+    @if (hasMoreToLoad)
+    {
+        <div class="load-more-container">
+            <button class="load-more-btn" @onclick="LoadMore">Load More Icons ⬇️</button>
+        </div>
+    }
 }
 
 @implements IDisposable
@@ -68,6 +92,7 @@ else
     private List<SvgFile> filteredSvgs = new List<SvgFile>();
     private int currentPage = 1;
     private int pageSize = 20;
+    private int totalIcons = 0;
     private bool hasMoreToLoad = true;
     private bool DownloadAsPng { get; set; }
     private bool isLoading = true;
@@ -84,7 +109,6 @@ else
 
     protected override async Task OnParametersSetAsync()
     {
-        // Check if the Tab parameter has changed
         if (Tab != previousTab)
         {
             previousTab = Tab;
@@ -105,6 +129,7 @@ else
             if (response != null)
             {
                 allSvgs = response.Icons ?? new List<SvgFile>();
+                totalIcons = allSvgs.Count;
                 await LoadSvgs();
             }
         }
@@ -140,13 +165,17 @@ else
 
     private async Task<List<SvgFile>> SearchSvgsAsync(string searchTerm, int page, int pageSize)
     {
-        await Task.CompletedTask; // Make this async for consistency
+        await Task.CompletedTask;
 
         var query = allSvgs.AsEnumerable();
 
         if (!string.IsNullOrWhiteSpace(searchTerm))
         {
-            query = query.Where(icon => icon.Name.Contains(searchTerm, StringComparison.OrdinalIgnoreCase));
+            var lowerSearchTerm = searchTerm.ToLower();
+            query = query.Where(icon => 
+                icon.Name.Contains(searchTerm, StringComparison.OrdinalIgnoreCase) ||
+                ExtractCategoryFromPath(icon.Path).Contains(lowerSearchTerm)
+            );
         }
 
         var paginatedIcons = query
@@ -155,6 +184,23 @@ else
             .ToList();
 
         return paginatedIcons;
+    }
+
+    private string ExtractCategoryFromPath(string path)
+    {
+        try
+        {
+            var parts = path.Split('/');
+            if (parts.Length > 2)
+            {
+                return string.Join(" ", parts.Skip(2).Take(parts.Length - 3))
+                    .ToLower()
+                    .Replace("-", " ")
+                    .Replace("+", " ");
+            }
+        }
+        catch { }
+        return string.Empty;
     }
 
     private void SearchDebounced()
@@ -181,7 +227,6 @@ else
 
     private string GenerateSafeId(string name)
     {
-        // Remove any non-alphanumeric characters and replace spaces with underscores
         return "svg_" + Regex.Replace(name, @"[^a-zA-Z0-9]+", "_");
     }
 
