@@ -96,7 +96,6 @@ img {
   transition: padding 260ms ease;
 }
 
-
 .has-results .hero {
   padding: 1.5rem 1.5rem 1rem;
   border-bottom: 1px solid var(--border);
@@ -236,7 +235,6 @@ img {
   max-width: 680px;
   transition: all var(--transition);
 }
-
 
 .has-results .filters {
   margin-bottom: 0.25rem;
