@@ -75,6 +75,18 @@ img {
   flex-direction: column;
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 /* --- Hero (Google-style centering) --- */
 .hero {
   display: flex;
@@ -82,6 +94,33 @@ img {
   align-items: center;
   padding: 14vh 1.5rem 2rem;
   transition: padding 260ms ease;
+}
+
+.first-use-tip {
+  width: 100%;
+  max-width: 680px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  background: #e8f0fe;
+  color: var(--blue-dark);
+  border: 1px solid #d2e3fc;
+  border-radius: var(--radius-sm);
+  font-size: 0.8rem;
+  padding: 0.55rem 0.75rem;
+  margin-bottom: 0.85rem;
+}
+
+.tip-close {
+  color: var(--blue-dark);
+  border-radius: 4px;
+  width: 22px;
+  height: 22px;
+}
+
+.tip-close:hover {
+  background: rgba(26, 115, 232, 0.12);
 }
 
 .has-results .hero {
@@ -222,6 +261,43 @@ img {
   justify-content: center;
   max-width: 680px;
   transition: all var(--transition);
+}
+
+.help-link {
+  padding: 6px 10px;
+  color: var(--text-secondary);
+  font-size: 0.76rem;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--bg);
+}
+
+.help-link:hover {
+  background: var(--bg-secondary);
+}
+
+.keyboard-help {
+  margin-top: 0.65rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.55rem;
+  font-size: 0.74rem;
+  color: var(--text-secondary);
+}
+
+.keyboard-help kbd {
+  font-family: inherit;
+  font-size: 0.72rem;
+  padding: 2px 5px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--bg-secondary);
+  color: var(--text);
+}
+
+.query-chips.trending {
+  margin-top: 0.7rem;
 }
 
 .has-results .filters {
@@ -505,6 +581,7 @@ img {
 .search-clear:focus-visible,
 .pill:focus-visible,
 .fmt-btn:focus-visible,
+.help-link:focus-visible,
 .btn-reset:focus-visible,
 .chip:focus-visible,
 .search-input:focus-visible {

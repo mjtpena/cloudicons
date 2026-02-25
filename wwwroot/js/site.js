@@ -10,16 +10,25 @@ window.xyzicon.searchEngine = {
   index: null,
   cache: new Map(),
   maxCacheSize: 30,
+  usageStats: new Map(),
+  queryStats: new Map(),
 
   // Initialize with icon data from C#
   initIndex(icons) {
+    const pick = (obj, camel, pascal, fallback = "") => {
+      if (!obj) return fallback;
+      if (obj[camel] !== undefined && obj[camel] !== null) return obj[camel];
+      if (obj[pascal] !== undefined && obj[pascal] !== null) return obj[pascal];
+      return fallback;
+    };
+
     this.index = icons.map((icon) => ({
-      id: icon.name,
-      name: icon.displayName,
-      provider: icon.provider,
-      searchText: icon.searchText || "",
-      path: icon.path,
-      fileName: icon.fileName,
+      id: pick(icon, "name", "Name"),
+      name: pick(icon, "displayName", "DisplayName"),
+      provider: pick(icon, "provider", "Provider"),
+      searchText: pick(icon, "searchText", "SearchText"),
+      path: pick(icon, "path", "Path"),
+      fileName: pick(icon, "fileName", "FileName"),
     }));
 
     console.log(`[xyzicon] Search index ready: ${this.index.length} icons`);
@@ -86,7 +95,8 @@ window.xyzicon.searchEngine = {
 
       if (searchText.startsWith(firstTerm)) score += 20;
 
-      ranked.push({ icon, score });
+      const usageBonus = this.usageStats.get(icon.id) || 0;
+      ranked.push({ icon, score: score + usageBonus });
     }
 
     ranked.sort(
@@ -142,6 +152,29 @@ window.xyzicon.searchEngine = {
 
   clearCache() {
     this.cache.clear();
+  },
+
+  recordIconUse(iconId) {
+    if (!iconId) return;
+    const current = this.usageStats.get(iconId) || 0;
+    this.usageStats.set(iconId, Math.min(current + 2, 60));
+  },
+
+  recordQueryOutcome(query, resultCount) {
+    const normalized = (query || "").trim().toLowerCase();
+    if (!normalized) return;
+    const current = this.queryStats.get(normalized) || { count: 0, hits: 0 };
+    current.count += 1;
+    if ((resultCount || 0) > 0) current.hits += 1;
+    this.queryStats.set(normalized, current);
+  },
+
+  getTopQueries(limit = 8) {
+    return Array.from(this.queryStats.entries())
+      .filter(([q, s]) => q.length > 1 && s.hits > 0)
+      .sort((a, b) => b[1].count - a[1].count)
+      .slice(0, limit)
+      .map(([q]) => q);
   },
 };
 
@@ -215,6 +248,41 @@ Object.assign(window.xyzicon, {
     if (card) {
       card.scrollIntoView({ block: "nearest", behavior: "smooth" });
     }
+  },
+
+  initKeyboardShortcuts(searchInputId, helpButtonId) {
+    if (this._keyHandlerAttached) return;
+    this._keyHandlerAttached = true;
+
+    window.addEventListener("keydown", (event) => {
+      const isMeta = event.metaKey || event.ctrlKey;
+      if (isMeta && event.key.toLowerCase() === "k") {
+        event.preventDefault();
+        const searchInput = document.getElementById(searchInputId);
+        if (searchInput) searchInput.focus();
+      }
+
+      if (event.key === "?" && !event.metaKey && !event.ctrlKey) {
+        const active = document.activeElement;
+        const inInput =
+          active &&
+          (active.tagName === "INPUT" ||
+            active.tagName === "TEXTAREA" ||
+            active.isContentEditable);
+        if (!inInput) {
+          const helpButton = document.getElementById(helpButtonId);
+          if (helpButton) helpButton.click();
+        }
+      }
+    });
+  },
+
+  shouldShowFirstUseTip() {
+    return localStorage.getItem("xyzicon:firstUseTipDismissed") !== "1";
+  },
+
+  dismissFirstUseTip() {
+    localStorage.setItem("xyzicon:firstUseTipDismissed", "1");
   },
 });
 
@@ -400,6 +468,52 @@ window.copyImageToClipboard = async function (imgId, fileName) {
     window.toastNotifications.error(
       "Copy failed. Try right-click → Copy Image instead.",
     );
+    return false;
+  }
+};
+
+window.copySvgCode = async function (imgId, fileName) {
+  const img = document.getElementById(imgId);
+  if (!img || !img.src) {
+    window.toastNotifications.error("Image not found");
+    return false;
+  }
+
+  if (!navigator.clipboard?.writeText) {
+    window.toastNotifications.error("Clipboard text API unavailable");
+    return false;
+  }
+
+  try {
+    const response = await fetch(img.src);
+    const svgText = await response.text();
+    await navigator.clipboard.writeText(svgText);
+    window.toastNotifications.success("SVG code copied");
+    return true;
+  } catch {
+    window.toastNotifications.error("Could not copy SVG code");
+    return false;
+  }
+};
+
+window.copyImageUrl = async function (imgId, fileName) {
+  const img = document.getElementById(imgId);
+  if (!img || !img.src) {
+    window.toastNotifications.error("Image not found");
+    return false;
+  }
+
+  if (!navigator.clipboard?.writeText) {
+    window.toastNotifications.error("Clipboard text API unavailable");
+    return false;
+  }
+
+  try {
+    await navigator.clipboard.writeText(img.src);
+    window.toastNotifications.success("Icon URL copied");
+    return true;
+  } catch {
+    window.toastNotifications.error("Could not copy icon URL");
     return false;
   }
 };

@@ -9,9 +9,18 @@
 <PageTitle>XYZ Icons - Search 8000+ Official Cloud Icons</PageTitle>
 
 <div class="app-root @(hasSearched ? "has-results" : "")">
+    <div class="sr-only" aria-live="polite" aria-atomic="true">@liveAnnouncement</div>
 
     <!-- Google-style centered hero (shrinks on search) -->
     <div class="hero">
+        @if (showFirstUseTips)
+        {
+            <div class="first-use-tip">
+                <span>Tip: Press ⌘K (or Ctrl+K) to focus search. Use ↑/↓ to move, Enter to copy, Esc to clear.</span>
+                <button class="tip-close" @onclick="DismissFirstUseTip" aria-label="Dismiss tip">✕</button>
+            </div>
+        }
+
         <div class="logo">
             <span class="logo-icon">☁️</span>
             <h1 class="logo-text">xyz<span class="logo-accent">icon</span></h1>
@@ -25,14 +34,14 @@
             </svg>
             <input type="text"
                    @ref="searchInput"
+                                     id="main-search-input"
                    @bind="searchTerm"
                    @bind:event="oninput"
-                     @onkeydown="OnSearchKeyDown"
+                                     @onkeydown="OnSearchKeyDown"
                    @onkeyup="OnSearchKeyUp"
                    placeholder="Search icons…"
-                     aria-label="Search icons"
-                   class="search-input"
-                   autofocus />
+                                     aria-label="Search icons"
+                     class="search-input" />
             @if (!string.IsNullOrEmpty(searchTerm))
             {
                 <button @onclick="ClearSearch" class="search-clear" title="Clear">
@@ -63,7 +72,28 @@
                 <button class="fmt-btn @(!DownloadAsPng ? "active" : "")" @onclick="() => DownloadAsPng = false">SVG</button>
                 <button class="fmt-btn @(DownloadAsPng ? "active" : "")" @onclick="() => DownloadAsPng = true">PNG</button>
             </div>
+            <button id="keyboard-help-toggle" class="help-link" @onclick="ToggleKeyboardHelp">Shortcuts ?</button>
         </div>
+
+        @if (showKeyboardHelp)
+        {
+            <div class="keyboard-help">
+                <span><kbd>⌘/Ctrl</kbd>+<kbd>K</kbd> focus search</span>
+                <span><kbd>↑</kbd>/<kbd>↓</kbd> move selection</span>
+                <span><kbd>Enter</kbd> copy selected icon</span>
+                <span><kbd>Esc</kbd> clear search</span>
+            </div>
+        }
+
+        @if (trendingQueries.Count > 0)
+        {
+            <div class="query-chips trending" aria-label="Trending searches">
+                @foreach (var query in trendingQueries)
+                {
+                    <button class="chip" @onclick="() => ApplySuggestion(query)">@query</button>
+                }
+            </div>
+        }
 
         @if (totalIconsLoaded > 0 && hasSearched)
         {
@@ -126,6 +156,8 @@
                                  src="@icon.Path"
                                  alt="@icon.DisplayName"
                                  loading="lazy"
+                                   decoding="async"
+                                   fetchpriority="low"
                                  class="icon-img" />
                         </div>
                         <div class="card-body">
@@ -134,7 +166,7 @@
                         </div>
                         <div class="card-actions">
                             <button class="action-btn" @onclick:stopPropagation="true"
-                                    @onclick="() => OnDownloadRequested(safeId, icon.DisplayName)"
+                                    @onclick="() => OnDownloadRequested(safeId, icon.Name, icon.DisplayName)"
                                     title="Download">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
                                     <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
@@ -142,12 +174,22 @@
                                 @GetDownloadButtonLabel(safeId)
                             </button>
                             <button class="action-btn" @onclick:stopPropagation="true"
-                                    @onclick="() => OnCopyRequested(safeId, icon.DisplayName)"
+                                    @onclick="() => OnCopyRequested(safeId, icon.Name, icon.DisplayName)"
                                     title="Copy to clipboard">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
                                     <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
                                 </svg>
                                 @GetCopyButtonLabel(safeId)
+                            </button>
+                            <button class="action-btn" @onclick:stopPropagation="true"
+                                    @onclick="() => OnCopySvgCodeRequested(safeId, icon.Name, icon.DisplayName)"
+                                    title="Copy SVG code">
+                                @GetCopySvgCodeButtonLabel(safeId)
+                            </button>
+                            <button class="action-btn" @onclick:stopPropagation="true"
+                                    @onclick="() => OnCopyUrlRequested(safeId, icon.Name, icon.DisplayName)"
+                                    title="Copy icon URL">
+                                @GetCopyUrlButtonLabel(safeId)
                             </button>
                         </div>
                     </div>
@@ -214,10 +256,16 @@
     private bool hasSearched = false;
     private bool DownloadAsPng { get; set; }
     private bool isLoading = true;
+    private bool showKeyboardHelp;
+    private bool showFirstUseTips;
     private string loadingMessage = "Loading icons…";
+    private string liveAnnouncement = string.Empty;
     private int activeCardIndex = -1;
     private string? lastCopiedSafeId;
     private string? lastDownloadedSafeId;
+    private string? lastCopiedSvgCodeSafeId;
+    private string? lastCopiedUrlSafeId;
+    private List<string> trendingQueries = new();
     private System.Timers.Timer? debounceTimer;
     private DotNetObjectReference<Index>? dotNetRef;
     private bool searchEngineReady = false;
@@ -274,6 +322,10 @@
         {
             dotNetRef = DotNetObjectReference.Create(this);
             await JSRuntime.InvokeVoidAsync("xyzicon.initInfiniteScroll", dotNetRef);
+            await JSRuntime.InvokeVoidAsync("xyzicon.initKeyboardShortcuts", "main-search-input", "keyboard-help-toggle");
+            showFirstUseTips = await JSRuntime.InvokeAsync<bool>("xyzicon.shouldShowFirstUseTip");
+            await RefreshTrendingQueries();
+            StateHasChanged();
         }
 
         // Re-observe sentinel whenever results change
@@ -497,13 +549,16 @@
             var enabledProviders = selectedProviders.ToDictionary(kv => kv.Key, kv => kv.Value);
 
             // Call JavaScript search engine (ultra-fast!)
-            var searchResults = await JSRuntime.InvokeAsync<List<dynamic>>("xyzicon.searchEngine.search", searchTerm, enabledProviders);
+            var searchResults = await JSRuntime.InvokeAsync<List<SearchResultItem>>("xyzicon.searchEngine.search", searchTerm, enabledProviders);
 
-            // Convert dynamic results back to IconData for display
+            // Convert typed JS results back to IconData for display
             filteredIcons = searchResults?
-                .Select(r => allIcons.FirstOrDefault(icon => icon.Name == (string)r.id))
+                .Select(r => allIcons.FirstOrDefault(icon => icon.Name == r.Id))
                 .OfType<IconData>()
                 .ToList() ?? new List<IconData>();
+
+            await JSRuntime.InvokeVoidAsync("xyzicon.searchEngine.recordQueryOutcome", searchTerm, filteredIcons.Count);
+            await RefreshTrendingQueries();
         }
         catch (Exception ex)
         {
@@ -514,6 +569,7 @@
         displayCount = displayIncrement;
         UpdateDisplayedIcons();
         activeCardIndex = displayedIcons.Count > 0 ? 0 : -1;
+        AnnounceResultCount();
     }
 
     private void UpdateDisplayedIcons()
@@ -556,6 +612,12 @@
 
     private async Task OnSearchKeyDown(KeyboardEventArgs e)
     {
+        if (e.Key == "?")
+        {
+            ToggleKeyboardHelp();
+            return;
+        }
+
         if (e.Key == "Escape")
         {
             await ClearSearch();
@@ -582,7 +644,7 @@
         if (e.Key == "Enter" && activeCardIndex >= 0 && activeCardIndex < displayedIcons.Count)
         {
             var icon = displayedIcons[activeCardIndex];
-            await OnCopyRequested(GenerateSafeId(icon.Name), icon.DisplayName);
+            await OnCopyRequested(GenerateSafeId(icon.Name), icon.Name, icon.DisplayName);
         }
     }
 
@@ -641,6 +703,7 @@
         hasSearched = selectedProviders.Values.Any(v => !v);
         await JSRuntime.InvokeVoidAsync("xyzicon.searchEngine.clearCache");
         await FilterIcons();
+        liveAnnouncement = "Search cleared.";
     }
 
     private async Task ResetSearch()
@@ -653,6 +716,7 @@
         displayedIcons.Clear();
         activeCardIndex = -1;
         await JSRuntime.InvokeVoidAsync("xyzicon.searchEngine.clearCache");
+        liveAnnouncement = "Search and filters reset.";
     }
 
     private async Task ApplySuggestion(string suggestion)
@@ -700,6 +764,16 @@
         return GetButtonSuccessLabel("Copy", lastCopiedSafeId == safeId);
     }
 
+    private string GetCopySvgCodeButtonLabel(string safeId)
+    {
+        return GetButtonSuccessLabel("Code", lastCopiedSvgCodeSafeId == safeId);
+    }
+
+    private string GetCopyUrlButtonLabel(string safeId)
+    {
+        return GetButtonSuccessLabel("URL", lastCopiedUrlSafeId == safeId);
+    }
+
     private string HighlightMatch(string text)
     {
         var encoded = WebUtility.HtmlEncode(text);
@@ -737,6 +811,30 @@
         }
     }
 
+    private async Task FlashCopySvgCodeState(string safeId)
+    {
+        lastCopiedSvgCodeSafeId = safeId;
+        await InvokeAsync(StateHasChanged);
+        await Task.Delay(1400);
+        if (lastCopiedSvgCodeSafeId == safeId)
+        {
+            lastCopiedSvgCodeSafeId = null;
+            await InvokeAsync(StateHasChanged);
+        }
+    }
+
+    private async Task FlashCopyUrlState(string safeId)
+    {
+        lastCopiedUrlSafeId = safeId;
+        await InvokeAsync(StateHasChanged);
+        await Task.Delay(1400);
+        if (lastCopiedUrlSafeId == safeId)
+        {
+            lastCopiedUrlSafeId = null;
+            await InvokeAsync(StateHasChanged);
+        }
+    }
+
     private async Task FlashDownloadState(string safeId)
     {
         lastDownloadedSafeId = safeId;
@@ -749,23 +847,85 @@
         }
     }
 
-    private async Task OnDownloadRequested(string safeId, string fileName)
+    private async Task OnDownloadRequested(string safeId, string iconId, string displayName)
     {
         bool success;
         if (DownloadAsPng)
-            success = await JSRuntime.InvokeAsync<bool>("downloadAsPng", safeId, fileName);
+            success = await JSRuntime.InvokeAsync<bool>("downloadAsPng", safeId, displayName);
         else
-            success = await JSRuntime.InvokeAsync<bool>("downloadAsSvg", safeId, fileName);
+            success = await JSRuntime.InvokeAsync<bool>("downloadAsSvg", safeId, displayName);
 
         if (success)
+        {
+            await JSRuntime.InvokeVoidAsync("xyzicon.searchEngine.recordIconUse", iconId);
+            liveAnnouncement = $"Downloaded {displayName} as {(DownloadAsPng ? "PNG" : "SVG")}.";
             _ = FlashDownloadState(safeId);
+        }
     }
 
-    private async Task OnCopyRequested(string safeId, string fileName)
+    private async Task OnCopyRequested(string safeId, string iconId, string displayName)
     {
-        var success = await JSRuntime.InvokeAsync<bool>("copyImageToClipboard", safeId, fileName);
+        var success = await JSRuntime.InvokeAsync<bool>("copyImageToClipboard", safeId, displayName);
         if (success)
+        {
+            await JSRuntime.InvokeVoidAsync("xyzicon.searchEngine.recordIconUse", iconId);
+            liveAnnouncement = $"Copied {displayName} to clipboard.";
             _ = FlashCopyState(safeId);
+        }
+    }
+
+    private async Task OnCopySvgCodeRequested(string safeId, string iconId, string displayName)
+    {
+        var success = await JSRuntime.InvokeAsync<bool>("copySvgCode", safeId, displayName);
+        if (success)
+        {
+            await JSRuntime.InvokeVoidAsync("xyzicon.searchEngine.recordIconUse", iconId);
+            liveAnnouncement = $"Copied SVG code for {displayName}.";
+            _ = FlashCopySvgCodeState(safeId);
+        }
+    }
+
+    private async Task OnCopyUrlRequested(string safeId, string iconId, string displayName)
+    {
+        var success = await JSRuntime.InvokeAsync<bool>("copyImageUrl", safeId, displayName);
+        if (success)
+        {
+            await JSRuntime.InvokeVoidAsync("xyzicon.searchEngine.recordIconUse", iconId);
+            liveAnnouncement = $"Copied URL for {displayName}.";
+            _ = FlashCopyUrlState(safeId);
+        }
+    }
+
+    private async Task RefreshTrendingQueries()
+    {
+        trendingQueries = await JSRuntime.InvokeAsync<List<string>>("xyzicon.searchEngine.getTopQueries", 8);
+    }
+
+    private async Task DismissFirstUseTip()
+    {
+        showFirstUseTips = false;
+        await JSRuntime.InvokeVoidAsync("xyzicon.dismissFirstUseTip");
+    }
+
+    private void ToggleKeyboardHelp()
+    {
+        showKeyboardHelp = !showKeyboardHelp;
+    }
+
+    private void AnnounceResultCount()
+    {
+        if (isLoading)
+            return;
+
+        if (!hasSearched)
+        {
+            liveAnnouncement = $"Ready. {totalIconsLoaded} icons available.";
+            return;
+        }
+
+        liveAnnouncement = filteredIcons.Count == 0
+            ? "No icons found."
+            : $"Showing {filteredIcons.Count} results.";
     }
 
     private class IconData
@@ -778,6 +938,12 @@
         public string ProviderName { get; set; } = string.Empty;
         public string Category { get; set; } = string.Empty;
         public string SearchText { get; set; } = string.Empty;
+    }
+
+    private class SearchResultItem
+    {
+        [JsonPropertyName("id")]
+        public string Id { get; set; } = string.Empty;
     }
 
     private class SvgFile
