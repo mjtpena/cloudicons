@@ -1,76 +1,16 @@
 ﻿<div class="top-row ps-3 navbar navbar-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="">Official Cloud Icons</a>
-        <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+        <a class="navbar-brand" href="/">☁️ Cloud Icons</a>
+        <div class="navbar-links">
+            <a href="https://github.com/mjtpena/CloudIcons" target="_blank" class="nav-link-external">
+                <span class="oi oi-external-link" aria-hidden="true"></span> GitHub
+            </a>
+            <a href="https://michaeljohnpena.com" target="_blank" class="nav-link-external">
+                <span class="oi oi-external-link" aria-hidden="true"></span> Author
+            </a>
+        </div>
     </div>
 </div>
 
-<div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
-    <nav class="flex-column">
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="oi oi-warning" aria-hidden="true"></span> Disclaimer
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="iconlist/azure" Match="NavLinkMatch.Prefix">
-                <span class="oi oi-cloud" aria-hidden="true"></span> Azure
-                <small class="text-muted d-block">v18 - Jan 2025</small>
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="iconlist/aws" Match="NavLinkMatch.Prefix">
-                <span class="oi oi-cloud" aria-hidden="true"></span> AWS
-                <small class="text-muted d-block">Jul 31, 2025</small>
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="iconlist/gcp" Match="NavLinkMatch.Prefix">
-                <span class="oi oi-cloud" aria-hidden="true"></span> Google Cloud
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="iconlist/fabric" Match="NavLinkMatch.Prefix">
-                <span class="oi oi-graph" aria-hidden="true"></span> Fabric
-                <small class="text-muted d-block">Aug 21, 2025</small>
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="iconlist/microsoft365" Match="NavLinkMatch.Prefix">
-                <span class="oi oi-document" aria-hidden="true"></span> Microsoft 365
-                <small class="text-muted d-block">Jan 9, 2024</small>
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="iconlist/powerplatform" Match="NavLinkMatch.Prefix">
-                <span class="oi oi-power-standby" aria-hidden="true"></span> Power Platform
-                <small class="text-muted d-block">Dec 19, 2025</small>
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="iconlist/dynamics365" Match="NavLinkMatch.Prefix">
-                <span class="oi oi-bullhorn" aria-hidden="true"></span> Dynamics 365
-                <small class="text-muted d-block">Dec 19, 2025</small>
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="iconlist/entra" Match="NavLinkMatch.Prefix">
-                <span class="oi oi-account-login" aria-hidden="true"></span> Entra (Azure AD)
-            </NavLink>
-        </div>
-    </nav>
-
-</div>
-
 @code {
-    private bool collapseNavMenu = true;
-
-    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
-
-    private void ToggleNavMenu()
-    {
-        collapseNavMenu = !collapseNavMenu;
-    }
 }
