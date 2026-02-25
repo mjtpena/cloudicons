@@ -44,31 +44,38 @@
             }
         </div>
 
-        <!-- Compact filter row -->
-        <div class="filters">
-            <div class="filter-shortcuts">
-                <button class="pill shortcut" @onclick="SelectAllProviders">All</button>
-                <button class="pill shortcut" @onclick="ClearAllProviders">None</button>
-                <span class="provider-meta">@SelectedProviderCount/@providers.Count selected</span>
-            </div>
-            <div class="provider-pills">
-                @foreach (var provider in providers)
-                {
-                    <button class="pill @(selectedProviders[provider.Key] ? "active" : "")"
-                            @onclick="() => ToggleProvider(provider.Key)">
-                        @provider.Value
-                    </button>
-                }
-            </div>
-            <div class="format-switch">
-                <button class="fmt-btn @(!DownloadAsPng ? "active" : "")" @onclick="() => DownloadAsPng = false">SVG</button>
-                <button class="fmt-btn @(DownloadAsPng ? "active" : "")" @onclick="() => DownloadAsPng = true">PNG</button>
-            </div>
-        </div>
-
-        @if (totalIconsLoaded > 0 && hasSearched)
+        @if (hasSearched)
         {
-            <div class="result-count">@filteredIcons.Count of @totalIconsLoaded icons</div>
+            <div class="search-toolbar">
+                <span class="result-count">@filteredIcons.Count of @totalIconsLoaded</span>
+                <button class="toolbar-btn @(showFilters ? "active" : "")" @onclick="ToggleFilters" title="Filter providers">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14">
+                        <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/>
+                    </svg>
+                    Filters
+                </button>
+                <div class="format-switch">
+                    <button class="fmt-btn @(!DownloadAsPng ? "active" : "")" @onclick="() => DownloadAsPng = false">SVG</button>
+                    <button class="fmt-btn @(DownloadAsPng ? "active" : "")" @onclick="() => DownloadAsPng = true">PNG</button>
+                </div>
+            </div>
+
+            @if (showFilters)
+            {
+                <div class="filter-bar">
+                    @foreach (var provider in providers)
+                    {
+                        <button class="pill @(selectedProviders[provider.Key] ? "active" : "")"
+                                @onclick="() => ToggleProvider(provider.Key)">
+                            @provider.Value
+                        </button>
+                    }
+                    @if (selectedProviders.Values.Any(v => !v))
+                    {
+                        <button class="pill reset-pill" @onclick="SelectAllProviders">Reset</button>
+                    }
+                </div>
+            }
         }
     </div>
 
@@ -104,12 +111,6 @@
             {
                 <button class="btn-reset" @onclick="SelectAllProviders">Clear filters</button>
             }
-            <div class="query-chips" aria-label="Suggested queries">
-                @foreach (var suggestion in commonSuggestions)
-                {
-                    <button class="chip" @onclick="() => ApplySuggestion(suggestion)">@suggestion</button>
-                }
-            </div>
             <button class="btn-reset" @onclick="ResetSearch">Reset</button>
         </div>
     }
@@ -127,13 +128,12 @@
                                  src="@icon.Path"
                                  alt="@icon.DisplayName"
                                  loading="lazy"
-                                   decoding="async"
-                                   fetchpriority="low"
+                                 decoding="async"
+                                 fetchpriority="low"
                                  class="icon-img" />
                         </div>
                         <div class="card-body">
                             <span class="card-title" title="@icon.DisplayName">@((MarkupString)HighlightMatch(icon.DisplayName))</span>
-                            <span class="card-provider">@GetProviderLabel(icon.Provider)</span>
                         </div>
                         <div class="card-actions">
                             <button class="action-btn" @onclick:stopPropagation="true"
@@ -151,16 +151,6 @@
                                     <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
                                 </svg>
                                 @GetCopyButtonLabel(safeId)
-                            </button>
-                            <button class="action-btn" @onclick:stopPropagation="true"
-                                    @onclick="() => OnCopySvgCodeRequested(safeId, icon.Name, icon.DisplayName)"
-                                    title="Copy SVG code">
-                                @GetCopySvgCodeButtonLabel(safeId)
-                            </button>
-                            <button class="action-btn" @onclick:stopPropagation="true"
-                                    @onclick="() => OnCopyUrlRequested(safeId, icon.Name, icon.DisplayName)"
-                                    title="Copy icon URL">
-                                @GetCopyUrlButtonLabel(safeId)
                             </button>
                         </div>
                     </div>
@@ -187,17 +177,12 @@
     }
     else
     {
-        <!-- Initial state: show popular/random icons as a preview -->
-        <div class="initial-hint">
-            <p>Random icons (default). Type to search, or click a provider to browse.</p>
-            <button class="btn-random" @onclick="RandomizePreviewIcons">Randomize icons</button>
-            <div class="preview-grid">
+        <div class="explore">
+            <div class="explore-grid">
                 @foreach (var icon in previewIcons)
                 {
-                    var safeId = GenerateSafeId(icon.Name);
-                    <div class="preview-card" @onclick="() => OnPreviewClick(icon)">
-                        <img id="@safeId" src="@icon.Path" alt="@icon.DisplayName" loading="lazy" class="preview-img" />
-                        <span class="preview-label">@icon.DisplayName</span>
+                    <div class="explore-card" @onclick="() => OnPreviewClick(icon)" title="@icon.DisplayName">
+                        <img src="@icon.Path" alt="@icon.DisplayName" loading="lazy" />
                     </div>
                 }
             </div>
@@ -220,6 +205,7 @@
     private int totalIconsLoaded = 0;
     private bool hasMoreToDisplay = false;
     private bool hasSearched = false;
+    private bool showFilters = false;
     private bool DownloadAsPng { get; set; }
     private bool isLoading = true;
     private string loadingMessage = "Loading icons…";
@@ -227,22 +213,9 @@
     private int activeCardIndex = -1;
     private string? lastCopiedSafeId;
     private string? lastDownloadedSafeId;
-    private string? lastCopiedSvgCodeSafeId;
-    private string? lastCopiedUrlSafeId;
     private System.Timers.Timer? debounceTimer;
     private DotNetObjectReference<Index>? dotNetRef;
     private bool searchEngineReady = false;
-    private readonly List<string> commonSuggestions = new()
-    {
-        "kubernetes",
-        "storage",
-        "database",
-        "compute",
-        "network",
-        "security",
-        "api",
-        "ai"
-    };
 
     private int SelectedProviderCount => selectedProviders.Values.Count(v => v);
 
@@ -621,8 +594,14 @@
     {
         selectedProviders[provider] = !selectedProviders[provider];
         hasSearched = true;
+        showFilters = true;
         await JSRuntime.InvokeVoidAsync("xyzicon.searchEngine.clearCache");
         await FilterIcons();
+    }
+
+    private void ToggleFilters()
+    {
+        showFilters = !showFilters;
     }
 
     private async Task SelectAllProviders()
@@ -663,6 +642,7 @@
         filteredIcons.Clear();
         displayedIcons.Clear();
         activeCardIndex = -1;
+        showFilters = false;
         await JSRuntime.InvokeVoidAsync("xyzicon.searchEngine.clearCache");
         RandomizePreviewIcons();
         liveAnnouncement = "Search and filters reset.";
@@ -677,14 +657,7 @@
         }
 
         var rng = new Random();
-        previewIcons = allIcons.OrderBy(_ => rng.Next()).Take(36).ToList();
-    }
-
-    private async Task ApplySuggestion(string suggestion)
-    {
-        searchTerm = suggestion;
-        hasSearched = true;
-        await FilterIcons();
+        previewIcons = allIcons.OrderBy(_ => rng.Next()).Take(48).ToList();
     }
 
     private async Task OnPreviewClick(IconData icon)
@@ -725,16 +698,6 @@
         return GetButtonSuccessLabel("Copy", lastCopiedSafeId == safeId);
     }
 
-    private string GetCopySvgCodeButtonLabel(string safeId)
-    {
-        return GetButtonSuccessLabel("Code", lastCopiedSvgCodeSafeId == safeId);
-    }
-
-    private string GetCopyUrlButtonLabel(string safeId)
-    {
-        return GetButtonSuccessLabel("URL", lastCopiedUrlSafeId == safeId);
-    }
-
     private string HighlightMatch(string text)
     {
         var encoded = WebUtility.HtmlEncode(text);
@@ -768,30 +731,6 @@
         if (lastCopiedSafeId == safeId)
         {
             lastCopiedSafeId = null;
-            await InvokeAsync(StateHasChanged);
-        }
-    }
-
-    private async Task FlashCopySvgCodeState(string safeId)
-    {
-        lastCopiedSvgCodeSafeId = safeId;
-        await InvokeAsync(StateHasChanged);
-        await Task.Delay(1400);
-        if (lastCopiedSvgCodeSafeId == safeId)
-        {
-            lastCopiedSvgCodeSafeId = null;
-            await InvokeAsync(StateHasChanged);
-        }
-    }
-
-    private async Task FlashCopyUrlState(string safeId)
-    {
-        lastCopiedUrlSafeId = safeId;
-        await InvokeAsync(StateHasChanged);
-        await Task.Delay(1400);
-        if (lastCopiedUrlSafeId == safeId)
-        {
-            lastCopiedUrlSafeId = null;
             await InvokeAsync(StateHasChanged);
         }
     }
@@ -832,28 +771,6 @@
             await JSRuntime.InvokeVoidAsync("xyzicon.searchEngine.recordIconUse", iconId);
             liveAnnouncement = $"Copied {displayName} to clipboard.";
             _ = FlashCopyState(safeId);
-        }
-    }
-
-    private async Task OnCopySvgCodeRequested(string safeId, string iconId, string displayName)
-    {
-        var success = await JSRuntime.InvokeAsync<bool>("copySvgCode", safeId, displayName);
-        if (success)
-        {
-            await JSRuntime.InvokeVoidAsync("xyzicon.searchEngine.recordIconUse", iconId);
-            liveAnnouncement = $"Copied SVG code for {displayName}.";
-            _ = FlashCopySvgCodeState(safeId);
-        }
-    }
-
-    private async Task OnCopyUrlRequested(string safeId, string iconId, string displayName)
-    {
-        var success = await JSRuntime.InvokeAsync<bool>("copyImageUrl", safeId, displayName);
-        if (success)
-        {
-            await JSRuntime.InvokeVoidAsync("xyzicon.searchEngine.recordIconUse", iconId);
-            liveAnnouncement = $"Copied URL for {displayName}.";
-            _ = FlashCopyUrlState(safeId);
         }
     }
 

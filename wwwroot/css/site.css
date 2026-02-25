@@ -226,49 +226,64 @@ img {
 }
 
 /* --- Filters --- */
-.filters {
+.search-toolbar {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-  justify-content: center;
-  max-width: 680px;
-  transition: all var(--transition);
-}
-
-.has-results .filters {
-  margin-bottom: 0.25rem;
-}
-
-.filter-shortcuts {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.pill.shortcut {
-  background: var(--bg-secondary);
-}
-
-.provider-meta {
-  font-size: 0.76rem;
-  color: var(--text-secondary);
-}
-
-.provider-pills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  justify-content: center;
-}
-
-.pill {
-  padding: 6px 14px;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
   font-size: 0.8rem;
+}
+
+.search-toolbar .result-count {
+  color: var(--text-secondary);
+  font-size: 0.78rem;
+  margin: 0;
+}
+
+.toolbar-btn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  font-size: 0.78rem;
   font-weight: 500;
   color: var(--text-secondary);
   border: 1px solid var(--border);
-  border-radius: 16px;
+  border-radius: 14px;
+  transition: all var(--transition);
+}
+
+.toolbar-btn:hover {
+  background: var(--bg-secondary);
+}
+
+.toolbar-btn.active {
+  background: #e8f0fe;
+  color: var(--blue-dark);
+  border-color: #d2e3fc;
+}
+
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.reset-pill {
+  color: var(--red) !important;
+  border-color: var(--red) !important;
+  background: #fff !important;
+}
+
+.pill {
+  padding: 4px 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+  border-radius: 14px;
   background: var(--bg);
   transition: all var(--transition);
   white-space: nowrap;
@@ -310,9 +325,8 @@ img {
 }
 
 .result-count {
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   color: var(--text-secondary);
-  margin-top: 0.5rem;
 }
 
 /* --- State messages --- */
@@ -326,47 +340,6 @@ img {
   color: var(--text-secondary);
   text-align: center;
   gap: 0.5rem;
-}
-
-.query-chips {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.5rem;
-  margin-top: 1rem;
-}
-
-.btn-random {
-  margin-top: 0.85rem;
-  padding: 0.45rem 0.9rem;
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  font-size: 0.8rem;
-  color: var(--text-secondary);
-  background: var(--bg);
-  transition: all var(--transition);
-}
-
-.btn-random:hover {
-  background: var(--bg-secondary);
-  border-color: var(--border-hover);
-  color: var(--text);
-}
-
-.chip {
-  padding: 0.35rem 0.75rem;
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  color: var(--text-secondary);
-  background: var(--bg);
-  font-size: 0.78rem;
-  transition: all var(--transition);
-}
-
-.chip:hover {
-  border-color: var(--border-hover);
-  background: var(--bg-secondary);
-  color: var(--text);
 }
 
 .state-big {
@@ -478,15 +451,15 @@ img {
 }
 
 .card-body {
-  padding: 0.75rem 0.75rem 0.5rem;
+  padding: 0.5rem 0.6rem;
   display: flex;
   flex-direction: column;
   gap: 2px;
-  min-height: 52px;
+  min-height: 36px;
 }
 
 .card-title {
-  font-size: 0.8rem;
+  font-size: 0.72rem;
   font-weight: 500;
   color: var(--text);
   line-height: 1.3;
@@ -498,8 +471,7 @@ img {
 }
 
 .card-provider {
-  font-size: 0.7rem;
-  color: var(--text-secondary);
+  display: none;
 }
 
 /* Card actions - visible on hover */
@@ -507,6 +479,12 @@ img {
   display: flex;
   gap: 2px;
   padding: 0 0.5rem 0.5rem;
+  opacity: 0;
+  transition: opacity 150ms ease;
+}
+
+.card:hover .card-actions,
+.card:focus-within .card-actions {
   opacity: 1;
 }
 
@@ -534,9 +512,8 @@ img {
 .search-clear:focus-visible,
 .pill:focus-visible,
 .fmt-btn:focus-visible,
-.btn-random:focus-visible,
+.toolbar-btn:focus-visible,
 .btn-reset:focus-visible,
-.chip:focus-visible,
 .search-input:focus-visible {
   outline: 2px solid var(--blue);
   outline-offset: 2px;
@@ -625,58 +602,42 @@ img {
   }
 }
 
-/* --- Initial hint / preview --- */
-.initial-hint {
+/* --- Initial explore grid --- */
+.explore {
   flex: 1;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 1rem 1.5rem 3rem;
-  color: var(--text-secondary);
-  font-size: 0.9rem;
+  justify-content: center;
+  padding: 0.5rem 1.5rem 3rem;
 }
 
-.preview-grid {
+.explore-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-  gap: 0.75rem;
-  max-width: 900px;
+  grid-template-columns: repeat(auto-fill, minmax(72px, 1fr));
+  gap: 0.25rem;
+  max-width: 840px;
   width: 100%;
-  margin-top: 1.5rem;
 }
 
-.preview-card {
+.explore-card {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 0.4rem;
-  padding: 0.75rem;
+  justify-content: center;
+  padding: 0.65rem;
   border-radius: var(--radius-sm);
   cursor: pointer;
-  transition: background var(--transition);
+  transition: background var(--transition), transform 120ms ease;
+  aspect-ratio: 1;
 }
 
-.preview-card:hover {
+.explore-card:hover {
   background: var(--bg-secondary);
+  transform: scale(1.08);
 }
 
-.preview-img {
-  width: 48px;
-  height: 48px;
+.explore-card img {
+  width: 40px;
+  height: 40px;
   object-fit: contain;
-}
-
-.preview-label {
-  font-size: 0.65rem;
-  color: var(--text-secondary);
-  text-align: center;
-  line-height: 1.2;
-  max-width: 90px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
 }
 
 /* --- Footer --- */
@@ -801,11 +762,6 @@ img {
     max-width: 100%;
   }
 
-  .filter-shortcuts {
-    width: 100%;
-    justify-content: center;
-  }
-
   .grid {
     grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
     gap: 1rem;
@@ -815,8 +771,8 @@ img {
     opacity: 1;
   }
 
-  .results {
-    padding: 1rem;
+  .explore-grid {
+    grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
   }
 }
 
@@ -835,18 +791,20 @@ img {
     gap: 0.75rem;
   }
 
+  .explore-grid {
+    grid-template-columns: repeat(auto-fill, minmax(52px, 1fr));
+    gap: 0.15rem;
+  }
+
   .card-img {
     padding: 0.75rem;
   }
   .card-body {
-    padding: 0.5rem;
-    min-height: 40px;
+    padding: 0.4rem;
+    min-height: 32px;
   }
   .card-title {
     font-size: 0.72rem;
-  }
-  .card-provider {
-    font-size: 0.62rem;
   }
 }
 
