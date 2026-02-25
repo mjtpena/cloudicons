@@ -132,11 +132,14 @@ window.copyImageToClipboard = function (imgId, fileName) {
     return;
   }
 
-  if (!window.isSecureContext || !navigator.clipboard?.write) {
-    window.toastNotifications.info(
-      "Clipboard needs HTTPS. Downloading instead.",
-    );
-    window.downloadAsPng(imgId, fileName);
+  // Only attempt copy if we have clipboard support
+  if (!window.isSecureContext) {
+    window.toastNotifications.info("Clipboard requires HTTPS");
+    return;
+  }
+
+  if (!navigator.clipboard?.write) {
+    window.toastNotifications.error("Clipboard not available in this browser");
     return;
   }
 

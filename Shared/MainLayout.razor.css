@@ -2,3 +2,34 @@ main {
   width: 100%;
   min-height: 100vh;
 }
+
+.attribution-footer {
+  border-top: 1px solid var(--border);
+  padding: 2rem 1.5rem;
+  background: var(--bg-secondary);
+  margin-top: auto;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-disclaimer {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  text-align: center;
+}
+
+.footer-disclaimer a {
+  color: var(--blue);
+  text-decoration: none;
+  transition: color var(--transition);
+  font-weight: 500;
+}
+
+.footer-disclaimer a:hover {
+  color: var(--blue-dark);
+  text-decoration: underline;
+}
