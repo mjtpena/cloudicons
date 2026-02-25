@@ -25,13 +25,17 @@ window.xyzicon.searchEngine = {
     console.log(`[xyzicon] Search index ready: ${this.index.length} icons`);
   },
 
-  // Ultra-fast search (~1-2ms for 8000+ icons)
+  // Fast ranked search
   search(query, enabledProviders) {
     if (!this.index) return [];
 
+    const providerSet = new Set(
+      Object.keys(enabledProviders).filter((p) => enabledProviders[p]),
+    );
+
     // No query = return all enabled providers
     if (!query || query.trim() === "") {
-      return this.index.filter((icon) => enabledProviders[icon.provider]);
+      return this.index.filter((icon) => providerSet.has(icon.provider));
     }
 
     // Generate cache key
@@ -53,64 +57,40 @@ window.xyzicon.searchEngine = {
       .filter((t) => t);
     if (terms.length === 0) return [];
 
-    const results = [];
-    const firstChar = terms[0][0];
-    const providerSet = new Set(
-      Object.keys(enabledProviders).filter((p) => enabledProviders[p]),
-    );
-
-    // Tier 1: Fast pass (exact substring matching)
+    const ranked = [];
     for (const icon of this.index) {
       if (!providerSet.has(icon.provider)) continue;
 
-      // Quick first-char check (99% filter)
-      if (
-        !icon.searchText[0] ||
-        icon.searchText[0].toLowerCase() !== firstChar
+      const displayName = (icon.name || "").toLowerCase();
+      const searchText = (icon.searchText || "").toLowerCase();
+      const firstTerm = terms[0];
+
+      let score = 0;
+      if (terms.every((term) => searchText.includes(term))) {
+        score += 40;
+      } else if (
+        terms.length === 1 &&
+        terms[0].length <= 8 &&
+        searchText
+          .split(/\s+/)
+          .some((word) => this._isFastTypoMatch(word, terms[0]))
       ) {
+        score += 8;
+      } else {
         continue;
       }
 
-      const searchText = icon.searchText.toLowerCase();
-      if (terms.every((term) => searchText.includes(term))) {
-        results.push(icon);
-      }
+      if (displayName === query.toLowerCase()) score += 100;
+      else if (displayName.startsWith(firstTerm)) score += 55;
+      else if (displayName.includes(firstTerm)) score += 30;
+
+      if (searchText.startsWith(firstTerm)) score += 20;
+
+      ranked.push({ icon, score });
     }
 
-    // Tier 2: Typo tolerance (only if no exact matches & short query)
-    if (results.length === 0 && query.length <= 8) {
-      for (const icon of this.index) {
-        if (!providerSet.has(icon.provider)) continue;
-
-        const words = icon.searchText.toLowerCase().split(/\s+/);
-        let matched = false;
-
-        for (const term of terms) {
-          for (const word of words) {
-            if (this._isFastTypoMatch(word, term)) {
-              results.push(icon);
-              matched = true;
-              break;
-            }
-          }
-          if (matched) break;
-        }
-
-        if (results.length >= 50) break; // Early exit
-      }
-    }
-
-    // Tier 3: Partial matching (prefix match, last resort)
-    if (results.length === 0 && terms[0].length > 2) {
-      const prefix = terms[0];
-      for (const icon of this.index) {
-        if (!providerSet.has(icon.provider)) continue;
-
-        if (icon.searchText.toLowerCase().startsWith(prefix)) {
-          results.push(icon);
-        }
-      }
-    }
+    ranked.sort((a, b) => b.score - a.score || a.icon.name.localeCompare(b.icon.name));
+    const results = ranked.map((r) => r.icon);
 
     // Cache result (LRU)
     if (this.cache.size >= this.maxCacheSize) {
@@ -202,7 +182,9 @@ window.toastNotifications = {
 };
 
 // --- Infinite Scroll ---
-window.xyzicon = {
+window.xyzicon._dotNetRef = null;
+window.xyzicon._observer = null;
+Object.assign(window.xyzicon, {
   _dotNetRef: null,
   _observer: null,
 
@@ -225,61 +207,70 @@ window.xyzicon = {
       this._observer.observe(el);
     }
   },
-};
+
+  scrollToCard(cardId) {
+    const card = document.getElementById(cardId);
+    if (card) {
+      card.scrollIntoView({ block: "nearest", behavior: "smooth" });
+    }
+  },
+});
 
 // --- Download as PNG ---
-window.downloadAsPng = function (imgId, fileName) {
+window.downloadAsPng = async function (imgId, fileName) {
   const img = document.getElementById(imgId);
   if (!img) {
     window.toastNotifications.error("Image not found");
-    return;
+    return false;
   }
 
   if (typeof html2canvas === "undefined") {
     window.toastNotifications.error(
       "html2canvas not loaded. Refresh the page.",
     );
-    return;
+    return false;
   }
 
-  html2canvas(img, { backgroundColor: null, scale: 2 })
-    .then((canvas) => {
-      const link = document.createElement("a");
-      link.href = canvas.toDataURL("image/png");
-      link.download = fileName.replace(/\s+/g, "-") + ".png";
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-      window.toastNotifications.success("PNG downloaded");
-    })
-    .catch(() => {
-      window.toastNotifications.error("Error generating PNG");
-    });
+  try {
+    const canvas = await html2canvas(img, { backgroundColor: null, scale: 2 });
+    const link = document.createElement("a");
+    link.href = canvas.toDataURL("image/png");
+    link.download = fileName.replace(/\s+/g, "-") + ".png";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    window.toastNotifications.success("PNG downloaded");
+    return true;
+  } catch {
+    window.toastNotifications.error("Error generating PNG");
+    return false;
+  }
 };
 
 // --- Download as SVG (fetch original) ---
-window.downloadAsSvg = function (imgId, fileName) {
+window.downloadAsSvg = async function (imgId, fileName) {
   const img = document.getElementById(imgId);
   if (!img || !img.src) {
     window.toastNotifications.error("Image not found");
-    return;
+    return false;
   }
 
-  fetch(img.src)
-    .then((r) => r.blob())
-    .then((blob) => {
-      const link = document.createElement("a");
-      link.href = URL.createObjectURL(blob);
-      link.download = fileName.replace(/\s+/g, "-") + ".svg";
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-      URL.revokeObjectURL(link.href);
-      window.toastNotifications.success("SVG downloaded");
-    })
-    .catch(() => {
-      window.toastNotifications.error("Error downloading SVG");
-    });
+  try {
+    const response = await fetch(img.src);
+    const blob = await response.blob();
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = fileName.replace(/\s+/g, "-") + ".svg";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(link.href);
+    window.toastNotifications.success("SVG downloaded");
+    return true;
+  } catch {
+    window.toastNotifications.error("Error downloading SVG");
+    return false;
+  }
 };
 
 // --- Copy to Clipboard (Safari-compatible) ---
@@ -287,18 +278,18 @@ window.copyImageToClipboard = async function (imgId, fileName) {
   const img = document.getElementById(imgId);
   if (!img) {
     window.toastNotifications.error("Image not found");
-    return;
+    return false;
   }
 
   if (typeof html2canvas === "undefined") {
     window.toastNotifications.error("html2canvas not loaded");
-    return;
+    return false;
   }
 
   // Check HTTPS requirement
   if (!window.isSecureContext) {
     window.toastNotifications.info("Clipboard requires HTTPS");
-    return;
+    return false;
   }
 
   try {
@@ -315,7 +306,7 @@ window.copyImageToClipboard = async function (imgId, fileName) {
 
     if (!blob) {
       window.toastNotifications.error("Failed to process image");
-      return;
+      return false;
     }
 
     // === STRATEGY 1: Modern Clipboard API (Chrome, Firefox, Safari 13.1+) ===
@@ -327,7 +318,7 @@ window.copyImageToClipboard = async function (imgId, fileName) {
             new ClipboardItem({ "image/png": blob }),
           ]);
           window.toastNotifications.success("Copied to clipboard");
-          return;
+          return true;
         }
       } catch (e) {
         console.warn("ClipboardItem write failed:", e);
@@ -358,7 +349,7 @@ window.copyImageToClipboard = async function (imgId, fileName) {
         window.toastNotifications.success("Image link copied to clipboard");
         document.body.removeChild(tempImg);
         URL.revokeObjectURL(imageUrl);
-        return;
+        return true;
       } catch (e) {
         console.warn("WriteText failed:", e);
       }
@@ -385,6 +376,7 @@ window.copyImageToClipboard = async function (imgId, fileName) {
 
       if (successful) {
         window.toastNotifications.success("Copied to clipboard");
+        return true;
       } else {
         throw new Error("execCommand failed");
       }
@@ -393,16 +385,19 @@ window.copyImageToClipboard = async function (imgId, fileName) {
       window.toastNotifications.error(
         "Clipboard not available. Try right-click → Copy instead.",
       );
+      return false;
     }
 
     if (tempImg.parentNode) {
       document.body.removeChild(tempImg);
     }
     URL.revokeObjectURL(imageUrl);
+    return false;
   } catch (err) {
     console.error("Copy failed:", err);
     window.toastNotifications.error(
       "Copy failed. Try right-click → Copy Image instead.",
     );
+    return false;
   }
 };

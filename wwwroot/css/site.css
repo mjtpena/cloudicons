@@ -80,12 +80,12 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 18vh 1.5rem 2rem;
-  transition: padding var(--transition);
+  padding: 14vh 1.5rem 2rem;
+  transition: padding 260ms ease;
 }
 
 .has-results .hero {
-  padding: 2rem 1.5rem 1.5rem;
+  padding: 1.5rem 1.5rem 1rem;
   border-bottom: 1px solid var(--border);
   position: sticky;
   top: 0;
@@ -133,14 +133,13 @@ img {
   color: var(--text-secondary);
   font-size: 0.95rem;
   margin-bottom: 1.75rem;
-  transition: all var(--transition);
+  transition: opacity 180ms ease;
 }
 
 .has-results .tagline {
-  font-size: 0;
-  margin: 0;
   opacity: 0;
-  height: 0;
+  margin-bottom: 0;
+  max-height: 0;
   overflow: hidden;
 }
 
@@ -229,6 +228,21 @@ img {
   margin-bottom: 0.25rem;
 }
 
+.filter-shortcuts {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.pill.shortcut {
+  background: var(--bg-secondary);
+}
+
+.provider-meta {
+  font-size: 0.76rem;
+  color: var(--text-secondary);
+}
+
 .provider-pills {
   display: flex;
   flex-wrap: wrap;
@@ -300,6 +314,30 @@ img {
   color: var(--text-secondary);
   text-align: center;
   gap: 0.5rem;
+}
+
+.query-chips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.chip {
+  padding: 0.35rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--text-secondary);
+  background: var(--bg);
+  font-size: 0.78rem;
+  transition: all var(--transition);
+}
+
+.chip:hover {
+  border-color: var(--border-hover);
+  background: var(--bg-secondary);
+  color: var(--text);
 }
 
 .state-big {
@@ -381,6 +419,12 @@ img {
     transform 150ms ease;
 }
 
+.card.active,
+.card:focus-visible {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 2px rgba(66, 133, 244, 0.2);
+}
+
 .card:hover {
   box-shadow: var(--shadow-lg);
   border-color: transparent;
@@ -434,11 +478,6 @@ img {
   display: flex;
   gap: 2px;
   padding: 0 0.5rem 0.5rem;
-  opacity: 0;
-  transition: opacity var(--transition);
-}
-
-.card:hover .card-actions {
   opacity: 1;
 }
 
@@ -462,6 +501,24 @@ img {
   background: #d2e3fc;
 }
 
+.action-btn:focus-visible,
+.search-clear:focus-visible,
+.pill:focus-visible,
+.fmt-btn:focus-visible,
+.btn-reset:focus-visible,
+.chip:focus-visible,
+.search-input:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
+}
+
+.match {
+  background: rgba(251, 188, 5, 0.28);
+  color: inherit;
+  border-radius: 2px;
+  padding: 0 1px;
+}
+
 .action-btn svg {
   flex-shrink: 0;
 }
@@ -474,7 +531,68 @@ img {
 .loading-more {
   display: flex;
   justify-content: center;
-  padding: 2rem;
+  padding: 1.5rem 0 2rem;
+}
+
+.loading-results {
+  padding-top: 2rem;
+}
+
+.loading-label {
+  text-align: center;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+.skeleton-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.25rem;
+}
+
+.skeleton-grid--inline {
+  width: 100%;
+}
+
+.skeleton-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 0.75rem;
+  background: var(--bg);
+}
+
+.skeleton-image,
+.skeleton-line {
+  background: linear-gradient(
+    90deg,
+    rgba(223, 225, 229, 0.7) 25%,
+    rgba(223, 225, 229, 0.35) 50%,
+    rgba(223, 225, 229, 0.7) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.3s linear infinite;
+}
+
+.skeleton-image {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 6px;
+}
+
+.skeleton-line {
+  height: 10px;
+  margin-top: 0.65rem;
+  border-radius: 999px;
+}
+
+.skeleton-line.short {
+  width: 58%;
+}
+
+@keyframes shimmer {
+  to {
+    background-position: -200% 0;
+  }
 }
 
 /* --- Initial hint / preview --- */
@@ -625,7 +743,7 @@ img {
 /* --- Responsive --- */
 @media (max-width: 768px) {
   .hero {
-    padding-top: 12vh;
+    padding-top: 10vh;
   }
   .has-results .hero {
     padding: 1rem 1rem 0.75rem;
@@ -653,6 +771,11 @@ img {
     max-width: 100%;
   }
 
+  .filter-shortcuts {
+    width: 100%;
+    justify-content: center;
+  }
+
   .grid {
     grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
     gap: 1rem;
@@ -669,7 +792,7 @@ img {
 
 @media (max-width: 480px) {
   .hero {
-    padding-top: 8vh;
+    padding-top: 6vh;
   }
 
   .pill {

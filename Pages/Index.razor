@@ -1,5 +1,6 @@
 @page "/"
 @using System.Net.Http.Json
+@using System.Net
 @using System.Text.Json.Serialization
 @using System.Text.RegularExpressions;
 @inject IJSRuntime JSRuntime
@@ -26,8 +27,10 @@
                    @ref="searchInput"
                    @bind="searchTerm"
                    @bind:event="oninput"
+                     @onkeydown="OnSearchKeyDown"
                    @onkeyup="OnSearchKeyUp"
                    placeholder="Search icons…"
+                     aria-label="Search icons"
                    class="search-input"
                    autofocus />
             @if (!string.IsNullOrEmpty(searchTerm))
@@ -42,6 +45,11 @@
 
         <!-- Compact filter row -->
         <div class="filters">
+            <div class="filter-shortcuts">
+                <button class="pill shortcut" @onclick="SelectAllProviders">All</button>
+                <button class="pill shortcut" @onclick="ClearAllProviders">None</button>
+                <span class="provider-meta">@SelectedProviderCount/@providers.Count selected</span>
+            </div>
             <div class="provider-pills">
                 @foreach (var provider in providers)
                 {
@@ -66,9 +74,18 @@
     <!-- Loading -->
     @if (isLoading)
     {
-        <div class="state-msg">
-            <div class="spinner"></div>
-            <p>@loadingMessage</p>
+        <div class="results loading-results">
+            <p class="loading-label">@loadingMessage</p>
+            <div class="skeleton-grid">
+                @for (var i = 0; i < 12; i++)
+                {
+                    <div class="skeleton-card">
+                        <div class="skeleton-image"></div>
+                        <div class="skeleton-line"></div>
+                        <div class="skeleton-line short"></div>
+                    </div>
+                }
+            </div>
         </div>
     }
     else if (allIcons.Count == 0)
@@ -82,6 +99,16 @@
         <div class="state-msg">
             <p class="state-big">No icons found</p>
             <p>Try different keywords or adjust provider filters.</p>
+            @if (selectedProviders.Values.Any(v => !v))
+            {
+                <button class="btn-reset" @onclick="SelectAllProviders">Clear filters</button>
+            }
+            <div class="query-chips" aria-label="Suggested queries">
+                @foreach (var suggestion in commonSuggestions)
+                {
+                    <button class="chip" @onclick="() => ApplySuggestion(suggestion)">@suggestion</button>
+                }
+            </div>
             <button class="btn-reset" @onclick="ResetSearch">Reset</button>
         </div>
     }
@@ -89,10 +116,11 @@
     {
         <div class="results">
             <div class="grid">
-                @foreach (var icon in displayedIcons)
+                @for (var i = 0; i < displayedIcons.Count; i++)
                 {
+                    var icon = displayedIcons[i];
                     var safeId = GenerateSafeId(icon.Name);
-                    <div class="card" @onclick="() => OnCardClick(safeId, icon.DisplayName)">
+                    <div id="card-@safeId" class="card @(activeCardIndex == i ? "active" : "")" tabindex="0" @onfocus="() => SetActiveCard(i)">
                         <div class="card-img">
                             <img id="@safeId"
                                  src="@icon.Path"
@@ -101,7 +129,7 @@
                                  class="icon-img" />
                         </div>
                         <div class="card-body">
-                            <span class="card-title" title="@icon.DisplayName">@icon.DisplayName</span>
+                            <span class="card-title" title="@icon.DisplayName">@((MarkupString)HighlightMatch(icon.DisplayName))</span>
                             <span class="card-provider">@GetProviderLabel(icon.Provider)</span>
                         </div>
                         <div class="card-actions">
@@ -111,7 +139,7 @@
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
                                     <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
                                 </svg>
-                                @(DownloadAsPng ? "PNG" : "SVG")
+                                @GetDownloadButtonLabel(safeId)
                             </button>
                             <button class="action-btn" @onclick:stopPropagation="true"
                                     @onclick="() => OnCopyRequested(safeId, icon.DisplayName)"
@@ -119,7 +147,7 @@
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
                                     <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
                                 </svg>
-                                Copy
+                                @GetCopyButtonLabel(safeId)
                             </button>
                         </div>
                     </div>
@@ -130,7 +158,16 @@
             {
                 <div class="sentinel" id="scroll-sentinel"></div>
                 <div class="loading-more">
-                    <div class="spinner-sm"></div>
+                    <div class="skeleton-grid skeleton-grid--inline">
+                        @for (var i = 0; i < 6; i++)
+                        {
+                            <div class="skeleton-card">
+                                <div class="skeleton-image"></div>
+                                <div class="skeleton-line"></div>
+                                <div class="skeleton-line short"></div>
+                            </div>
+                        }
+                    </div>
                 </div>
             }
         </div>
@@ -140,6 +177,12 @@
         <!-- Initial state: show popular/random icons as a preview -->
         <div class="initial-hint">
             <p>Type to search, or click a provider to browse.</p>
+            <div class="query-chips" aria-label="Popular searches">
+                @foreach (var suggestion in commonSuggestions)
+                {
+                    <button class="chip" @onclick="() => ApplySuggestion(suggestion)">@suggestion</button>
+                }
+            </div>
             <div class="preview-grid">
                 @foreach (var icon in previewIcons)
                 {
@@ -153,14 +196,6 @@
         </div>
     }
 
-    <!-- Footer -->
-    <footer class="site-footer">
-        <a href="https://github.com/mjtpena/CloudIcons" target="_blank" rel="noopener">GitHub</a>
-        <span class="dot">·</span>
-        <a href="https://michaeljohnpena.com" target="_blank" rel="noopener">Author</a>
-        <span class="dot">·</span>
-        <span class="footer-note">xyzicon.com</span>
-    </footer>
 </div>
 
 @implements IDisposable
@@ -180,9 +215,25 @@
     private bool DownloadAsPng { get; set; }
     private bool isLoading = true;
     private string loadingMessage = "Loading icons…";
+    private int activeCardIndex = -1;
+    private string? lastCopiedSafeId;
+    private string? lastDownloadedSafeId;
     private System.Timers.Timer? debounceTimer;
     private DotNetObjectReference<Index>? dotNetRef;
     private bool searchEngineReady = false;
+    private readonly List<string> commonSuggestions = new()
+    {
+        "kubernetes",
+        "storage",
+        "database",
+        "compute",
+        "network",
+        "security",
+        "api",
+        "ai"
+    };
+
+    private int SelectedProviderCount => selectedProviders.Values.Count(v => v);
 
     private Dictionary<string, string> providers = new()
     {
@@ -323,12 +374,6 @@
         }
     }
 
-    private void BuildSearchIndexes()
-    {
-        // This method is now a no-op - search happens in JavaScript
-    }
-    }
-
     private string BuildSearchText(string name, string providerName, string path)
     {
         var clean = CleanIconName(name).ToLowerInvariant();
@@ -456,9 +501,8 @@
 
             // Convert dynamic results back to IconData for display
             filteredIcons = searchResults?
-                .Where(r => r != null)
                 .Select(r => allIcons.FirstOrDefault(icon => icon.Name == (string)r.id))
-                .Where(icon => icon != null)
+                .OfType<IconData>()
                 .ToList() ?? new List<IconData>();
         }
         catch (Exception ex)
@@ -469,12 +513,18 @@
 
         displayCount = displayIncrement;
         UpdateDisplayedIcons();
+        activeCardIndex = displayedIcons.Count > 0 ? 0 : -1;
     }
 
     private void UpdateDisplayedIcons()
     {
         displayedIcons = filteredIcons.Take(displayCount).ToList();
         hasMoreToDisplay = displayCount < filteredIcons.Count;
+
+        if (displayedIcons.Count == 0)
+            activeCardIndex = -1;
+        else if (activeCardIndex >= displayedIcons.Count)
+            activeCardIndex = displayedIcons.Count - 1;
     }
 
     private void LoadMore()
@@ -504,6 +554,48 @@
         debounceTimer?.Start();
     }
 
+    private async Task OnSearchKeyDown(KeyboardEventArgs e)
+    {
+        if (e.Key == "Escape")
+        {
+            await ClearSearch();
+            return;
+        }
+
+        if (!hasSearched || displayedIcons.Count == 0)
+            return;
+
+        if (e.Key == "ArrowDown")
+        {
+            activeCardIndex = Math.Min(displayedIcons.Count - 1, activeCardIndex + 1);
+            await ScrollActiveCardIntoView();
+            return;
+        }
+
+        if (e.Key == "ArrowUp")
+        {
+            activeCardIndex = Math.Max(0, activeCardIndex - 1);
+            await ScrollActiveCardIntoView();
+            return;
+        }
+
+        if (e.Key == "Enter" && activeCardIndex >= 0 && activeCardIndex < displayedIcons.Count)
+        {
+            var icon = displayedIcons[activeCardIndex];
+            await OnCopyRequested(GenerateSafeId(icon.Name), icon.DisplayName);
+        }
+    }
+
+    private async Task ScrollActiveCardIntoView()
+    {
+        if (activeCardIndex < 0 || activeCardIndex >= displayedIcons.Count)
+            return;
+
+        var activeIcon = displayedIcons[activeCardIndex];
+        await JSRuntime.InvokeVoidAsync("xyzicon.scrollToCard", $"card-{GenerateSafeId(activeIcon.Name)}");
+        StateHasChanged();
+    }
+
     private async Task OnDebounce()
     {
         await InvokeAsync(async () =>
@@ -523,15 +615,35 @@
         await FilterIcons();
     }
 
-    private void ClearSearch()
+    private async Task SelectAllProviders()
     {
-        searchTerm = string.Empty;
-        hasSearched = false;
-        filteredIcons.Clear();
-        displayedIcons.Clear();
+        foreach (var provider in providers.Keys)
+            selectedProviders[provider] = true;
+
+        hasSearched = !string.IsNullOrWhiteSpace(searchTerm);
+        await JSRuntime.InvokeVoidAsync("xyzicon.searchEngine.clearCache");
+        await FilterIcons();
     }
 
-    private void ResetSearch()
+    private async Task ClearAllProviders()
+    {
+        foreach (var provider in providers.Keys)
+            selectedProviders[provider] = false;
+
+        hasSearched = true;
+        await JSRuntime.InvokeVoidAsync("xyzicon.searchEngine.clearCache");
+        await FilterIcons();
+    }
+
+    private async Task ClearSearch()
+    {
+        searchTerm = string.Empty;
+        hasSearched = selectedProviders.Values.Any(v => !v);
+        await JSRuntime.InvokeVoidAsync("xyzicon.searchEngine.clearCache");
+        await FilterIcons();
+    }
+
+    private async Task ResetSearch()
     {
         searchTerm = string.Empty;
         hasSearched = false;
@@ -539,6 +651,15 @@
             selectedProviders[provider] = true;
         filteredIcons.Clear();
         displayedIcons.Clear();
+        activeCardIndex = -1;
+        await JSRuntime.InvokeVoidAsync("xyzicon.searchEngine.clearCache");
+    }
+
+    private async Task ApplySuggestion(string suggestion)
+    {
+        searchTerm = suggestion;
+        hasSearched = true;
+        await FilterIcons();
     }
 
     private async Task OnPreviewClick(IconData icon)
@@ -546,6 +667,11 @@
         searchTerm = icon.DisplayName;
         hasSearched = true;
         await FilterIcons();
+    }
+
+    private void SetActiveCard(int index)
+    {
+        activeCardIndex = index;
     }
 
     private string GenerateSafeId(string name)
@@ -558,22 +684,88 @@
         return providers.GetValueOrDefault(providerKey, providerKey);
     }
 
-    private async Task OnCardClick(string safeId, string displayName)
+    private static string GetButtonSuccessLabel(string defaultLabel, bool isSuccess)
     {
-        await JSRuntime.InvokeVoidAsync("copyImageToClipboard", safeId, displayName);
+        return isSuccess ? "✓" : defaultLabel;
+    }
+
+    private string GetDownloadButtonLabel(string safeId)
+    {
+        var defaultLabel = DownloadAsPng ? "PNG" : "SVG";
+        return GetButtonSuccessLabel(defaultLabel, lastDownloadedSafeId == safeId);
+    }
+
+    private string GetCopyButtonLabel(string safeId)
+    {
+        return GetButtonSuccessLabel("Copy", lastCopiedSafeId == safeId);
+    }
+
+    private string HighlightMatch(string text)
+    {
+        var encoded = WebUtility.HtmlEncode(text);
+        if (string.IsNullOrWhiteSpace(searchTerm))
+            return encoded;
+
+        var terms = searchTerm
+            .Split(' ', StringSplitOptions.RemoveEmptyEntries)
+            .Select(t => t.Trim())
+            .Where(t => t.Length > 1)
+            .Distinct(StringComparer.OrdinalIgnoreCase)
+            .ToList();
+
+        foreach (var term in terms)
+        {
+            encoded = Regex.Replace(
+                encoded,
+                Regex.Escape(WebUtility.HtmlEncode(term)),
+                m => $"<mark class=\"match\">{m.Value}</mark>",
+                RegexOptions.IgnoreCase);
+        }
+
+        return encoded;
+    }
+
+    private async Task FlashCopyState(string safeId)
+    {
+        lastCopiedSafeId = safeId;
+        await InvokeAsync(StateHasChanged);
+        await Task.Delay(1400);
+        if (lastCopiedSafeId == safeId)
+        {
+            lastCopiedSafeId = null;
+            await InvokeAsync(StateHasChanged);
+        }
+    }
+
+    private async Task FlashDownloadState(string safeId)
+    {
+        lastDownloadedSafeId = safeId;
+        await InvokeAsync(StateHasChanged);
+        await Task.Delay(1400);
+        if (lastDownloadedSafeId == safeId)
+        {
+            lastDownloadedSafeId = null;
+            await InvokeAsync(StateHasChanged);
+        }
     }
 
     private async Task OnDownloadRequested(string safeId, string fileName)
     {
+        bool success;
         if (DownloadAsPng)
-            await JSRuntime.InvokeVoidAsync("downloadAsPng", safeId, fileName);
+            success = await JSRuntime.InvokeAsync<bool>("downloadAsPng", safeId, fileName);
         else
-            await JSRuntime.InvokeVoidAsync("downloadAsSvg", safeId, fileName);
+            success = await JSRuntime.InvokeAsync<bool>("downloadAsSvg", safeId, fileName);
+
+        if (success)
+            _ = FlashDownloadState(safeId);
     }
 
     private async Task OnCopyRequested(string safeId, string fileName)
     {
-        await JSRuntime.InvokeVoidAsync("copyImageToClipboard", safeId, fileName);
+        var success = await JSRuntime.InvokeAsync<bool>("copyImageToClipboard", safeId, fileName);
+        if (success)
+            _ = FlashCopyState(safeId);
     }
 
     private class IconData
