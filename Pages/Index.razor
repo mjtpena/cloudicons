@@ -182,6 +182,7 @@
     private string loadingMessage = "Loading icons…";
     private System.Timers.Timer? debounceTimer;
     private DotNetObjectReference<Index>? dotNetRef;
+    private bool searchEngineReady = false;
 
     private Dictionary<string, string> providers = new()
     {
@@ -282,6 +283,9 @@
 
             totalIconsLoaded = allIcons.Count;
             loadingMessage = $"Loaded {totalIconsLoaded} icons";
+            
+            // ===== INITIALIZE JAVASCRIPT SEARCH ENGINE =====
+            await InitializeSearchEngine();
         }
         catch (Exception ex)
         {
@@ -294,11 +298,97 @@
         }
     }
 
+    private async Task InitializeSearchEngine()
+    {
+        try
+        {
+            // Convert to minimal data structure for transfer
+            var searchData = allIcons.Select(icon => new
+            {
+                icon.Name,
+                icon.DisplayName,
+                icon.Provider,
+                icon.SearchText,
+                icon.Path,
+                icon.FileName
+            }).ToList();
+
+            await JSRuntime.InvokeVoidAsync("xyzicon.searchEngine.initIndex", searchData);
+            searchEngineReady = true;
+            Console.WriteLine("[xyzicon] JavaScript search engine initialized");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error initializing search engine: {ex.Message}");
+        }
+    }
+
+    private void BuildSearchIndexes()
+    {
+        // This method is now a no-op - search happens in JavaScript
+    }
+    }
+
     private string BuildSearchText(string name, string providerName, string path)
     {
         var clean = CleanIconName(name).ToLowerInvariant();
         var cat = ExtractCategory(path);
-        return $"{clean} {name.ToLowerInvariant()} {providerName.ToLowerInvariant()} {cat}";
+        var acronyms = ExtractAcronyms(clean);
+        return $"{clean} {name.ToLowerInvariant()} {providerName.ToLowerInvariant()} {cat} {acronyms}";
+    }
+
+    private string ExtractAcronyms(string text)
+    {
+        // Extract first letters of each word as potential acronym
+        var words = text.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+        if (words.Length > 1)
+        {
+            var acronym = string.Concat(words.Select(w => w[0]));
+            
+            // Common cloud acronym expansions
+            var commonExpansions = GetAcronymExpansions(text);
+            return $"{acronym} {commonExpansions}";
+        }
+        return string.Empty;
+    }
+
+    private string GetAcronymExpansions(string text)
+    {
+        // Map of common cloud service acronyms
+        var acronymMap = new Dictionary<string, string>
+        {
+            { "kubernetes", "k8s aks eks gke" },
+            { "azure kubernetes service", "aks" },
+            { "elastic kubernetes service", "eks" },
+            { "google kubernetes engine", "gke" },
+            { "virtual machine", "vm" },
+            { "virtual network", "vnet" },
+            { "database", "db" },
+            { "application", "app" },
+            { "application insights", "ai appinsights" },
+            { "api management", "apim" },
+            { "azure devops", "ado" },
+            { "container", "aci acr aks" },
+            { "authentication", "auth aad entra" },
+            { "active directory", "ad aad" },
+            { "storage account", "storage sa" },
+            { "virtual desktop", "avd" },
+            { "machine learning", "ml aml" },
+            { "artificial intelligence", "ai" },
+            { "service bus", "sb asb" },
+            { "event hub", "eh aeh" },
+            { "cognitive services", "cog" },
+            { "developer", "dev" },
+            { "operations", "ops" },
+            { "production", "prod" },
+        };
+
+        var lowerText = text.ToLowerInvariant();
+        var matches = acronymMap
+            .Where(kvp => lowerText.Contains(kvp.Key))
+            .Select(kvp => kvp.Value);
+        
+        return string.Join(" ", matches);
     }
 
     private static string CleanIconName(string name)
@@ -346,20 +436,37 @@
         return cleaned;
     }
 
-    private void FilterIcons()
+    private async Task FilterIcons()
     {
-        var query = allIcons.AsEnumerable();
-
-        // Provider filter
-        query = query.Where(icon => selectedProviders.GetValueOrDefault(icon.Provider, true));
-
-        if (!string.IsNullOrWhiteSpace(searchTerm))
+        if (!searchEngineReady)
         {
-            var terms = searchTerm.ToLowerInvariant().Split(' ', StringSplitOptions.RemoveEmptyEntries);
-            query = query.Where(icon => terms.All(t => icon.SearchText.Contains(t)));
+            filteredIcons.Clear();
+            displayCount = displayIncrement;
+            UpdateDisplayedIcons();
+            return;
         }
 
-        filteredIcons = query.ToList();
+        try
+        {
+            // Get enabled providers as dictionary for JavaScript
+            var enabledProviders = selectedProviders.ToDictionary(kv => kv.Key, kv => kv.Value);
+
+            // Call JavaScript search engine (ultra-fast!)
+            var searchResults = await JSRuntime.InvokeAsync<List<dynamic>>("xyzicon.searchEngine.search", searchTerm, enabledProviders);
+
+            // Convert dynamic results back to IconData for display
+            filteredIcons = searchResults?
+                .Where(r => r != null)
+                .Select(r => allIcons.FirstOrDefault(icon => icon.Name == (string)r.id))
+                .Where(icon => icon != null)
+                .ToList() ?? new List<IconData>();
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error in FilterIcons: {ex.Message}");
+            filteredIcons.Clear();
+        }
+
         displayCount = displayIncrement;
         UpdateDisplayedIcons();
     }
@@ -399,11 +506,11 @@
 
     private async Task OnDebounce()
     {
-        await InvokeAsync(() =>
+        await InvokeAsync(async () =>
         {
             hasSearched = !string.IsNullOrWhiteSpace(searchTerm) ||
                           selectedProviders.Values.Any(v => !v);
-            FilterIcons();
+            await FilterIcons();
             StateHasChanged();
         });
     }
@@ -412,8 +519,8 @@
     {
         selectedProviders[provider] = !selectedProviders[provider];
         hasSearched = true;
-        FilterIcons();
-        await Task.CompletedTask;
+        await JSRuntime.InvokeVoidAsync("xyzicon.searchEngine.clearCache");
+        await FilterIcons();
     }
 
     private void ClearSearch()
@@ -434,11 +541,11 @@
         displayedIcons.Clear();
     }
 
-    private void OnPreviewClick(IconData icon)
+    private async Task OnPreviewClick(IconData icon)
     {
         searchTerm = icon.DisplayName;
         hasSearched = true;
-        FilterIcons();
+        await FilterIcons();
     }
 
     private string GenerateSafeId(string name)
