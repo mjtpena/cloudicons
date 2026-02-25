@@ -282,8 +282,8 @@ window.downloadAsSvg = function (imgId, fileName) {
     });
 };
 
-// --- Copy to Clipboard ---
-window.copyImageToClipboard = function (imgId, fileName) {
+// --- Copy to Clipboard (Safari-compatible) ---
+window.copyImageToClipboard = async function (imgId, fileName) {
   const img = document.getElementById(imgId);
   if (!img) {
     window.toastNotifications.error("Image not found");
@@ -295,35 +295,114 @@ window.copyImageToClipboard = function (imgId, fileName) {
     return;
   }
 
-  // Only attempt copy if we have clipboard support
+  // Check HTTPS requirement
   if (!window.isSecureContext) {
     window.toastNotifications.info("Clipboard requires HTTPS");
     return;
   }
 
-  if (!navigator.clipboard?.write) {
-    window.toastNotifications.error("Clipboard not available in this browser");
-    return;
-  }
+  try {
+    // Generate PNG via canvas
+    const canvas = await new Promise((resolve, reject) => {
+      html2canvas(img, { backgroundColor: null, scale: 2 })
+        .then(resolve)
+        .catch(reject);
+    });
 
-  html2canvas(img, { backgroundColor: null, scale: 2 })
-    .then((canvas) => {
-      canvas.toBlob((blob) => {
-        if (!blob) {
-          window.toastNotifications.error("Failed to process image");
+    const blob = await new Promise((resolve) => {
+      canvas.toBlob(resolve, "image/png");
+    });
+
+    if (!blob) {
+      window.toastNotifications.error("Failed to process image");
+      return;
+    }
+
+    // === STRATEGY 1: Modern Clipboard API (Chrome, Firefox, Safari 13.1+) ===
+    if (navigator.clipboard?.write) {
+      try {
+        // Check if ClipboardItem is available (Safari may not support it)
+        if (typeof ClipboardItem !== "undefined") {
+          await navigator.clipboard.write([
+            new ClipboardItem({ "image/png": blob }),
+          ]);
+          window.toastNotifications.success("Copied to clipboard");
           return;
         }
-        navigator.clipboard
-          .write([new ClipboardItem({ "image/png": blob })])
-          .then(() => {
-            window.toastNotifications.success("Copied to clipboard");
-          })
-          .catch(() => {
-            window.toastNotifications.error("Copy failed");
-          });
-      }, "image/png");
-    })
-    .catch(() => {
-      window.toastNotifications.error("Error processing image");
+      } catch (e) {
+        console.warn("ClipboardItem write failed:", e);
+        // Fall through to next strategy
+      }
+    }
+
+    // === STRATEGY 2: Fallback for Safari/older browsers ===
+    // Try using a temporary hidden image element
+    const tempImg = document.createElement("img");
+    tempImg.src = URL.createObjectURL(blob);
+    tempImg.style.display = "none";
+    document.body.appendChild(tempImg);
+
+    // Wait for image to load
+    await new Promise((resolve, reject) => {
+      tempImg.onload = resolve;
+      tempImg.onerror = reject;
+      setTimeout(reject, 2000); // Timeout after 2s
     });
+
+    // Try to copy the image URL instead (Safari workaround)
+    const imageUrl = tempImg.src;
+
+    if (navigator.clipboard?.writeText) {
+      try {
+        await navigator.clipboard.writeText(`![${fileName}](${imageUrl})`);
+        window.toastNotifications.success("Image link copied to clipboard");
+        document.body.removeChild(tempImg);
+        URL.revokeObjectURL(imageUrl);
+        return;
+      } catch (e) {
+        console.warn("WriteText failed:", e);
+      }
+    }
+
+    // === STRATEGY 3: Ultra-fallback for older Safari (use document.execCommand) ===
+    const tempDiv = document.createElement("div");
+    tempDiv.contentEditable = true;
+    tempDiv.style.position = "fixed";
+    tempDiv.style.opacity = "0";
+    tempDiv.textContent = `Image: ![${fileName}](${imageUrl})`;
+    document.body.appendChild(tempDiv);
+
+    try {
+      const range = document.createRange();
+      range.selectNodeContents(tempDiv);
+      const selection = window.getSelection();
+      selection.removeAllRanges();
+      selection.addRange(range);
+
+      const successful = document.execCommand("copy");
+      selection.removeAllRanges();
+      document.body.removeChild(tempDiv);
+
+      if (successful) {
+        window.toastNotifications.success("Copied to clipboard");
+      } else {
+        throw new Error("execCommand failed");
+      }
+    } catch (e) {
+      document.body.removeChild(tempDiv);
+      window.toastNotifications.error(
+        "Clipboard not available. Try right-click → Copy instead.",
+      );
+    }
+
+    if (tempImg.parentNode) {
+      document.body.removeChild(tempImg);
+    }
+    URL.revokeObjectURL(imageUrl);
+  } catch (err) {
+    console.error("Copy failed:", err);
+    window.toastNotifications.error(
+      "Copy failed. Try right-click → Copy Image instead.",
+    );
+  }
 };
