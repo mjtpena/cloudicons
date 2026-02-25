@@ -5,118 +5,166 @@
 @inject IJSRuntime JSRuntime
 @inject HttpClient HttpClient
 
-<PageTitle>Cloud Icons - Search All Icons</PageTitle>
+<PageTitle>Cloud Icons - Search 8000+ Official Cloud Icons</PageTitle>
 
 <div class="unified-container">
+    <!-- Enhanced Header with Better Visual Hierarchy -->
     <div class="search-header">
-        <h1>☁️ Cloud Icons</h1>
-        <p class="subtitle">Search across 8,000+ official cloud icons from Azure, AWS, GCP, and more</p>
+        <div class="header-content">
+            <h1 class="header-title">☁️ Cloud Icons</h1>
+            <p class="header-subtitle">Instantly search and download 8,000+ official cloud service icons</p>
+        </div>
     </div>
 
-    <div class="search-container">
-        <div class="search-input-group">
-            <input type="text" 
-                   @bind="searchTerm" 
-                   @bind:event="oninput" 
-                   @onkeyup="SearchDebounced" 
-                   placeholder="🔍 Search all icons (e.g., 'database', 'storage', 'kubernetes')..." 
-                   class="search-input" />
+    <!-- Improved Search Bar with Better Layout -->
+    <div class="search-section">
+        <div class="search-box-wrapper">
+            <div class="search-input-wrapper">
+                <span class="search-icon">🔍</span>
+                <input type="text" 
+                       @bind="searchTerm" 
+                       @bind:event="oninput" 
+                       @onkeyup="SearchDebounced" 
+                       placeholder="Search by name, category or provider..." 
+                       class="search-input-enhanced" />
+                @if (!string.IsNullOrEmpty(searchTerm))
+                {
+                    <button @onclick="ClearSearch" class="clear-btn" title="Clear search">✕</button>
+                }
+            </div>
         </div>
-        
-        <div class="search-filters">
-            <div class="filter-group">
-                <label class="filter-label">
-                    <input type="checkbox" id="downloadAsPng" @bind="DownloadAsPng" />
-                    <span>📥 Download as PNG</span>
-                </label>
+
+        <!-- Better Filter Organization -->
+        <div class="filters-section">
+            <div class="filters-row">
+                <!-- Download Format Toggle -->
+                <div class="filter-group-vertical">
+                    <label class="filter-group-title">Format:</label>
+                    <div class="format-toggle">
+                        <label class="toggle-option @(DownloadAsPng ? "active" : "")">
+                            <input type="radio" value="svg" @onchange="@((ChangeEventArgs e) => DownloadAsPng = false)" />
+                            <span>📄 SVG</span>
+                        </label>
+                        <label class="toggle-option @(DownloadAsPng ? "active" : "")">
+                            <input type="radio" value="png" @onchange="@((ChangeEventArgs e) => DownloadAsPng = true)" />
+                            <span>📥 PNG</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Provider Chips -->
+                <div class="filter-group-vertical">
+                    <label class="filter-group-title">Providers:</label>
+                    <div class="provider-chips">
+                        @foreach (var provider in providers)
+                        {
+                            <label class="provider-chip @(selectedProviders[provider.Key] ? "active" : "")">
+                                <input type="checkbox" 
+                                       checked="@selectedProviders[provider.Key]"
+                                       @onchange="async (e) => await OnProviderFilterChanged(provider.Key, e.Value is bool b && b)" />
+                                <span>@provider.Value</span>
+                            </label>
+                        }
+                    </div>
+                </div>
+
+                <!-- Results Counter -->
+                @if (totalIconsLoaded > 0)
+                {
+                    <div class="results-counter">
+                        <div class="counter-value">@filteredIcons.Count</div>
+                        <div class="counter-label">of @totalIconsLoaded icons</div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading State -->
+    @if (isLoading)
+    {
+        <div class="loading-container">
+            <div class="loading-content">
+                <div class="loader-spinner"></div>
+                <p class="loading-text">@loadingMessage</p>
+            </div>
+        </div>
+    }
+    <!-- Empty State -->
+    else if (allIcons.Count == 0)
+    {
+        <div class="empty-state">
+            <div class="empty-icon">📭</div>
+            <h3>No icons loaded</h3>
+            <p>Something went wrong. Please refresh the page.</p>
+        </div>
+    }
+    <!-- No Results State -->
+    else if (filteredIcons.Count == 0)
+    {
+        <div class="empty-state">
+            <div class="empty-icon">🔍</div>
+            <h3>No icons found</h3>
+            <p>Try searching with different keywords or adjust your provider filters</p>
+            <button @onclick="ResetSearch" class="reset-btn">Reset Search</button>
+        </div>
+    }
+    <!-- Results Grid -->
+    else
+    {
+        <div class="results-section">
+            <div class="grid-header">
+                <span class="grid-info">Showing @filteredIcons.Count icon@(filteredIcons.Count != 1 ? "s" : "")</span>
             </div>
 
-            <div class="provider-filters">
-                <span class="filter-title">Providers:</span>
-                @foreach (var provider in providers)
+            <div class="icons-grid">
+                @foreach (var icon in filteredIcons)
                 {
-                    <label class="filter-badge">
-                        <input type="checkbox" 
-                               checked="@selectedProviders[provider.Key]"
-                               @onchange="async (e) => await OnProviderFilterChanged(provider.Key, e.Value is bool b && b)" />
-                        <span>@provider.Value</span>
-                    </label>
+                    var safeId = GenerateSafeId(icon.Name);
+                    <div class="icon-card">
+                        <div class="icon-image-container">
+                            <img id="@safeId" 
+                                 src="@icon.Path" 
+                                 alt="@icon.Name" 
+                                 title="@GetIconTitle(icon)"
+                                 @oncontextmenu="@(e => OnRightClick(e, safeId, icon.Name))"
+                                 @oncontextmenu:preventDefault="true"
+                                 class="icon-image" />
+                            <div class="icon-overlay">
+                                <button @onclick="() => OnDownloadRequested(safeId, icon.Name)" 
+                                        class="overlay-btn download-btn" 
+                                        title="Download icon">
+                                    @(DownloadAsPng ? "📥 PNG" : "📄 SVG")
+                                </button>
+                                <button @onclick="() => OnRightClick(null, safeId, icon.Name)" 
+                                        class="overlay-btn copy-btn" 
+                                        title="Copy to clipboard">
+                                    📋 Copy
+                                </button>
+                            </div>
+                            <span class="provider-label">@icon.ProviderName</span>
+                        </div>
+                        <div class="icon-info">
+                            <h4 class="icon-title" title="@icon.Name">@(icon.Name.Length > 40 ? icon.Name.Substring(0, 40) + "..." : icon.Name)</h4>
+                            @if (!string.IsNullOrEmpty(icon.Category))
+                            {
+                                <p class="icon-category">@icon.Category</p>
+                            }
+                        </div>
+                    </div>
                 }
             </div>
 
-            @if (totalIconsLoaded > 0)
+            <!-- Load More Button -->
+            @if (hasMoreToLoad)
             {
-                <div class="results-info">
-                    📊 Found <strong>@filteredIcons.Count</strong> / <strong>@totalIconsLoaded</strong> icons
+                <div class="load-more-section">
+                    <button @onclick="LoadMore" class="load-more-btn">
+                        Load More Icons ⬇️
+                    </button>
                 </div>
             }
         </div>
-    </div>
-
-    @if (isLoading)
-    {
-        <div class="loading-section">
-            <div class="loading-spinner">
-                <p>Loading icons...</p>
-                <p class="loading-detail">@loadingMessage</p>
-            </div>
-        </div>
-    }
-    else if (allIcons.Count == 0)
-    {
-        <div class="no-results">
-            <div class="no-results-icon">📭</div>
-            <div class="no-results-text">No icons loaded</div>
-        </div>
-    }
-    else if (filteredIcons.Count == 0)
-    {
-        <div class="no-results">
-            <div class="no-results-icon">🔍</div>
-            <div class="no-results-text">No icons found matching "<strong>@searchTerm</strong>"</div>
-            <p class="no-results-hint">Try searching by category or provider name</p>
-        </div>
-    }
-    else
-    {
-        <div class="results-summary">
-            <p>Showing @filteredIcons.Count icons</p>
-        </div>
-
-        <div class="svg-grid">
-            @foreach (var icon in filteredIcons)
-            {
-                var safeId = GenerateSafeId(icon.Name);
-                <div class="svg-item-wrapper">
-                    <div class="svg-item">
-                        <div class="provider-badge">@icon.Provider</div>
-                        <img id="@safeId" 
-                             src="@icon.Path" 
-                             alt="@icon.Name" 
-                             title="@GetIconTitle(icon)"
-                             @oncontextmenu="@(e => OnRightClick(e, safeId, icon.Name))"
-                             @oncontextmenu:preventDefault="true" />
-                        @if (DownloadAsPng)
-                        {
-                            <a @onclick="() => OnDownloadRequested(safeId, icon.Name)" class="action-btn">📥 PNG</a>
-                        }
-                        else
-                        {
-                            <a href="@icon.Path" download="@icon.Name" class="action-btn">📄 SVG</a>
-                        }
-                    </div>
-                    <p class="icon-name" title="@icon.Name">@(icon.Name.Length > 32 ? icon.Name.Substring(0, 32) + "..." : icon.Name)</p>
-                    <p class="icon-category">@(string.IsNullOrEmpty(icon.Category) ? "—" : icon.Category)</p>
-                </div>
-            }
-        </div>
-
-        @if (hasMoreToLoad)
-        {
-            <div class="load-more-container">
-                <button class="load-more-btn" @onclick="LoadMore">Load More Icons ⬇️</button>
-            </div>
-        }
     }
 </div>
 
@@ -176,7 +224,7 @@
             int loadedCount = 0;
             foreach (var (providerKey, providerName) in providers)
             {
-                loadingMessage = $"Loading {providerName}...";
+                loadingMessage = $"Loading {providerName.Split(' ')[1..]}...";
                 StateHasChanged();
 
                 try
@@ -309,6 +357,22 @@
         await LoadSvgs();
     }
 
+    private void ClearSearch()
+    {
+        searchTerm = string.Empty;
+        currentPage = 1;
+    }
+
+    private void ResetSearch()
+    {
+        searchTerm = string.Empty;
+        currentPage = 1;
+        foreach (var provider in providers.Keys)
+        {
+            selectedProviders[provider] = true;
+        }
+    }
+
     private string GenerateSafeId(string name)
     {
         return "svg_" + Regex.Replace(name, @"[^a-zA-Z0-9]+", "_");
@@ -327,7 +391,7 @@
         }
     }
 
-    private async Task OnRightClick(MouseEventArgs e, string safeId, string fileName)
+    private async Task OnRightClick(MouseEventArgs? e, string safeId, string fileName)
     {
         await JSRuntime.InvokeVoidAsync("copyImageToClipboard", safeId, fileName);
     }
