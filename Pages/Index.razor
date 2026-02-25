@@ -566,12 +566,6 @@
 
     private async Task OnSearchKeyDown(KeyboardEventArgs e)
     {
-        if (e.Key == "?")
-        {
-            ToggleKeyboardHelp();
-            return;
-        }
-
         if (e.Key == "Escape")
         {
             await ClearSearch();
@@ -683,7 +677,7 @@
         }
 
         var rng = new Random();
-        previewIcons = allIcons.OrderBy(_ => rng.Next()).Take(24).ToList();
+        previewIcons = allIcons.OrderBy(_ => rng.Next()).Take(36).ToList();
     }
 
     private async Task ApplySuggestion(string suggestion)
