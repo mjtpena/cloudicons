@@ -10,33 +10,33 @@ window.xyzicon.searchEngine = {
   index: null,
   cache: new Map(),
   maxCacheSize: 30,
-  
+
   // Initialize with icon data from C#
   initIndex(icons) {
-    this.index = icons.map(icon => ({
+    this.index = icons.map((icon) => ({
       id: icon.name,
       name: icon.displayName,
       provider: icon.provider,
       searchText: icon.searchText || "",
       path: icon.path,
-      fileName: icon.fileName
+      fileName: icon.fileName,
     }));
-    
+
     console.log(`[xyzicon] Search index ready: ${this.index.length} icons`);
   },
 
   // Ultra-fast search (~1-2ms for 8000+ icons)
   search(query, enabledProviders) {
     if (!this.index) return [];
-    
+
     // No query = return all enabled providers
     if (!query || query.trim() === "") {
-      return this.index.filter(icon => enabledProviders[icon.provider]);
+      return this.index.filter((icon) => enabledProviders[icon.provider]);
     }
 
     // Generate cache key
     const providers = Object.keys(enabledProviders)
-      .filter(p => enabledProviders[p])
+      .filter((p) => enabledProviders[p])
       .sort()
       .join(",");
     const cacheKey = `${query}|${providers}`;
@@ -47,24 +47,32 @@ window.xyzicon.searchEngine = {
     }
 
     // === SEARCH ALGORITHM: 3-tier filtering ===
-    const terms = query.toLowerCase().split(/\s+/).filter(t => t);
+    const terms = query
+      .toLowerCase()
+      .split(/\s+/)
+      .filter((t) => t);
     if (terms.length === 0) return [];
 
     const results = [];
     const firstChar = terms[0][0];
-    const providerSet = new Set(Object.keys(enabledProviders).filter(p => enabledProviders[p]));
+    const providerSet = new Set(
+      Object.keys(enabledProviders).filter((p) => enabledProviders[p]),
+    );
 
     // Tier 1: Fast pass (exact substring matching)
     for (const icon of this.index) {
       if (!providerSet.has(icon.provider)) continue;
 
       // Quick first-char check (99% filter)
-      if (!icon.searchText[0] || icon.searchText[0].toLowerCase() !== firstChar) {
+      if (
+        !icon.searchText[0] ||
+        icon.searchText[0].toLowerCase() !== firstChar
+      ) {
         continue;
       }
 
       const searchText = icon.searchText.toLowerCase();
-      if (terms.every(term => searchText.includes(term))) {
+      if (terms.every((term) => searchText.includes(term))) {
         results.push(icon);
       }
     }
@@ -97,7 +105,7 @@ window.xyzicon.searchEngine = {
       const prefix = terms[0];
       for (const icon of this.index) {
         if (!providerSet.has(icon.provider)) continue;
-        
+
         if (icon.searchText.toLowerCase().startsWith(prefix)) {
           results.push(icon);
         }
@@ -126,7 +134,8 @@ window.xyzicon.searchEngine = {
     if (Math.abs(word.length - term.length) > 1) return false;
 
     let diff = 0;
-    let i = 0, j = 0;
+    let i = 0,
+      j = 0;
 
     while (i < word.length && j < term.length) {
       if (word[i] !== term[j]) {
@@ -151,7 +160,7 @@ window.xyzicon.searchEngine = {
 
   clearCache() {
     this.cache.clear();
-  }
+  },
 };
 
 // ==========================================================================

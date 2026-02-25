@@ -283,7 +283,7 @@
 
             totalIconsLoaded = allIcons.Count;
             loadingMessage = $"Loaded {totalIconsLoaded} icons";
-            
+
             // ===== INITIALIZE JAVASCRIPT SEARCH ENGINE =====
             await InitializeSearchEngine();
         }
@@ -344,7 +344,7 @@
         if (words.Length > 1)
         {
             var acronym = string.Concat(words.Select(w => w[0]));
-            
+
             // Common cloud acronym expansions
             var commonExpansions = GetAcronymExpansions(text);
             return $"{acronym} {commonExpansions}";
@@ -387,7 +387,7 @@
         var matches = acronymMap
             .Where(kvp => lowerText.Contains(kvp.Key))
             .Select(kvp => kvp.Value);
-        
+
         return string.Join(" ", matches);
     }
 
