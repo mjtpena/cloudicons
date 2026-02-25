@@ -13,14 +13,6 @@
 
     <!-- Google-style centered hero (shrinks on search) -->
     <div class="hero">
-        @if (showFirstUseTips)
-        {
-            <div class="first-use-tip">
-                <span>Tip: Press ⌘K (or Ctrl+K) to focus search. Use ↑/↓ to move, Enter to copy, Esc to clear.</span>
-                <button class="tip-close" @onclick="DismissFirstUseTip" aria-label="Dismiss tip">✕</button>
-            </div>
-        }
-
         <div class="logo">
             <span class="logo-icon">☁️</span>
             <h1 class="logo-text">xyz<span class="logo-accent">icon</span></h1>
@@ -72,28 +64,7 @@
                 <button class="fmt-btn @(!DownloadAsPng ? "active" : "")" @onclick="() => DownloadAsPng = false">SVG</button>
                 <button class="fmt-btn @(DownloadAsPng ? "active" : "")" @onclick="() => DownloadAsPng = true">PNG</button>
             </div>
-            <button id="keyboard-help-toggle" class="help-link" @onclick="ToggleKeyboardHelp">Shortcuts ?</button>
         </div>
-
-        @if (showKeyboardHelp)
-        {
-            <div class="keyboard-help">
-                <span><kbd>⌘/Ctrl</kbd>+<kbd>K</kbd> focus search</span>
-                <span><kbd>↑</kbd>/<kbd>↓</kbd> move selection</span>
-                <span><kbd>Enter</kbd> copy selected icon</span>
-                <span><kbd>Esc</kbd> clear search</span>
-            </div>
-        }
-
-        @if (trendingQueries.Count > 0)
-        {
-            <div class="query-chips trending" aria-label="Trending searches">
-                @foreach (var query in trendingQueries)
-                {
-                    <button class="chip" @onclick="() => ApplySuggestion(query)">@query</button>
-                }
-            </div>
-        }
 
         @if (totalIconsLoaded > 0 && hasSearched)
         {
@@ -218,13 +189,8 @@
     {
         <!-- Initial state: show popular/random icons as a preview -->
         <div class="initial-hint">
-            <p>Type to search, or click a provider to browse.</p>
-            <div class="query-chips" aria-label="Popular searches">
-                @foreach (var suggestion in commonSuggestions)
-                {
-                    <button class="chip" @onclick="() => ApplySuggestion(suggestion)">@suggestion</button>
-                }
-            </div>
+            <p>Random icons (default). Type to search, or click a provider to browse.</p>
+            <button class="btn-random" @onclick="RandomizePreviewIcons">Randomize icons</button>
             <div class="preview-grid">
                 @foreach (var icon in previewIcons)
                 {
@@ -256,8 +222,6 @@
     private bool hasSearched = false;
     private bool DownloadAsPng { get; set; }
     private bool isLoading = true;
-    private bool showKeyboardHelp;
-    private bool showFirstUseTips;
     private string loadingMessage = "Loading icons…";
     private string liveAnnouncement = string.Empty;
     private int activeCardIndex = -1;
@@ -265,7 +229,6 @@
     private string? lastDownloadedSafeId;
     private string? lastCopiedSvgCodeSafeId;
     private string? lastCopiedUrlSafeId;
-    private List<string> trendingQueries = new();
     private System.Timers.Timer? debounceTimer;
     private DotNetObjectReference<Index>? dotNetRef;
     private bool searchEngineReady = false;
@@ -309,11 +272,7 @@
         await LoadAllIconsMetadata();
 
         // Pick some preview icons
-        if (allIcons.Count > 0)
-        {
-            var rng = new Random(42);
-            previewIcons = allIcons.OrderBy(_ => rng.Next()).Take(24).ToList();
-        }
+        RandomizePreviewIcons();
     }
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
@@ -322,10 +281,6 @@
         {
             dotNetRef = DotNetObjectReference.Create(this);
             await JSRuntime.InvokeVoidAsync("xyzicon.initInfiniteScroll", dotNetRef);
-            await JSRuntime.InvokeVoidAsync("xyzicon.initKeyboardShortcuts", "main-search-input", "keyboard-help-toggle");
-            showFirstUseTips = await JSRuntime.InvokeAsync<bool>("xyzicon.shouldShowFirstUseTip");
-            await RefreshTrendingQueries();
-            StateHasChanged();
         }
 
         // Re-observe sentinel whenever results change
@@ -558,7 +513,6 @@
                 .ToList() ?? new List<IconData>();
 
             await JSRuntime.InvokeVoidAsync("xyzicon.searchEngine.recordQueryOutcome", searchTerm, filteredIcons.Count);
-            await RefreshTrendingQueries();
         }
         catch (Exception ex)
         {
@@ -716,7 +670,20 @@
         displayedIcons.Clear();
         activeCardIndex = -1;
         await JSRuntime.InvokeVoidAsync("xyzicon.searchEngine.clearCache");
+        RandomizePreviewIcons();
         liveAnnouncement = "Search and filters reset.";
+    }
+
+    private void RandomizePreviewIcons()
+    {
+        if (allIcons.Count == 0)
+        {
+            previewIcons.Clear();
+            return;
+        }
+
+        var rng = new Random();
+        previewIcons = allIcons.OrderBy(_ => rng.Next()).Take(24).ToList();
     }
 
     private async Task ApplySuggestion(string suggestion)
@@ -894,22 +861,6 @@
             liveAnnouncement = $"Copied URL for {displayName}.";
             _ = FlashCopyUrlState(safeId);
         }
-    }
-
-    private async Task RefreshTrendingQueries()
-    {
-        trendingQueries = await JSRuntime.InvokeAsync<List<string>>("xyzicon.searchEngine.getTopQueries", 8);
-    }
-
-    private async Task DismissFirstUseTip()
-    {
-        showFirstUseTips = false;
-        await JSRuntime.InvokeVoidAsync("xyzicon.dismissFirstUseTip");
-    }
-
-    private void ToggleKeyboardHelp()
-    {
-        showKeyboardHelp = !showKeyboardHelp;
     }
 
     private void AnnounceResultCount()
