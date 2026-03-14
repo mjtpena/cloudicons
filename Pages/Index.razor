@@ -254,6 +254,7 @@
         {
             dotNetRef = DotNetObjectReference.Create(this);
             await JSRuntime.InvokeVoidAsync("xyzicon.initInfiniteScroll", dotNetRef);
+            try { await searchInput.FocusAsync(); } catch { }
         }
 
         // Re-observe sentinel whenever results change
